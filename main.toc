@@ -1,7 +1,8 @@
 \contentsline {section}{\numberline {1}Introduction}{1}
 \contentsline {subsection}{\numberline {1.1}Stakeholders}{1}
 \contentsline {subsection}{\numberline {1.2}Customer}{1}
-\contentsline {subsection}{\numberline {1.3}Project Scope}{1}
+\contentsline {subsection}{\numberline {1.3}Project description}{1}
+\contentsline {subsection}{\numberline {1.4}Project Scope}{1}
 \contentsline {section}{\numberline {2}Project Directive}{2}
 \contentsline {subsection}{\numberline {2.1}Methodology}{2}
 \contentsline {subsection}{\numberline {2.2}Group Organization}{2}
@@ -34,25 +35,15 @@
 \contentsline {subsubsection}{\numberline {3.5.2}Testing activities}{3}
 \contentsline {subsubsection}{\numberline {3.5.3}Testing frameworks}{3}
 \contentsline {subsubsection}{\numberline {3.5.4}Conclusions}{3}
-\contentsline {section}{\numberline {4}Requirement specification}{4}
-\contentsline {subsection}{\numberline {4.1}Userstories}{4}
-\contentsline {subsection}{\numberline {4.2}Use case diagrams}{4}
-\contentsline {subsection}{\numberline {4.3}Functional requirements}{4}
-\contentsline {subsection}{\numberline {4.4}Non-functional requirements}{4}
-\contentsline {section}{\numberline {5}Game architecture}{5}
-\contentsline {section}{\numberline {6}Test}{6}
-\contentsline {section}{\numberline {7}Sprint 1}{7}
-\contentsline {subsection}{\numberline {7.1}Sprint planning}{7}
-\contentsline {subsection}{\numberline {7.2}Requirements}{7}
-\contentsline {subsection}{\numberline {7.3}Implementation}{7}
-\contentsline {subsection}{\numberline {7.4}Testing}{7}
-\contentsline {subsection}{\numberline {7.5}Delivery}{7}
-\contentsline {subsubsection}{\numberline {7.5.1}Planned delivery}{7}
-\contentsline {subsubsection}{\numberline {7.5.2}Actual delivery}{7}
-\contentsline {subsection}{\numberline {7.6}Customer feedback}{7}
-\contentsline {subsection}{\numberline {7.7}Sprint retrospective}{7}
-\contentsline {subsection}{\numberline {7.8}Evaluation}{7}
-\contentsline {section}{\numberline {8}Sprint 2}{8}
+\contentsline {subsection}{\numberline {3.6}Tools}{3}
+\contentsline {section}{\numberline {4}Game Concept}{4}
+\contentsline {section}{\numberline {5}Requirement specification}{5}
+\contentsline {subsection}{\numberline {5.1}Functional requirements}{5}
+\contentsline {subsection}{\numberline {5.2}Non-functional requirements}{5}
+\contentsline {subsection}{\numberline {5.3}Use case diagrams}{5}
+\contentsline {section}{\numberline {6}Game architecture}{6}
+\contentsline {section}{\numberline {7}Test}{7}
+\contentsline {section}{\numberline {8}Sprint 1}{8}
 \contentsline {subsection}{\numberline {8.1}Sprint planning}{8}
 \contentsline {subsection}{\numberline {8.2}Requirements}{8}
 \contentsline {subsection}{\numberline {8.3}Implementation}{8}
@@ -63,7 +54,7 @@
 \contentsline {subsection}{\numberline {8.6}Customer feedback}{8}
 \contentsline {subsection}{\numberline {8.7}Sprint retrospective}{8}
 \contentsline {subsection}{\numberline {8.8}Evaluation}{8}
-\contentsline {section}{\numberline {9}Sprint 3}{9}
+\contentsline {section}{\numberline {9}Sprint 2}{9}
 \contentsline {subsection}{\numberline {9.1}Sprint planning}{9}
 \contentsline {subsection}{\numberline {9.2}Requirements}{9}
 \contentsline {subsection}{\numberline {9.3}Implementation}{9}
@@ -74,7 +65,7 @@
 \contentsline {subsection}{\numberline {9.6}Customer feedback}{9}
 \contentsline {subsection}{\numberline {9.7}Sprint retrospective}{9}
 \contentsline {subsection}{\numberline {9.8}Evaluation}{9}
-\contentsline {section}{\numberline {10}Sprint 4}{10}
+\contentsline {section}{\numberline {10}Sprint 3}{10}
 \contentsline {subsection}{\numberline {10.1}Sprint planning}{10}
 \contentsline {subsection}{\numberline {10.2}Requirements}{10}
 \contentsline {subsection}{\numberline {10.3}Implementation}{10}
@@ -85,6 +76,18 @@
 \contentsline {subsection}{\numberline {10.6}Customer feedback}{10}
 \contentsline {subsection}{\numberline {10.7}Sprint retrospective}{10}
 \contentsline {subsection}{\numberline {10.8}Evaluation}{10}
-\contentsline {section}{\numberline {11}Templates and standards}{11}
-\contentsline {subsection}{\numberline {11.1}Templates}{11}
-\contentsline {subsection}{\numberline {11.2}Standards}{11}
+\contentsline {section}{\numberline {11}Sprint 4}{11}
+\contentsline {subsection}{\numberline {11.1}Sprint planning}{11}
+\contentsline {subsection}{\numberline {11.2}Requirements}{11}
+\contentsline {subsection}{\numberline {11.3}Implementation}{11}
+\contentsline {subsection}{\numberline {11.4}Testing}{11}
+\contentsline {subsection}{\numberline {11.5}Delivery}{11}
+\contentsline {subsubsection}{\numberline {11.5.1}Planned delivery}{11}
+\contentsline {subsubsection}{\numberline {11.5.2}Actual delivery}{11}
+\contentsline {subsection}{\numberline {11.6}Customer feedback}{11}
+\contentsline {subsection}{\numberline {11.7}Sprint retrospective}{11}
+\contentsline {subsection}{\numberline {11.8}Evaluation}{11}
+\contentsline {section}{\numberline {12}Conclusion and Evaluation}{12}
+\contentsline {section}{\numberline {13}Templates and standards}{13}
+\contentsline {subsection}{\numberline {13.1}Templates}{13}
+\contentsline {subsection}{\numberline {13.2}Standards}{13}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.27)  30 AUG 2013 00:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.27)  3 SEP 2013 09:40
 entering extended mode
 **C:/Users/Marte/Documents/GitHub/report/main.tex
 (C:/Users/Marte/Documents/GitHub/report/main.tex
@@ -275,6 +275,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [3]
 (C:\Users\Marte\Documents\GitHub\report\introduction/stakeholders.tex)
 (C:\Users\Marte\Documents\GitHub\report\introduction/customer.tex)
+(C:\Users\Marte\Documents\GitHub\report\introduction/project_description.tex)
 (C:\Users\Marte\Documents\GitHub\report\introduction/project_scope.tex)
 [1]
 (C:\Users\Marte\Documents\GitHub\report\projectplanManagement/methodology.tex)
@@ -292,25 +293,28 @@ ex)
 )
 (C:\Users\Marte\Documents\GitHub\report\preliminaryStudies/mobileDevelopment.te
 x) (C:\Users\Marte\Documents\GitHub\report\preliminaryStudies/test.tex)
-[3]
-(C:\Users\Marte\Documents\GitHub\report\requirementSpecification/user_stories.t
-ex)
-(C:\Users\Marte\Documents\GitHub\report\requirementSpecification/use_case_diagr
-ams.tex)
+(C:\Users\Marte\Documents\GitHub\report\preliminaryStudies/tools.tex) [3]
+[4]
 (C:\Users\Marte\Documents\GitHub\report\requirementSpecification/functional_req
 uirements.tex)
 (C:\Users\Marte\Documents\GitHub\report\requirementSpecification/non-functional
-_requirements.tex) [4] [5] [6]
-(C:\Users\Marte\Documents\GitHub\report\phases/sprint1.tex) [7]
-(C:\Users\Marte\Documents\GitHub\report\phases/sprint2.tex) [8]
-(C:\Users\Marte\Documents\GitHub\report\phases/sprint3.tex) [9]
-(C:\Users\Marte\Documents\GitHub\report\phases/sprint4.tex) [10]
+_requirements.tex)
+(C:\Users\Marte\Documents\GitHub\report\requirementSpecification/use_case_diagr
+ams.tex) [5] [6] [7] (C:\Users\Marte\Documents\GitHub\report\phases/sprint1.tex
+) [8] (C:\Users\Marte\Documents\GitHub\report\phases/sprint2.tex) [9]
+(C:\Users\Marte\Documents\GitHub\report\phases/sprint3.tex) [10]
+(C:\Users\Marte\Documents\GitHub\report\phases/sprint4.tex) [11]
+(C:\Users\Marte\Documents\GitHub\report\conclusionAndEvaluation/evaluation.tex)
+(C:\Users\Marte\Documents\GitHub\report\conclusionAndEvaluation/conclusion.tex)
+
+(C:\Users\Marte\Documents\GitHub\report\conclusionAndEvaluation/further_work.te
+x) [12]
 (C:\Users\Marte\Documents\GitHub\report\templateAndStandards/templates.tex)
 (C:\Users\Marte\Documents\GitHub\report\templateAndStandards/standards.tex)
-[11] (C:\Users\Marte\Documents\GitHub\report\main.aux) ) 
+[13] (C:\Users\Marte\Documents\GitHub\report\main.aux) ) 
 Here is how much of TeX's memory you used:
- 519 strings out of 493921
- 8780 string characters out of 3144876
+ 533 strings out of 493921
+ 9501 string characters out of 3144876
  57322 words of memory out of 3000000
  3790 multiletter control sequences out of 15000+200000
  7897 words of font info for 28 fonts, out of 3000000 for 9000
@@ -320,9 +324,9 @@ Here is how much of TeX's memory you used:
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on main.pdf (14 pages, 69415 bytes).
+Output written on main.pdf (16 pages, 70576 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
