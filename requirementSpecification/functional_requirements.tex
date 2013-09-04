@@ -1,1 +1,113 @@
 \subsection{Functional requirements}
+
+
+\definecolor{Gray}{rgb}{0.7, 0.7, 0.7}
+\definecolor{Black}{rgb}{0.22, 0.22, 0.22}
+
+\begin{longtable}{| c | p{8cm} | c | c |}
+	\hline
+   	
+   	\rowcolor{Black}
+   	\bf{\color{white} ID} & \bf{\color{white}Requirement} & \bf{\color{white} Priority} & \bf{\color{white} Complexity} \\ \hline
+
+   	\rowcolor{Gray}
+   	\multicolumn{4}{| l |}{1) Basic functionality} \\ \hline
+
+   	FR1.1 & The user should be able to read game instructions from the main menu & H & L \\ \hline
+
+   	FR1.2 & The user should be able to exit the game at any time, and the game state should be saved and loaded when the user returns to the game & H & M \\ \hline
+
+   	FR1.3 & The user should be able to restart any level at any given point of time after start playing & M & L \\ \hline
+
+   	FR1.4 & The user should get a highscore based on the time spent finishing the level & M & M \\ \hline
+
+   	FR1.5 & The user should be able to improve the highscore on any level by beating previous highscores & M & L \\ \hline
+
+   	FR1.6 & The user should be able to pause the game at any time & M & L \\ \hline
+
+   	FR1.7 & The game should play background music & L & H \\ \hline
+
+ 	FR1.8 & The user should be able to turn on/off the background music & L & L \\ \hline
+
+ 	\rowcolor{Gray}
+   	\multicolumn{4}{| l |}{2) Building and Upgrade} \\ \hline
+
+   	FR2.1 & Buildings should appear around the map at arbitrary intervals and locations & C & H \\ \hline
+
+   	FR2.2 & The user should be able to buy and place several power stations on the game map & C & H \\ \hline
+
+   	FR2.3 & The user should be able to buy and place power cables on the map & C & H \\ \hline
+
+   	FR2.4 & The user should be able to connect the buildings to the powerplants by building a power cable & C & H \\ \hline
+
+   	FR2.5 & The user should be able to upgrade the power plant & H & M \\ \hline
+
+	FR2.6 & The amount of power available to the user should be limited; the power supply of a power plant should be upgradeable. & H & L \\ \hline
+
+	FR2.7 & The user should be able to remove power lines from the map & M & M \\ \hline
+
+	FR2.8 & The player should only be allowed to build a level-specific number of power plants. & M & L \\ \hline
+
+	FR2.9 & The user should be able to see information about buildings when tapping on them. & M & M \\ \hline
+
+\pagebreak
+
+   	\rowcolor{Gray}
+   	\multicolumn{4}{| l |}{3) Obstacles} \\ \hline
+
+   	FR3.1 & Arbitrary power lines may be damaged throughout the game & M & M \\ \hline
+
+   	FR3.2 & The user should be able to fix unstable power lines before it is broken; this should cost some amount of money. & M & L \\ \hline
+
+   	FR3.3 & There should be several types of buildings on the map, with different power requirements yielding different earnings & M & H \\ \hline
+
+   	FR3.4 & The user should be informed about new obstacles & M & M \\ \hline
+
+   	FR3.5 & The user should be able to see that a building has gone without power for some time, and is affecting the player's health score & M & M \\ \hline
+
+   	\rowcolor{Gray}
+   	\multicolumn{4}{| l |}{4) Level specific} \\ \hline
+
+   	FR4.1 & The user should be able to continue to the next level when the goal is reached & H & L \\ \hline
+
+   	FR4.2 & The user should be able to continue a level while the health score is greater than zero. When the health score reaches zero, the game is over. & H & L \\ \hline
+
+   	FR4.3 & When an existing building is not supplied with power, the player's health score should decrease & H & M \\ \hline
+
+   	FR4.4 & As the user reaches higher levels there should be an increase in faulty power cables & M & H \\ \hline
+
+   	FR4.5 & As the user reaches higher levels new buildings appear more rapidly & M & H \\ \hline
+
+   	FR4.6 & As the user reaches higher levels unstable power lines will appear more rapidly & M & H \\ \hline
+
+   	FR4.7 & As the user reaches higher levels the map size may increase & L & H \\ \hline
+
+\pagebreak
+   	\rowcolor{Gray}
+   	\multicolumn{4}{| l |}{5) Incoming/outgoing money:} \\ \hline
+
+   	FR5.1 & The user should be able to collect money from the buildings connected to the power plant & H & L \\ \hline
+
+   	FR5.2 & There should be buildings on the map for the user to supply with power; new buildings should appear over time. & H & H \\ \hline
+
+   	FR5.3 & When connecting buildings through power cables, there should be a cost which is proportional to the length of the cable. & H & L \\ \hline
+
+   	FR5.4 & The player should be able to suspend specific buildings' power supply in order to server others & M & H \\ \hline
+
+   	FR5.5 & A power preservation tip should appear when the user reaches a new level. & L & L \\ \hline
+
+   	\rowcolor{Gray}   	
+   	\multicolumn{4}{| l |}{6) GUI} \\ \hline
+
+   	FR6.1 & The user should be able to see a small part of the game map. & C & L \\ \hline
+
+   	FR6.2 & The user should be able to navigate around the map using the touch function on the phone & C & M \\ \hline
+
+   	FR6.3 & The user should be able to click on a power plant to receive information about the cost of upgrading it and what the upgrade does & M & M \\ \hline
+
+   	FR6.4 & The user should be able to view all of the map by double tapping the screen; double tapping a point on the complete map should zoom in on that area. & M & H \\ \hline
+
+   	FR6.5 & The user shoud get a notification of new events outside the screen & L & M \\ \hline
+
+	\hline
+\end{longtable}
