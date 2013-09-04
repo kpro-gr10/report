@@ -55,5 +55,5 @@ local.properties
 *~
 *.bbl
 *.blg
-Report.pdf
+main.pdf
 *synctex.gz
