@@ -1,7 +1,87 @@
 \subsection{Mobile technology}
 
-\subsubsection{Mobile platform}
-\subsubsection{Crossplatform}
-\subsubsection{Native}
+After the introduction of smartphones, there has been an explosive surge in the popularity of using mobile technologies as computers.
 
+\subsubsection{Mobile platform}
+{\bf Android}
+\linebreak
+Android is a linux-based operating system, design primarily for mobile devices with touchscreen support. Android is currently being developed by Google and is deployed on various mobile devices developed by 3rd-parties.
+\linebreak
+Pros:
+\begin{itemize}
+  \item Developing for Android is free.
+  \item Native support for java, a well known programming language.
+  \item Can develop for Android using any operating system.
+  \item Android can be emulated using AVD, allowing for easy testing.
+\end{itemize}
+\linebreak
+Cons:
+\begin{itemize}
+  \item There are many different Android devices, making testing more demanding.
+  \item Apps developed for Android will only run on Android.
+\end{itemize}
+\linebreak
+{\bf iOS}
+iOS a operative system developed by Apple primarily for iPhone, and has been extended to run on other Apple devices, like the iPad. Apple does not allow iOS to be deployed on 3rd-party hardware.
+\linebreak
+Pros:
+\begin{itemize}
+  \item There are fewer devices running iOS, and things like screen resolution is typically standardized, making development and testing easier.
+\end{itemize}
+Cons:
+\begin{itemize}
+  \item Apple hardware and software required to develop for iOS.
+  \item Distribution of applications for iOS requires a yearly subscription.
+  \item Apple got strict terms, which might not be compatible with other software licences.
+  \item Apps developed for iOS will only run on iOS.
+\end{itemize}
+\linebreak
+\subsubsection{Crossplatform}
+{\bf Phonegap}
+Phonegap is a free and open source framework that makes it possible to create mobile applications using web APIs like HTML5, CSS and JavaScript. Phonegap allows developers to create an application which is a hybrid between a web-app and a native application. Phonegap packages the program as an application and gives the developer access to native device APIs.
+\linebreak
+Pros:
+\begin{itemize}
+  \item Applications can be developed for Android, BlackBerry, iOS, Windows Phone, Windows 8 and Tizen operating systems.
+  \item Developers can use JavaScript, HTML5 and CSS to develop for multiple platforms.
+  \item Access to native APIs like camera, storage, networking, touchscreen etc.
+  \item Can use existing CSS and JavaScript libraries.
+  \item Looks like a native application.
+  \item Makes it easy to build applications for all supported platforms.
+  \item Phonegap is open source.
+\end{itemize}
+Cons:
+\begin{itemize}
+  \item Phonegap runs as an offline webpage, which is likely to impact performance.
+\end{itemize}
+\linebreak
+{\bf Corona}
+Corona is a software development kit (SDK) which allows developers to build applications for iPhone, iPad and Android devices. Corona is not open source, and enforces a revenue limit for developers unless the developers pay a monthly fee. Corona lets programmers develop using Lua.
+\linebreak
+Pros:
+\begin{itemize}
+  \item Comes with a physics engine and other features useful for game development.
+\end{itemize}
+Cons:
+\begin{itemize}
+  \item Not open source
+  \item Costs money to unlock full feature set.
+\end{itemize}
+\linebreak
+\subsubsection{Native}
+For focus on single platforms, developing native applications would probably be the best choice. Developing native applications for Android uses Java and iOS uses Objective-C.
+\linebreak
+Pros:
+\begin{itemize}
+  \item Easier to ensure that the application will run on all versions of the platform.
+  \item Best performance.
+\end{itemize}
+Cons:
+\begin{itemize}
+  \item We have to develop for both iOS and Android in different languages.
+  \item We will have to learn Objective-C.
+  \item Can only build applications for iOS on Mac.
+\end{itemize}
+\linebreak
 \subsubsection{Conclusions}
+After having discussed it in the group and with the customer we have agreed on using Phonegap to develop the game. The customer wanted the game to be developed with known technology that they can easily find people with experience with. HTML5, CSS and JavaScript are very popular development platforms.
