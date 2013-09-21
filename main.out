@@ -1,0 +1,130 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Project description}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Customer}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Stakeholders}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Project Directive}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Methodology}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Group Organization}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Roles}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Allocation of roles}{subsection.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Project Phases}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Planning and research}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Sprints}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Documentation and delivery}{subsection.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Risk Management}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Risk Analysis}{subsection.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.5}{Quality Assurance}{section.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Internal reporting/routines}{subsection.2.5}% 17
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Meetings \(and interaction?\)}{subsection.2.5}% 18
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Templates}{subsection.2.5}% 19
+\BOOKMARK [3][-]{subsubsection.2.5.4}{Phase Result Approval}{subsection.2.5}% 20
+\BOOKMARK [3][-]{subsubsection.2.5.5}{Response Time Lines}{subsection.2.5}% 21
+\BOOKMARK [3][-]{subsubsection.2.5.6}{Documentation and Code}{subsection.2.5}% 22
+\BOOKMARK [3][-]{subsubsection.2.5.7}{Testing}{subsection.2.5}% 23
+\BOOKMARK [3][-]{subsubsection.2.5.8}{Version control}{subsection.2.5}% 24
+\BOOKMARK [3][-]{subsubsection.2.5.9}{Task Reviewing and Inspection??}{subsection.2.5}% 25
+\BOOKMARK [3][-]{subsubsection.2.5.10}{Code reviews}{subsection.2.5}% 26
+\BOOKMARK [1][-]{section.3}{Preliminary Studies}{}% 27
+\BOOKMARK [2][-]{subsection.3.1}{Methodology}{section.3}% 28
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Development process}{subsection.3.1}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Conclusions}{subsection.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.2}{Game Concept}{section.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Power industry}{subsection.3.2}% 32
+\BOOKMARK [3][-]{subsubsection.3.2.2}{The Process}{subsection.3.2}% 33
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Similar game concepts}{subsection.3.2}% 34
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Conclusions}{subsection.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.3}{Mobile technology}{section.3}% 36
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Mobile platforms}{subsection.3.3}% 37
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Cross-platform}{subsection.3.3}% 38
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Native}{subsection.3.3}% 39
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Conclusions}{subsection.3.3}% 40
+\BOOKMARK [2][-]{subsection.3.4}{Mobile development}{section.3}% 41
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Frameworks}{subsection.3.4}% 42
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Conclusions}{subsection.3.4}% 43
+\BOOKMARK [2][-]{subsection.3.5}{Test}{section.3}% 44
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Testing cycle}{subsection.3.5}% 45
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Testing activities}{subsection.3.5}% 46
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Testing frameworks}{subsection.3.5}% 47
+\BOOKMARK [3][-]{subsubsection.3.5.4}{Conclusions}{subsection.3.5}% 48
+\BOOKMARK [2][-]{subsection.3.6}{Tools}{section.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Git and GitHub}{subsection.3.6}% 50
+\BOOKMARK [3][-]{subsubsection.3.6.2}{AgileZen}{subsection.3.6}% 51
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Google Drive}{subsection.3.6}% 52
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Dropbox}{subsection.3.6}% 53
+\BOOKMARK [1][-]{section.4}{Game Concept}{}% 54
+\BOOKMARK [2][-]{subsection.4.1}{Introduction}{section.4}% 55
+\BOOKMARK [2][-]{subsection.4.2}{Game Concept}{section.4}% 56
+\BOOKMARK [3][-]{subsubsection.4.2.1}{About}{subsection.4.2}% 57
+\BOOKMARK [3][-]{subsubsection.4.2.2}{The Player}{subsection.4.2}% 58
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Game Elements}{subsection.4.2}% 59
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Challenges}{subsection.4.2}% 60
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Goals}{subsection.4.2}% 61
+\BOOKMARK [1][-]{section.5}{Requirement specification}{}% 62
+\BOOKMARK [2][-]{subsection.5.1}{Functional requirements}{section.5}% 63
+\BOOKMARK [2][-]{subsection.5.2}{Non-functional requirements}{section.5}% 64
+\BOOKMARK [2][-]{subsection.5.3}{Use case diagrams}{section.5}% 65
+\BOOKMARK [1][-]{section.6}{Game Architecture}{}% 66
+\BOOKMARK [2][-]{subsection.6.1}{Architectural Drivers}{section.6}% 67
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Cross platform}{subsection.6.1}% 68
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Developer inexperience}{subsection.6.1}% 69
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Projected lifetime}{subsection.6.1}% 70
+\BOOKMARK [2][-]{subsection.6.2}{Architectural Tactics}{section.6}% 71
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Usability}{subsection.6.2}% 72
+\BOOKMARK [2][-]{subsection.6.3}{Architectural Patterns}{section.6}% 73
+\BOOKMARK [2][-]{subsection.6.4}{Architectural Views}{section.6}% 74
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Logical View}{subsection.6.4}% 75
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Process View}{subsection.6.4}% 76
+\BOOKMARK [3][-]{subsubsection.6.4.3}{Physical View}{subsection.6.4}% 77
+\BOOKMARK [3][-]{subsubsection.6.4.4}{Development View}{subsection.6.4}% 78
+\BOOKMARK [3][-]{subsubsection.6.4.5}{Scenarios}{subsection.6.4}% 79
+\BOOKMARK [2][-]{subsection.6.5}{Architectural Rationale}{section.6}% 80
+\BOOKMARK [1][-]{section.7}{Test}{}% 81
+\BOOKMARK [1][-]{section.8}{Sprint 1}{}% 82
+\BOOKMARK [2][-]{subsection.8.1}{Sprint Planning}{section.8}% 83
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Duration}{subsection.8.1}% 84
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Expected results}{subsection.8.1}% 85
+\BOOKMARK [3][-]{subsubsection.8.1.3}{Sprint backlog}{subsection.8.1}% 86
+\BOOKMARK [2][-]{subsection.8.2}{Implementation}{section.8}% 87
+\BOOKMARK [2][-]{subsection.8.3}{Testing}{section.8}% 88
+\BOOKMARK [2][-]{subsection.8.4}{Customer feedback}{section.8}% 89
+\BOOKMARK [2][-]{subsection.8.5}{Sprint retrospective}{section.8}% 90
+\BOOKMARK [1][-]{section.9}{Sprint 2}{}% 91
+\BOOKMARK [2][-]{subsection.9.1}{Sprint planning}{section.9}% 92
+\BOOKMARK [2][-]{subsection.9.2}{Requirements}{section.9}% 93
+\BOOKMARK [2][-]{subsection.9.3}{Implementation}{section.9}% 94
+\BOOKMARK [2][-]{subsection.9.4}{Testing}{section.9}% 95
+\BOOKMARK [2][-]{subsection.9.5}{Delivery}{section.9}% 96
+\BOOKMARK [3][-]{subsubsection.9.5.1}{Planned delivery}{subsection.9.5}% 97
+\BOOKMARK [3][-]{subsubsection.9.5.2}{Actual delivery}{subsection.9.5}% 98
+\BOOKMARK [2][-]{subsection.9.6}{Customer feedback}{section.9}% 99
+\BOOKMARK [2][-]{subsection.9.7}{Sprint retrospective}{section.9}% 100
+\BOOKMARK [2][-]{subsection.9.8}{Evaluation}{section.9}% 101
+\BOOKMARK [1][-]{section.10}{Sprint 3}{}% 102
+\BOOKMARK [2][-]{subsection.10.1}{Sprint planning}{section.10}% 103
+\BOOKMARK [2][-]{subsection.10.2}{Requirements}{section.10}% 104
+\BOOKMARK [2][-]{subsection.10.3}{Implementation}{section.10}% 105
+\BOOKMARK [2][-]{subsection.10.4}{Testing}{section.10}% 106
+\BOOKMARK [2][-]{subsection.10.5}{Delivery}{section.10}% 107
+\BOOKMARK [3][-]{subsubsection.10.5.1}{Planned delivery}{subsection.10.5}% 108
+\BOOKMARK [3][-]{subsubsection.10.5.2}{Actual delivery}{subsection.10.5}% 109
+\BOOKMARK [2][-]{subsection.10.6}{Customer feedback}{section.10}% 110
+\BOOKMARK [2][-]{subsection.10.7}{Sprint retrospective}{section.10}% 111
+\BOOKMARK [2][-]{subsection.10.8}{Evaluation}{section.10}% 112
+\BOOKMARK [1][-]{section.11}{Sprint 4}{}% 113
+\BOOKMARK [2][-]{subsection.11.1}{Sprint planning}{section.11}% 114
+\BOOKMARK [2][-]{subsection.11.2}{Requirements}{section.11}% 115
+\BOOKMARK [2][-]{subsection.11.3}{Implementation}{section.11}% 116
+\BOOKMARK [2][-]{subsection.11.4}{Testing}{section.11}% 117
+\BOOKMARK [2][-]{subsection.11.5}{Delivery}{section.11}% 118
+\BOOKMARK [3][-]{subsubsection.11.5.1}{Planned delivery}{subsection.11.5}% 119
+\BOOKMARK [3][-]{subsubsection.11.5.2}{Actual delivery}{subsection.11.5}% 120
+\BOOKMARK [2][-]{subsection.11.6}{Customer feedback}{section.11}% 121
+\BOOKMARK [2][-]{subsection.11.7}{Sprint retrospective}{section.11}% 122
+\BOOKMARK [2][-]{subsection.11.8}{Evaluation}{section.11}% 123
+\BOOKMARK [1][-]{section.12}{Conclusion and Evaluation}{}% 124
+\BOOKMARK [2][-]{subsection.12.1}{Evaluation}{section.12}% 125
+\BOOKMARK [2][-]{subsection.12.2}{Conclusion}{section.12}% 126
+\BOOKMARK [2][-]{subsection.12.3}{Further work}{section.12}% 127
+\BOOKMARK [1][-]{section.13}{Templates and standards}{}% 128
+\BOOKMARK [2][-]{subsection.13.1}{Templates}{section.13}% 129
+\BOOKMARK [2][-]{subsection.13.2}{Standards}{section.13}% 130
