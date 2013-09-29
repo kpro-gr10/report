@@ -19,6 +19,7 @@
 	7 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
 	3.2 & The player is not able to afford the Power Plant. A message is displayed, to let the player know. \\ \hline
+	4.1 & The player taps a spot where a building or Power Line is already placed. Sound notification. Go to 4. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -32,7 +33,7 @@
 	3 & The system checks whether the maximum number of Power Plants has been met. \\ \hline
 	4 & The system checks whether the player is able to afford the Power Line. \\ \hline
 	4.1 & The player is asked to either buy it or decline. \\ \hline
-	4.1.1 & The player taps 'OK'. Go to 4. \\ \hline
+	4.1.1 & The player taps 'OK'. Go to 5. \\ \hline
 	4.1.2 & The player taps 'Cancel'. Go to 9. \\ \hline
 	5 & The player chooses the Power Plant to build from by tapping it. \\ \hline
 	6 & The player drags a line from the Power Plant to the building to serve. \\ \hline
@@ -42,8 +43,10 @@
 	Exceptions: & \\ \hline
 	3.1 & The maximun number of Power Plants has been met. A message will be displayed. \\ \hline
 	4.2 & The player is not able to afford the Power Line. A message is displayed. \\ \hline
-	5.1 & The player does not tap a Power Plant ... \\ \hline
-	6.1 & The player does not drag the Power Line to a building ... \\ \hline
+	5.1 & The player does not tap a Power Plant. Sound notification. Go to 5. \\ \hline
+	6.1 & The player does not drag the Power Line to a building. Sound notification. Go to 4. \\ \hline
+	6.2 & The Power Plant does not have the power to serve this building. Display message to player. Go to 9. \\ \hline
+	6.3 & The building is already served by a Power Plant. Display message to player. Go to 9. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -53,14 +56,15 @@
 	Preconditions: & User has initiated a game. There exists a damaged Power Line on the map. \\ \hline
 	Flow of events: & \\ \hline
 	1 & The player taps the damaged Power Line. \\ \hline
-	2 & The system asks whether the player wants to fix the Power Line. \\ \hline
-	2.1 & The player taps 'OK'. Go to 3. \\ \hline
+	2 & The system asks whether the player wants to 'Remove' or 'Repair' the Power Line, or 'Cancel'. \\ \hline
+	2.1 & The player taps 'Repair'. Go to 3. \\ \hline
 	2.2 & The player taps 'Cancel'. Go to 4. \\ \hline
 	3 & The system checks whether the player is able to afford the repair cost. \\ \hline
 	3.1 & The player can afford the repair cost and the damaged Power Line is replaced by a new. \\ \hline
 	4 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
-	3.2 & The player cannot afford the repair cost. A message is displayed. \\ \hline
+	1.1 & The player does not tap a damaged Power Line. Notification Sound. Go to 1. \\ \hline
+	3.2 & The player cannot afford the repair cost. A message is displayed. Go to 4 \\ \hline
 \end{tabular}
 
 %Koster penger?
@@ -71,9 +75,16 @@
 	Preconditions: & User has initiated a game. A Power Plant is ready to be upgraded. \\ \hline
 	Flow of events: & \\ \hline
 	1 & The player taps the Power Plant ready to be updated. \\ \hline
-	2 & The system incerases the amount of power the Power Plant is able to supply. \\ \hline
-	3 & End scenario. \\ \hline
+	2 & The system displays an information box belonging to the given Power Plant. \\ \hline
+	3 & The player taps 'Upgrade' in the information box. \\ \hline
+	4 & The system asks whether the player wants to Upgrade the Power Plant \\ \hline
+	4.1 & The player taps 'Upgrade'. Go to 5. \\ \hline
+	4.2 & The player taps 'Cancel'. Go to 7. \\ \hline
+	5 & The system checks whether the player is able to afford the Upgrade. \\ \hline
+	6 & The system incerases the amount of power the Power Plant is able to supply. \\ \hline
+	7 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
+	4.1 & The player is not able to afford the Upgrade. A message is displayed. Go to 7 \\ \hline 
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -95,9 +106,13 @@
 	Actors: & Player \\ \hline
 	Preconditions: & A game has been initiated. \\ \hline
 	Flow of events: & \\ \hline
-	1 & The player taps the Pause button. \\ \hline
+	1 & The player pauses the game. \\ \hline
+	1.1 & The player taps the Pause button. \\ \hline
+	1.2 & The player leaves the game. \\ \hline
 	2 & The system saves the state of the game, \\ \hline
-	3 & The player taps the Resume button. \\ \hline
+	3 & The player resumes the game. \\ \hline
+	3.1 & The player taps the 'Resume' button \\ \hline
+	3.2 & The player taps 'Load Game' from Game Menu \\ \hline
 	4 & The system returns to the saved game. \\ \hline
 	5 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
@@ -111,12 +126,14 @@
 	Preconditions: & A game has been initiated. There exists a Power Line on the game map. \\ \hline
 	Flow of events: & \\ \hline
 	1 & The player taps the Power Line he wants to remove. \\ \hline
-	2 & The system asks whether the player wants to remove the Power Line \\ \hline
-	2.1 & The player taps 'OK'. Go to 3. \\ \hline
-	2.2 & The player taps 'Cancel'. Go to 4. \\ \hline
-	3 & The system removes the Power Line. \\ \hline
-	4 & End scenario. \\ \hline
+	2 & The system asks whether the player wants to 'Remove' or 'Repair' the Power Line, or 'Cancel' \\ \hline
+	3.1 & The player taps 'Remove'. Go to 4. \\ \hline
+	3.2 & The player taps 'Cancel'. Go to 6. \\ \hline
+	4 & The system checks whether the playe is able to afford to remove the Power Line \\ \hline
+	5 & The system removes the Power Line. \\ \hline
+	6 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
+	4.1 The player can not afford to remove the Power Line. Display message. Go to 6. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -130,61 +147,44 @@
 	3 & The player taps 'OK' when he is done. \\ \hline
 	4 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
+	1.1 The building is ready to pay for the power. The player must collect money before information is shown. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
 	\hline
-	{\bf Scenario \#9:} & {\bf User gets a new high score.} \\ \hline
+	{\bf Scenario \#9:} & {\bf Building is not served with power.} \\ \hline
 	Actors: & Player \\ \hline
-	Preconditions: & A game has been initiated. \\ \hline
+	Preconditions: & A game has been initiated. At least one house is not connected to a Power Plant. \\ \hline
 	Flow of events: & \\ \hline
+	1 & The house's timer starts going. \\ \hline
+	1.2 & The player does not connect the house to a Power Plant. Go to 2. \\ \hline
+	1.2 & The player connects the house to a Power Plant. The timer stops and is set to 0. Go to XXX \\ \hline
+	2 & The player's healthbar decreases.
+	2.1 & 
+	3 & The timer reaches a certain point where the building is removed.
 	Exceptions: & \\ \hline
+	
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
 	\hline
-	{\bf Scenario \#10:} & {\bf User reaches a new level.} \\ \hline
-	Actors: & Player \\ \hline
-	Preconditions: & A game has been initiated. \\ \hline
-	Flow of events: & \\ \hline
-	Exceptions: & \\ \hline
-\end{tabular}
-
-\begin{tabular}{| l | p{10cm} |}
-	\hline
-	{\bf Scenario \#11:} & {\bf Game Over.} \\ \hline
-	Actors: & bla \\ \hline
-	Preconditions: & bla \\ \hline
-	Flow of events: & bla \\ \hline
-	Exceptions: \\ \hline
-\end{tabular}
-
-\begin{tabular}{| l | p{10cm} |}
-	\hline
-	{\bf Scenario \#12:} & {\bf Building is not served with power.} \\ \hline
-	Actors: & bla \\ \hline
-	Preconditions: & bla \\ \hline
-	Flow of events: & bla \\ \hline
-	Exceptions: \\ \hline
-\end{tabular}
-
-% Må samkjøres med 'info om bygning'
-\begin{tabular}{| l | p{10cm} |}
-	\hline
-	{\bf Scenario \#13:} & {\bf Collect money from building.} \\ \hline
+	{\bf Scenario \#10:} & {\bf Collect money from building.} \\ \hline
 	Actors: & Player \\ \hline
 	Preconditions: & The game has been initiated. There exists a building on the map. The building is ready to pay for the power. \\ \hline
 	Flow of events: & \\ \hline
 	1 & The system shows that the building is ready to pay for the power. \\ \hline
 	2 & The player taps the building he wants to collect money from. \\ \hline
-	3 & the sytems updates the players money. \\ \hline
-	4 & End scenario. \\ \hline
+	3 & The sytems updates the players money. \\ \hline
+	4 & The system checks whether the player has reached the goal. \\ \hline
+	4.1 & The player has reached the goal and is sent to the next level. \\ \hline
+	4.2 & The player has not reached the goal. Go to 5. \\ \hline
+	5 & End scenario. \\ \hline
 	Exceptions: \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
 	\hline
-	{\bf Scenario \#14:} & {\bf blablablabla} \\ \hline
+	{\bf Scenario \#11:} & {\bf blablablabla} \\ \hline
 	Actors: & bla \\ \hline
 	Preconditions: & bla \\ \hline
 	Flow of events: & bla \\ \hline
