@@ -156,13 +156,15 @@
 	Flow of events: & \\ \hline
 	1 & The house's timer starts going. \\ \hline
 	1.2 & The player does not connect the house to a Power Plant. Go to 2. \\ \hline
-	1.2 & The player connects the house to a Power Plant. The timer stops and is set to 0. Go to 4 \\ \hline
-	2 & The player's healthbar decreases. \\ \hline
-	2.1 & \\ \hline
-	3 & The timer reaches a certain point where the building is removed. \\ \hline
-	4 & End scenario. \\ \hline
-	Exceptions: & \\ \hline
-	
+	1.2 & The player connects the house to a Power Plant. The timer stops and is set to 0. Go to 5 \\ \hline
+	2 & The timer reaches a certain point \\ \hline
+	3 & The building is removed. \\ \hline
+	4 & The player's Healthbar decreases with a certain amount. \\ \hline
+	4.1 & The system checks whether the Healthbar is below 0. \\ \hline
+	4.1.1 & The Healthbar is not below 0. Go to 5 \\ \hline
+	4.1.2 & The Healthbar is below zero. Game Over. \\ \hline
+	5 & End scenario. \\ \hline
+	Exceptions: & \\ \hline	
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -176,16 +178,7 @@
 	3 & The sytems updates the players money. \\ \hline
 	4 & The system checks whether the player has reached the goal. \\ \hline
 	4.1 & The player has reached the goal and is sent to the next level. \\ \hline
-	4.2 & The player has not reached the goal. Go to 5. \\ \hline
+	4.2 & The player has not reached the goal. \\ \hline
 	5 & End scenario. \\ \hline
-	Exceptions: \\ \hline
-\end{tabular}
-
-\begin{tabular}{| l | p{10cm} |}
-	\hline
-	{\bf Scenario \#11:} & {\bf blablablabla} \\ \hline
-	Actors: & bla \\ \hline
-	Preconditions: & bla \\ \hline
-	Flow of events: & bla \\ \hline
-	Exceptions: \\ \hline
+	Exceptions: & \\ \hline
 \end{tabular}
