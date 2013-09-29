@@ -1,6 +1,5 @@
 \subsection{Userstories}
 
-
 \begin{tabular}{| l | p{10cm} |}
 	\hline
 	{\bf Scenario \#1:} & {\bf Add new Power Plant.} \\ \hline
@@ -118,7 +117,6 @@
 	Exceptions: & \\ \hline
 \end{tabular}
 
-% Må samkjøres med repair power line ang. hva som skjer når man trykker på kabelen.
 \begin{tabular}{| l | p{10cm} |}
 	\hline
 	{\bf Scenario \#7:} & {\bf Remove Power Line} \\ \hline
@@ -133,7 +131,7 @@
 	5 & The system removes the Power Line. \\ \hline
 	6 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
-	4.1 The player can not afford to remove the Power Line. Display message. Go to 6. \\ \hline
+	4.1 & The player can not afford to remove the Power Line. Display message. Go to 6. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -147,7 +145,7 @@
 	3 & The player taps 'OK' when he is done. \\ \hline
 	4 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
-	1.1 The building is ready to pay for the power. The player must collect money before information is shown. \\ \hline
+	1.1 & The building is ready to pay for the power. The player must collect money before information is shown. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -158,10 +156,11 @@
 	Flow of events: & \\ \hline
 	1 & The house's timer starts going. \\ \hline
 	1.2 & The player does not connect the house to a Power Plant. Go to 2. \\ \hline
-	1.2 & The player connects the house to a Power Plant. The timer stops and is set to 0. Go to XXX \\ \hline
-	2 & The player's healthbar decreases.
-	2.1 & 
-	3 & The timer reaches a certain point where the building is removed.
+	1.2 & The player connects the house to a Power Plant. The timer stops and is set to 0. Go to 4 \\ \hline
+	2 & The player's healthbar decreases. \\ \hline
+	2.1 & \\ \hline
+	3 & The timer reaches a certain point where the building is removed. \\ \hline
+	4 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
 	
 \end{tabular}
