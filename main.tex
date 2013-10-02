@@ -10,6 +10,17 @@
 \usepackage{hyperref} % Support for hyperlinks
 \usepackage[protrusion=true,expansion=true]{microtype} % Improve justification
 \usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+
+\restylefloat{table}
+
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -94,5 +105,8 @@
 \section{Templates and standards}
 \input{templateAndStandards/templates}
 \input{templateAndStandards/standards}
+
+\newpage
+\input{references.tex}
 
 \end{document}
