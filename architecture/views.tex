@@ -37,10 +37,12 @@ The third layer is where the game is implemented using the MVC pattern and Backb
 the implementation.
 
 
-\subsubsection{Development View} % describes the static organization of the software in its development environment, programmers, software management
-The development view is separated into hierarchically into layers. The Game Assets layer contains 
-singleton objects with assets like images and preallocated objects. The game logic layer is where 
-the game itself runs. The PhoneGap layer is a cross platform layer which allows our code to run on 
-different devices. The final layer is the Platform specific SDK.
+\subsubsection{Development View}
+The development view is separated into hierarchically into layers. The first layer is the game state 
+and logic layer. The Models store the current state of the game which gets updated by the game loop 
+and input from the player. The second layer decides how the game state is to be presented to the 
+player, this layer also receives user input from layer three which updates the game state. The third 
+layer is the HTML code which handles the layout of the user interface and sends user input to the
+second layer.
 
 \includegraphics[width=\textwidth]{pictures/development_view}

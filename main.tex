@@ -1,8 +1,9 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{lscape}   % Make a page in landscape format \begin{landscape}
-\usepackage{xcolor, colortbl} % To color table cells
-\usepackage{color}    % Able to change textcolor
+\usepackage{colortbl} % To color table cells
+\usepackage{color} % Able to change textcolor
+\usepackage[table]{xcolor}
 \usepackage{longtable}
 \usepackage{graphicx} % Able to add pictures
 \usepackage{parskip}  % Separate paragraphs with a blank line
@@ -24,7 +25,6 @@
 
 \begin{document}
 \pagenumbering{gobble}
-
 
 %\input{section/#section name}
 \input{frontpage.tex}
@@ -93,6 +93,7 @@
 \input{architecture/patterns}
 \clearpage
 \input{architecture/views}
+\clearpage
 \input{architecture/rationale}
 
 \newpage
