@@ -1,13 +1,10 @@
 \subsection{Functional requirements}
 
-
-\definecolor{Gray}{rgb}{0.7, 0.7, 0.7}
-\definecolor{Black}{rgb}{0.22, 0.22, 0.22}
-
-\begin{longtable}{| c | p{8cm} | c | c |}
+\begin{longtable}{| p{1.5cm} | p{8cm} | p{1.5cm} | p{2cm} |}
 \hline
+\rowcolor{gray} 
 \bf{ID} & \bf{Requirement} & \bf{Priority} & \bf{Complexity} \\ \hline
-\multicolumn{4}{| l |}{1) Basic functionality} \\ \hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{1) Basic functionality} \\ \hline
    FR1.1 & The user should be able to read game instructions from the main menu & H & L \\ \hline
 
    FR1.2 & The user should be able to exit the game at any time, and the game state should 
@@ -27,7 +24,7 @@
 
    FR1.8 & The user should be able to turn on/off the background music & L & L \\ \hline
 
-\multicolumn{4}{| l |}{2) Building and Upgrade} \\ \hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{2) Building and Upgrade} \\ \hline
 
    FR2.1 & Buildings should appear around the map at arbitrary intervals and locations & C & H \\ \hline
 
@@ -48,8 +45,9 @@
    FR2.8 & The player should only be allowed to build a level-specific number of power plants. & M & L \\ \hline
 
    FR2.9 & The user should be able to see information about buildings when tapping on them. & M & M \\ \hline
-
-\multicolumn{4}{| l |}{3) Obstacles} \\ \hline
+\pagebreak
+\hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{3) Obstacles} \\ \hline
 
    FR3.1 & Arbitrary power lines may be damaged throughout the game & M & M \\ \hline
 
@@ -59,7 +57,7 @@
    FR3.3 & FR3.3 There should be several types of buildings on the map, with different power 
    requirements & M & H \\ \hline
 
-   FR3.4 Different types of building should reward different amounts of money & 
+   FR3.4 & Different types of building should reward different amounts of money & 
    M & H \\ \hline
 
    FR3.5 & The user should be informed about new obstacles & M & M \\ \hline
@@ -67,7 +65,7 @@
    FR3.6 & The user should be able to see that a building has gone without power 
    for some time, and is affecting the player's health score & C & M \\ \hline
 
-\multicolumn{4}{| l |}{4) Level specific} \\ \hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{4) Level specific} \\ \hline
 
    FR4.1 & The user should be able to continue to the next level when the goal is reached & H & L \\ \hline
 
@@ -83,14 +81,15 @@
 
    FR4.6 & As the user reaches higher levels the map size may increase & L & H \\ \hline
 
-\multicolumn{4}{| l |}{5) Incoming/outgoing money:} \\ \hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{5) Incoming/outgoing money:} \\ \hline
 
    FR5.1 & The user should be able to collect money from the buildings connected to the power plant & H & L \\ \hline
 
    FR5.2 & When connecting buildings through power cables, there should be a cost which is proportional 
    to the length of the cable. & H & L \\ \hline
-
-\multicolumn{4}{| l |}{6) GUI} \\ \hline
+\pagebreak
+\hline
+\multicolumn{4}{|>{\columncolor[gray]{.8}}l|}{6) GUI} \\ \hline
 
    FR6.1 & The user should be able to see a small part of the game map. & C & L \\ \hline
 
