@@ -1,19 +1,18 @@
 \subsection{Architectural Tactics}
-In this section we will list the most important quality attributes as 
-well as plan the tactis to ensure that we maintain the quality.
+In this section we will list the most important quality attributes as well as plan the tactis to 
+ensure that we maintain the quality.
 
 {\bf What is architectural tactics? }
 Architectual tactics are design decisions that influence the control of a quality attribute reponse. 
-Each tactic is a design option for the architect. [http://www.ece.ubc.ca/~matei/EECE417/BASS/ch05lev1sec1.html]
+Each tactic is a design option for the architect.
 
 \subsubsection{Modifiability}
 To achieve good modifiability for our code, we will use well known patterns, like MVP and create 
 independent modules. We will make sure each module only has one task and that each module works 
-largely independent from the other modules in the game in order to achieve high cohesion and 
-loose coupling. Loose coupling makes it possible to understand each module without reading the
-other and enables changes to one class without affecting others. High cohesion makes it easier
-to understand what each module does. This let's us minimize the "ripple effect" and increases
-modifiability.
+largely independent from the other modules in the game in order to achieve high cohesion and loose 
+coupling. Loose coupling enables changes to one class without affecting others. High cohesion makes 
+it easier to understand what each module does. This let's us minimize the "ripple effect" and 
+increases modifiability.
 
 \subsubsection{Performance}
 The most critical resource for the performance of this project is CPU power. JavaScript is not very 
