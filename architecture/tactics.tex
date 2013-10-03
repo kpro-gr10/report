@@ -1,20 +1,21 @@
 \subsection{Architectural Tactics}
-
-In this section we will list the most inportant quality attributes as 
+In this section we will list the most important quality attributes as 
 well as plan the tactis to ensure that we maintain the quality.
 
 {\bf What is a Quality attribute? }
 
 {\bf What is architectural tactics? }
-
+Architectual tactics are design decisions that influence the control of a quality attribute reponse. 
+Each tactic is a design option for the architect. [http://www.ece.ubc.ca/~matei/EECE417/BASS/ch05lev1sec1.html]
 
 \subsubsection{Modifiability}
-
-
+To achieve good modifiability for our code, we will use well known patterns, like MVC and create largely 
+independent modules, so that changes to one part of the system has minimal effects on other parts of the 
+system. The MVC pattern helps us achieve this goal. 
 
 \subsubsection{Performance}
-
-\subsubsection{Usability}
-
-\subsubsection{Testability}
-
+The most critical resource for the performance of this project is CPU power. JavaScript is not very efficient, 
+so making the code efficient is very important. A tactic we will be using to achieve this is to controll the 
+event sampling frequency. A typical event is a change to the game state which requires the game to be repainted. 
+By only repainting the game at fixed intervals, and only repainting when a notable change has occured, we can 
+improve the performance of the code.
