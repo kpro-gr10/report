@@ -7,6 +7,8 @@ Performance testing PER-XX
 Usability testing USA-XX
 User acceptance testing ACC-XX
 
+Functional test
+
 \begin{table}[H]
 \centering
 	\begin{tabular}{ l | l }
@@ -31,14 +33,18 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Game Instructions \\ 
+		Name & Main Menu \\ 
 		Test Id & INT-01 \\ 
-		Feature to be tested & That it is possible to read game instructions from the main menu. \\ 
-		Requirement & FR1.1 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-		Result & \\ 		
+		Feature to be tested & That the buttons in the main menu directs to the correct pages. \\ 
+		Requirement & FR1.1, ?Highscore?, ?Start Game? \\ 
+		Pre-conditions & App is started. \\ 
+		Steps of Execution & 1. Tap the 'New Game' button. \\
+		& 2. Tap the 'Instructions' button. \\
+		& 3. Tap the 'Highscore' button. \\
+		Expected result & 1. A new game is started. \\
+		& 2. The page showing the game instructions is shown. \\
+		& 3. The page showing the high score is shown. \\
+		Result & \\
 	\end{tabular}
 	\caption{Integration test 1}
 \end{table}
@@ -50,11 +56,13 @@ User acceptance testing ACC-XX
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Exit Game \\ 
 		Test Id & INT-02 \\ 
-		Feature to be tested & Test that it is possible to exit the game, and when loading the game from main menu one returns to the game and it has been paused. \\ 
+		Feature to be tested & Test that the game is paused when exiting the game. \\ 
 		Requirement & FR1.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. \\ 
+		Steps of Execution & 1. Leave the game by tapping the home button on the phone. \\
+		& 2. Open the game app. \\
+		& 3. Tap 'Load Game'. \\
+		Expected result & 3. The game is paused at the point where it was left. \\ 
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 2}
@@ -67,13 +75,13 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Appearance of buildings  \\ 
+		Name & Appearance of buildings \\ 
 		Test Id & INT-03 \\ 
 		Feature to be tested & That buildings appear around the map at arbitrary intervals and locations. \\ 
 		Requirement & FR2.1 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. \\ 
+		Steps of Execution & 1. Observe that buildings appear around the map at arbitrary intervals and locations.\\ 
+		Expected result & 1. Buildings appear around the map at arbitrary intervals and locations at a satisfying rate.\\ 
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 3}
@@ -84,13 +92,23 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Build power plants \\ 
+		Name & Build Power Plants \\ 
 		Test Id & INT-04 \\ 
-		Feature to be tested & That it is possible to buy and place power stations on the game map. \\ 
+		Feature to be tested & That it is possible to buy and place power plants on the game map. \\ 
 		Requirement & FR2.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant. \\
+		Steps of Execution & 1. Drag the build menu into view. \\ 
+		& 2. Tap the power plant icon. \\
+		& 3. Tap somewhere on the map where a power plant can not be placed e.g. a building. \\
+		& 4. Tap an emty area on the map. \\
+		& 5. Tap 'OK'. \\
+		& 6. Repeat, but tap 'Cancel'. \\
+		Expected result & 2.1 If player has enough money the game is set to building mode. \\
+		& 2.2 If player does not have enough money, information is displayed. \\
+		& 3. Nothing happens. \\ 
+		& 4. The player is aksed to either buy or cancel. \\
+		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. \\
+		& 6. Leave building mode. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 4}
@@ -103,8 +121,8 @@ User acceptance testing ACC-XX
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Build power cables \\ 
 		Test Id & INT-05\\ 
-		Feature to be tested &  That it is possible to buy and place power cables on the game map. \\ 
-		Requirement & FR2.3 \\ 
+		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. Proportional COST!! \\ 
+		Requirement & FR2.3, FR2.4, FR5.3 \\ 
 		Pre-conditions & \\ 
 		Steps of Execution & \\ 
 		Expected result & \\ 
@@ -118,53 +136,24 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Power cable connection \\ 
-		Test Id & INT-06\\ 
-		Feature to be tested & That it is possible to connect the buildings and the powerplants through power cables. \\ 
-		Requirement & FR2.4 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-		Result & \\ 
-	\end{tabular}
-	\caption{Integration test 6}
-\end{table}
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & Upgrade power plant\\ 
+		Name & Upgrade Power Plant\\ 
 		Test Id & INT-07 \\ 
 		Feature to be tested & That it is possible to upgrade a power plant. \\ 
-		Requirement & FR2.5 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Requirement & FR2.5, FR6.3 \\ 
+		Pre-conditions & A game has been started. First the player does not have enough money. Subsequently the player does have enough money. \\ 
+		Steps of Execution & 1. Tap a power plant. \\ 
+		& 2. Choose 'Upgrade Power Plant'. \\
+		& 3. Choose "Upgrade" from the pop up. \\
+		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
+		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
+		& 3. When not having enough money the system gives accordant feedback. \\
+		& 3. When having enough money the system upgrades the power plant. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 7}
 \end{table}
 
 \subsubsection{Obstacles}
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & \\ 
-		Test Id & INT-08 \\ 
-		Feature to be tested & \\ 
-		Requirement & \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-		Result & \\ 
-	\end{tabular}
-	\caption{Integration test 8}
-\end{table}
 
 \subsubsection{Level}
 
@@ -190,38 +179,23 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Game Over \\ 
+		Name & Health Score and Game Over \\ 
 		Test Id & INT-10 \\ 
 		Feature to be tested & That the game is over when the health score reaches zero. \\ 
-		Requirement & FR4.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Requirement & FR3.6, FR4.2, FR4.3 \\ 
+		Pre-conditions & A game has been started.\\ 
+		Steps of Execution & 1. Let several buildings not get power. \\ 
+		& 2. Let the health score decrease to zero. \\
+		& 3. Tap "Start new game". \\
+		& 4. Tap "Back to main menu". \\
+		Expected result & 1. The health score is decreasing and houses not supplied are red. \\
+		& 2. The "Game Over" page is displayed. \\
+		& 3. A new game is started. \\
+		& 4. The main menu page is displayed. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 10}
 \end{table}
-
-
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & Health Score \\ 
-		Test Id & INT-11 \\ 
-		Feature to be tested & Test that when an existing building is not supplied with power, the health score decreases \\ 
-		Requirement & FR4.3 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-		Result & \\ 
-	\end{tabular}
-	\caption{Integration test 11}
-\end{table}
-
-\subsubsection{Incoming/Outgoing money}
 
 \begin{table}[H]
 \centering
@@ -232,29 +206,13 @@ User acceptance testing ACC-XX
 		Test Id & INT-12 \\ 
 		Feature to be tested & That it is possible to collect money from buildings connected to the power plants at regular intervals. \\
 		Requirement & FR5.1 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. A building is ready to pay for power. \\ 
+		Steps of Execution & 1. Tap the building. \\ 
+		Expected result & 0. The building has a collect money sign. \\
+		& 1. The players money is updated and the sign disappears. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 12}
-\end{table}
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & \\ 
-		Test Id & INT-13 \\ 
-		Feature to be tested & \\ 
-		Requirement & \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-		Result & \\ 
-	\end{tabular}
-	\caption{Integration test 13}
 \end{table}
 
 \subsubsection{GUI}
@@ -264,13 +222,15 @@ User acceptance testing ACC-XX
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Map and navigation\\ 
+		Name & Map navigation \\ 
 		Test Id & INT-14 \\ 
 		Feature to be tested & That user should be able to see a small part of the game map and be able to navigate around it.\\ 
 		Requirement & FR6.1 and FR6.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. \\ 
+		Steps of Execution & 1. Drag a finger over the screen. \\
+		& 2. Try to navigate outside the game map. \\
+		Expected result & 1. The screen will move across the map in the opposite direction of the finger.\\ 
+		& 2. Nothing happens. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 14}
@@ -283,12 +243,40 @@ User acceptance testing ACC-XX
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Zooming \\ 
 		Test Id & INT-15 \\ 
-		Feature to be tested & The shifting between zoomed-out and zoomed-in screens \\ 
+		Feature to be tested & The shifting between zoomed-out and zoomed-in screens. \\ 
 		Requirement & FR6.4 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & A game has been started. \\ 
+		Steps of Execution & 1. Double tap the screen in zoomed-in mode.\\ 
+		& 2. Double tap the screen in zoomed-out mode. \\
+		Expected result & 1. The screen will show the whole game map. \\
+		& 2. The game will show the part of the game map where the player tapped the screen. \\
 		Result & \\ 
 	\end{tabular}
 	\caption{Integration test 15}
 \end{table}
+
+\subsubsection{Other}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Tilting \\ 
+		Test Id & INT-16 \\ 
+		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
+		Requirement & ??? \\ 
+		Pre-conditions & The app is started. \\ 
+		Steps of Execution & 1. Tilt the phone. \\ 
+		Expected result & The screen picture stays in place. \\ 
+		Result & \\ 
+	\end{tabular}
+	\caption{Integration test 16}
+\end{table}
+
+
+TODO:
+
+Sjekk samsvar med user stories
+Legg inn i Sprint
+Sjekk med AgileZen
