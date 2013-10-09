@@ -30,6 +30,7 @@
 \begin{tabular}{| p{1cm} | p{8cm} | p{3cm} |}
 	\hline
 	ID & Description & Estimate \\ \hline
+	FR2.1 & Buildings should appear around the map at arbitrary intervals and locations. & comment \\ \hline
 	FR6.1 & The user should be able to see a small part of the game map. & commment \\ \hline
 	FR6.2 & The user should be able to navigate around the map using the touch function on the phone & commment \\ \hline
 	FR6.4 & The user should be able to view all of the map by double tapping the screen; double tapping a point on the complete map should zoom in on that area. & commment \\
@@ -84,15 +85,18 @@ handles input events from the HTML objects.
 
 There has been minimal testing in the first sprint. Much time has been spent getting to know the programming tools to be used and the focus has been on creating a base for further programming as well as something more visual to show the customer, as opposed to planning tests to be executed. The testing that has been carried out has been manual testing as well as debugging using Android Debug Monitor. The manual testing has been carried out in parallell with programming using an actual Android phone as well as Android Virtual Device. Android Virtual Device is an emulator configuration that lets one model an actual device by defining hardware and software options to be emulated. This approach has been sufficient for the first sprint, but as the amount of code grows and more logic is added there will be need for more proper testing, such as unit-, integration- and usability testing. More planned out tests will take place in the next and following sprints. The manual tests executed can be found in table XXX.
 
-\begin{tabular}{| l | p{2.5cm} | p{3cm} | p{3.5cm} | p{2.5cm} |}
+
+The functional tests executed in this sprint were as follows:
+
+\definecolor{lightgray}{gray}{0.9}
+
+\begin{tabular}{| l | l | l |}
 	\hline
-	{\bf ID} & {\bf Description} & {\bf Action} & {\bf Expected results} & {\bf Result} \\ \hline
-	
-	01 & Navigate around the map. & Navigate around the map by dragging one finger across the screen. & Move across the map in the opposite direction of where the finger was dragged. & As expected \\ \hline
-	
-	02 & Zoom in and out. & Double tap the zoomed in and zoomed out screens. & The zoomed in screen to zoom out and vice versa. & When zooming in, the screen does not zoom to the excact position where the screen was tapped. \\ \hline
-	
-	03 & Observe that buildings appear around the map. & Observe. & Buildings appear. & Buildings appeared. \\ \hline
+	\rowcolor{lightgray}
+	{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+	FT-01 Map navigation & & \\ \hline
+  	FT-02 Appearance of buildings & & \\ \hline
+	FT-03 Zooming & & \\ \hline
 \end{tabular}
 
 \subsection{Problems during the sprint:}
