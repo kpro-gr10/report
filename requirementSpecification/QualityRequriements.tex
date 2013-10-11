@@ -1,16 +1,14 @@
 \subsection{Quality Requirements}
 
-In this section we will describe the quality requirements for the game and
-will briefly describe all requirements under each quality requirement.
-Each requirement will be described with a quality attribute scenario that looks like this:
+This section describes the quality requirements for the game and will briefly describe all requirements under each quality requirement. Each requirement will be described with a quality attribute scenario that looks like this:
 
 \begin{itemize}
 	\item {\bf Source of stimulus:} Human, computer, or other actor that generates the stimulus
-	\item {\bf Stimulus:} condition that needs to be considered when it arrives at a system
-	\item {\bf Environment:} the stimulus occurs within certain conditions
-	\item {\bf Artifact:} some artifact is stimulated 
-	\item {\bf Response:} the activity undertaken after the arrival of the stimulus
-	\item {\bf Response measure:} when the response occur, it should be measured in some fashion so that the requirement can be tested.
+	\item {\bf Stimulus:} Condition that needs to be considered when it arrives at a system
+	\item {\bf Environment:} The stimulus occurs within certain conditions
+	\item {\bf Artifact:} Some artifact is stimulated 
+	\item {\bf Response:} The activity undertaken after the arrival of the stimulus
+	\item {\bf Response measure:} When the response occur, it should be measured in some fashion so that the requirement can be tested.
 \end{itemize}
 
 \begin{figure}[!hr]
@@ -19,10 +17,7 @@ Each requirement will be described with a quality attribute scenario that looks 
 
 {\bf What is a quality attribute?:}
 
-{\bf Priority of quality attributes:} It is not possible to meet all quality requirements because some 
-decisions will affect the other. This will result in a priority of the quality attributes that we need 
-to meet and some others that are not that important. We have picked two main quality attributes: 
-modifiability and performance.
+{\bf Priority of quality attributes:} It is not possible to meet all quality requirements because some decisions will affect others. This will result in a priority of the quality attributes that we need to meet and some that are less important. We have picked two main quality attributes: Modifiability and performance.
 
 \begin{itemize}
 	\item {\bf Primary quality attribute: } Modifiability
@@ -37,45 +32,42 @@ When is the change made and who makes it (the environment)?
 Once a change has been specified, the new implementation must be designed, 
 implemented, tested, and deployed. All of these actions take time and money, both of which can be measured.
 Helgelandskraft (the customer) wanted the possibility for further development on the game. The developers
-have to keep in mind that the game are developed in a such way that the customer can continue
+have to keep in mind that the game is developed in a such way that the customer can continue
 the development after the delivery. If the game is made in a way that changes are hard to implement, 
 the customer would need to use a lot of resources in sense of time and money, and that is the main 
 reason for this to be the primary quality attribute.
 
 Changes the customer might want to add to the game is more buildings and more obstacles to take
-the game to a more complex state. We have therefore added good models so it would be easy for 
+the game to a more complex state. Good models have therefore been added so that it will be easy for 
 the customer to make further development on this part.
 
 \subsubsection*{M1: Add new elements}
-In our game we have specified a small set of elements like powerplants, houses, powerlines, etc.
-In order to have the oppertunity to add new buildings we have made a model for each element
-with specific attributes. When e developer wants to add more elements, he/she can use the model
-we have made and easily add the wanted parameters. 
+In the game a small set of elements like powerplants, houses, powerlines, etc. has been specified.
+In order to have the oppertunity to add new buildings a model for each element with specific attributes has been made. When a developer wants to add more elements, he or she can use these models and easily add the wanted parameters. 
 
 \begin{tabular}{| l | l |}
 	\hline
 	{\bf Portion of scenario} & {\bf Values} \\ \hline
 	Source of stimulus & Developer\\ \hline
-	Stimulus & add new elements to the game\\ \hline
-	Environment & design time \\ \hline
-	Artifact &  code \\ \hline
-	Response & modification is made with no side effects\\ \hline
+	Stimulus & Add new elements to the game\\ \hline
+	Environment & Design time \\ \hline
+	Artifact & Code \\ \hline
+	Response & Modification is made with no side effects\\ \hline
 	Response Measure & 1 hour\\ \hline
 \end{tabular}
 
 \subsubsection* {M2: Increase game difficulty}
-If the game is made to easy for the user it is possible for the developer to just ajust the
-parameters in the models. The difficulty of the game is based on the parameters
-in the models. 
+If the game is made to easy for the user it is possible for the developer to adjust the
+parameters in the models. The difficulty of the game is based on these parameters.
 
 \begin{tabular}{| l | l |}
 	\hline
 	{\bf Portion of scenario} & {\bf Values} \\ \hline
 	Source of stimulus & Developer\\ \hline
-	Stimulus & modify the difficulty in the game\\ \hline
-	Environment & design time \\ \hline
-	Artifact & code \\ \hline
-	Response & modification is made with no side effects\\ \hline
+	Stimulus & Modify the difficulty in the game\\ \hline
+	Environment & Design time \\ \hline
+	Artifact & Code \\ \hline
+	Response & Modification is made with no side effects\\ \hline
 	Response Measure & 1 hour\\ \hline
 \end{tabular}
 
@@ -98,15 +90,10 @@ that part of the display at the beginning of the next game update.
 \end{tabular}
 
 \subsubsection{Other Quality attributes}
-\subsubsection*{Usability: } the group do not have the main focus on this quality attribute, 
-but since this is a game that is supposed to be played by a varaity of people, it
-have to be considered to make the game easy to use. In the game we have added a 
-instruction in the main menu so the user can get help to get started.
+\subsubsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.
 
-\subsubsection*{Testability: } since the game are made as a prototype, we have focused on have
+\subsubsection*{Testability: } Since the game is made as a prototype, the focus has been on having
 test on the main functionality so the customer can run test under further developing.
-In order to have test, we need to write testable code.
+In order to have test, testable code needs to be written.
 
-\subsubsection*{Compitability: } the game has to run on a different kind of platforms. we
-have chosen to develop on a cross-platform framwork so it it easier to adapt to 
-new platforms.
+\subsubsection*{Compitability: } The game has to run on different kinds of platforms. A cross-platform framwork has been chosen for development to make it it easier to adapt to new platforms.
