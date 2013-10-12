@@ -130,7 +130,7 @@ Below is the template for the test cases.
 		Name & Main Menu \\ 
 		Test Id & FT-04 \\ 
 		Feature to be tested & That the buttons in the main menu directs to the correct pages. \\ 
-		Requirement & FR1.1, ?Highscore?, ?Start Game? \\ 
+		Requirement & FR1.1, FR6.7 ?Highscore?, ?Start Game? \\ 
 		Pre-conditions & FT-01 \\ 
 		Steps of Execution & 1. Tap the 'New Game' button. \\
 		& 2. Tap the 'Instructions' button. \\
@@ -150,7 +150,7 @@ Below is the template for the test cases.
 		Name & Build Power Plants \\ 
 		Test Id & FT-05 \\ 
 		Feature to be tested & That it is possible to buy and place power plants on the game map. \\ 
-		Requirement & FR2.2 \\ 
+		Requirement & FR2.2, FR6.8 \\ 
 		Pre-conditions & FT-01. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant. \\
 		Steps of Execution & 1. Drag the build menu into view. \\ 
 		& 2. Tap the power plant icon. \\
@@ -176,7 +176,7 @@ Below is the template for the test cases.
 		Name & Build Power Lines \\ 
 		Test Id & FT-06 \\ 
 		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. Proportional COST!! \\ 
-		Requirement & FR2.3, FR2.4, FR5.3 \\ 
+		Requirement & FR2.3, FR5.2, FR6.8 \\ 
 		Pre-conditions & FT-01 \\ 
 		Steps of Execution & \\ 
 		Expected result & \\ 
@@ -224,7 +224,7 @@ Below is the template for the test cases.
 		Name & Upgrade Power Plant\\ 
 		Test Id & FT-07 \\ 
 		Feature to be tested & That it is possible to upgrade a power plant. \\ 
-		Requirement & FR2.5, FR6.3 \\ 
+		Requirement & FR2.4, FR5.3(?), FR6.3 \\ 
 		Pre-conditions & First the player does not have enough money. Subsequently the player does have enough money. \\ 
 		Steps of Execution & 1. Tap a power plant. \\ 
 		& 2. Choose 'Upgrade Power Plant'. \\
@@ -258,10 +258,10 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Health Score and Game Over \\ 
+		Name & Game Over \\ 
 		Test Id & FT-10 \\ 
 		Feature to be tested & That the game is over when the health score reaches zero. \\ 
-		Requirement & FR3.6, FR4.2, FR4.3 \\ 
+		Requirement & FR4.2 \\ 
 		Pre-conditions & \\ 
 		Steps of Execution & 1. Let several buildings not get power. \\ 
 		& 2. Let the health score decrease to zero. \\
@@ -298,15 +298,64 @@ Below is the template for the test cases.
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Tilting \\ 
-		Test Id & FT-16 \\ 
+		Test Id & FT-13 \\ 
 		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
-		Requirement & ??? \\ 
+		Requirement & FR1.12 \\ 
 		Pre-conditions & \\ 
 		Steps of Execution & 1. Tilt the phone. \\ 
 		Expected result & The screen picture stays in place. \\ 
 	\end{tabular}
+	\caption{Functional test 13}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Building Mode \\ 
+		Test Id & FT.14 \\ 
+		Feature to be tested & That the game is set in "Building Mode" when building power plants or power cables. \\ 
+		Requirement & FR6.9 \\ 
+		Pre-conditions &  \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 14}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & No Power and Health Bar \\ 
+		Test Id & FT.15 \\ 
+		Feature to be tested & \\ 
+		Requirement & FR3.6, FR6.10 \\ 
+		Pre-conditions &  \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 15}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Information on Building \\ 
+		Test Id & FT-16 \\ 
+		Feature to be tested &  \\ 
+		Requirement & FR2.8 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & \\ 
+		Expected result & \\ 
+	\end{tabular}
 	\caption{Functional test 16}
 \end{table}
+
 
 \subsection{Test Plan Schedule}
 
