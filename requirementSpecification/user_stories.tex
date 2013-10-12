@@ -1,38 +1,29 @@
 \subsection{Userstories}
 
-This section will focus on the user stories in the game. Each story will be 
-desribed as a scenario. All the scenarios have a certain number of attributes:
-actors, preconditions, flow of events and exceptions.
-Before describing the flow of events, you need to know who is involved in the 
-scenario (the actors) and what preconditions that needs to be fullfilled before
-the scenario can take place. 
-In the flow of events, it will be described step by step the actions that can be
-carried out and where in the flow you jump if you perform a action.
-If any step in the flow of events can occur, it is described in the buttom of each
-table. This is events that can occur, but it is not a consistent part of the flow. \\
+This section will focus on the user stories in the game. Each story will be desribed as a scenario. All the scenarios have a certain number of attributes: Actors, preconditions, flow of events and exceptions. Before describing the flow of events, one needs to know who is involved in the scenario (the actors) and what preconditions that needs to be fullfilled in order for the scenario to take place. In the flow of events, the actions will be described step by step. If a step in the flow of events can occur, but is not a consistent part of the flow, it is described in the bottom of each table.\\
 
 \definecolor{lightgray}{gray}{0.6}
 
 \begin{tabular}{| l | p{10cm} |}
 	\hline
 	\rowcolor{lightgray}
-	{\bf Scenario \#1:} & {\bf Add new Power Plant.} \\ \hline
+	{\bf Scenario \#1:} & {\bf Build Power Plant.} \\ \hline
 	Actors: & Player \\ \hline
 	Preconditions: & User has initiated a game. \\ \hline
 	Flow of events: &  \\ \hline
-	1 & The player drags the buy menu into view. \\ \hline
+	1 & The player drags the build menu into view. \\ \hline
 	2 & The player taps the Power Plant button. \\ \hline
 	3 & The system checks whether or not the player is able to afford the Power Plant. \\ \hline
-	3.1 & The player is able to afford the Power Plant and is asked to either buy it or decline. \\ \hline
-	3.1.1 & The player taps 'OK'. Go to 4. \\ \hline
-	3.1.2 & The player taps 'Cancel'. Go to 7. \\ \hline
-	4 & The player chooses where to place the Power Plant by tapping the spot on the map where he wants it. \\ \hline
-	5 & The system places a Power Plant at det given spot. \\ \hline
-	6 & The system reduces the amount of money the player has by the cost of the Power Plant. \\ \hline
-	7 & End scenario. \\ \hline
+	4 & The player chooses where to place the Power Plant by tapping the spot on the map where he or she wants it. \\ \hline
+	5 & The player is asked to either buy it or decline. \\ \hline
+	5.1 & The player taps 'OK'. Go to 6. \\ \hline
+	5.2 & The player taps 'Cancel'. Go to 8. \\ \hline
+	6 & The system places a Power Plant at det given spot. \\ \hline
+	7 & The system reduces the amount of money the player has by the cost of the Power Plant. \\ \hline
+	8 & End scenario. \\ \hline
 	Exceptions: & \\ \hline
 	3.2 & The player is not able to afford the Power Plant. A message is displayed, to let the player know. \\ \hline
-	4.1 & The player taps a spot where a building or Power Line is already placed. Sound notification. Go to 4. \\ \hline
+	4.1 & The player taps a spot where a building, a Power Line or another Power Plant is already placed. Sound notification. Go to 4. \\ \hline
 \end{tabular}
 
 \begin{tabular}{| l | p{10cm} |}
@@ -42,7 +33,7 @@ table. This is events that can occur, but it is not a consistent part of the flo
 	Actors: & Player \\ \hline
 	Preconditions: & User has initiated a game. There exists at least one Power Plant and at least on building on the map. \\ \hline
 	Flow of events: & \\ \hline
-	1 & The player drags the buy menu into view. \\ \hline
+	1 & The player drags the build menu into view. \\ \hline
 	2 & The player taps the Power Line button. \\ \hline
 	3 & The system checks whether the maximum number of Power Plants has been met. \\ \hline
 	4 & The system checks whether the player is able to afford the Power Line. \\ \hline
