@@ -1,32 +1,36 @@
 \section{Sprint 1}
 \definecolor{gray}{gray}{0.6}
+
 \subsection{Sprint Planning}
 	In this sprint the group were planning on a small delivery. This is because we need a lot of time to get started with the development and get to know the framework Backbone. The delivery in this sprint delivery will include a graphical map with zooming functionality. To get started on implementing the other functional requirements, it requires that we have the map to put them on. 
 	In order to start with the other parts of the game, it require that the group have defined and implemented all the elements in the game like building, power plants, power lines, etc.
 
 	To be able to keep up the testing activity in the upcoming sprints, we will try to get started with unit tests. This will probably take some time since testing is a new concept to many in the group as well as Jasmine is a new framework for all in the group. 
 
-\subsubsection{Duration and worklaod}
+\subsection{Duration and worklaod}
 	When the group had the firs meeting, we agreed to have sprints lasting for 2 weeks.
 	After the 10days into the first sprint, the group realised that goal was not reachable.
 	The group decided to change the first sprint duration to 3 weeks instead of 2 weeks. \\
-	{\bf Duration:} 09.09 - 29.09 \\
+
+	{\bf Duration:} 09.09 - 29.09 (3 weeks)\\
 	{\bf Workload:} This is the list with hours spent (the whole grup) on the project in this sprint.
 	\begin{itemize}
 		\item {\bf Planning:} 11 hours
 		\item {\bf Development:} 94,5 hours
-		\item {\bf Design:} 15 hours
+		\item {\bf Design:} 14 hours
 		\item {\bf Documentation (report):} 40,5 hours
+		\item {\bf Testing:} 1 hour
 	\end{itemize}
 	{\bf Total workload: } 161 hours \\
+	
 	The group's goal was to work at least 20-25 hours pr/person every week. We did not manage this at this sprint, but we had a avrage of 13,5 hours/week (161 hours/4 persons/3 weeks = 13.5 hours). 
 	In section 'problems during the sprint', we have written what have happend during this sprint.
 	Many of the scenarios from that section affected the workload on the group. 
 
-\subsubsection{Expected results}
+\subsection{Expected sprint results}
 
 
-\subsubsection{Sprint backlog}
+\subsection{Sprint backlog}
 \begin{tabular}{| p{1cm} | p{8cm} | p{3cm} |}
 	\hline
 	\rowcolor{gray}
@@ -40,47 +44,47 @@
 
 \subsection{Implementation}
 
-\subsubsection{Models}
+\subsubsection*{Models}
 We have been using Backbone to implement the game models in this project. In Sprint 1 we have implemented 
 the following models to store game data.
-\subsubsection*{Building}
-The building model stores information about the buildings location on the game map as well as a reference 
-to the image that should be drawn on the map.
-\subsubsection*{Level}
-This model contains the map and player object. It is this object's job to handle the logic responsible for 
-updating the state of the game models.
-\subsubsection*{Map}
-The map model has two main functions. The first is to hold a Backbone Collection with all the buildings 
-that are placed on the map. The second is to maintain which part of the map that should be painted.
-\subsubsection*{Player} 
-The player model stores how many lives the player has and how much money the player has available to them.
+	\subsubsection*{Building}
+	The building model stores information about the buildings location on the game map as well as a reference 
+	to the image that should be drawn on the map.
+	\subsubsection*{Level}
+	This model contains the map and player object. It is this object's job to handle the logic responsible for 
+	updating the state of the game models.
+	\subsubsection*{Map}
+	The map model has two main functions. The first is to hold a Backbone Collection with all the buildings 
+	that are placed on the map. The second is to maintain which part of the map that should be painted.
+	\subsubsection*{Player} 
+	The player model stores how many lives the player has and how much money the player has available to them.
 
-\subsubsection{Presenters}
-Backbone Presenters are the JavaScript objects that connects the Backbone Models to the visual HTML code. 
-They listen to changes to the Backbone Models and changes the HTML objects accordingly. The Presenters also 
-handles input events from the HTML objects.
-\subsubsection*{Menu Screen}
+\subsubsection*{Presenters}
+	Backbone Presenters are the JavaScript objects that connects the Backbone Models to the visual HTML code. 
+	They listen to changes to the Backbone Models and changes the HTML objects accordingly. The Presenters also 
+	handles input events from the HTML objects.
+	\subsubsection*{Menu Screen}
 
-\subsubsection*{Game Screen}
-\subsubsection*{Instruction screen}
-\subsubsection*{Highscore screen}
+	\subsubsection*{Game Screen}
+	\subsubsection*{Instruction screen}
+	\subsubsection*{Highscore screen}
 
-\begin{figure}[!ht]
-\centering
-\subfigure{
-	\includegraphics[scale=0.2]{pictures/game_screenshot_2}
-}
-\subfigure{
-	\includegraphics[scale=0.2]{pictures/game_screenshot_1}
-}
-\end{figure}
+	\begin{figure}[!ht]
+	\centering
+	\subfigure{
+		\includegraphics[scale=0.2]{pictures/game_screenshot_2}
+	}
+	\subfigure{
+		\includegraphics[scale=0.2]{pictures/game_screenshot_1}
+	}
+	\end{figure}
 
-\subsubsection{Game Logic}
-\subsubsection*{Place buildings on map}
+\subsubsection*{Game Logic}
+	\subsubsection*{Place buildings on map}
 
-\subsubsection{Other Implementations}
-\subsubsection*{Rendering}
-\subsubsection*{Game Loop}
+\subsubsection*{Other Implementations}
+	\subsubsection*{Rendering}
+	\subsubsection*{Game Loop}
 
 \subsection{Testing}
 
@@ -100,7 +104,7 @@ The functional tests executed in this sprint were as follows:
 	FT-03 Zooming & & \\ \hline
 \end{tabular}
 
-\subsection{Problems during the sprint:}
+\subsection{Group dynamics}
 In the start of this sprint we had a major problem that many of the group members was ill or 
 that many members didn't have the time to contribute to the project. This is one of the risk factors 
 that we have listed in the risk analysis. 
@@ -128,4 +132,7 @@ since we are still quite inexperienced with javascript, mobile development and t
 	This is the feeback from the customers and the feedback from us to the customers (good/bad/what could be better?)
 
 \subsection{Sprint retrospective}
-	After every sprint we will talk about what we can do better, what to keep and what new to indtroduce to the working process.
+	\subsubsection*{}
+	\subsubsection*{}
+	\subsubsection*{}
+	\subsubsection*{}
