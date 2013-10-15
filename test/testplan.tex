@@ -1,51 +1,3 @@
-
-intro
-
-meets the requirements that guided its design and development,
-works as expected,
-can be implemented with the same characteristics,
-and satisfies the needs of stakeholders
-
-\subsection{Test Methods}
-
-\paragraph{Black box testing}
-
-Black box testing examines that the functionality of the application works according to the requirements. To carry out a black box test knowledge of internal structure of the application is not neccessary. Knowledge of what the application is supposed to do is required, but no how it does it. Hence the software is viewed as a black box, where you can not see the inside, but where input is tested against output to see if the application acts as expected. The strong point of black box testing is detecting unimplemented parts of the specification or missing requirements.
-
-\paragraph{White box testing}
-
-White box testing on the other hand examines the internal structure of the application. In the case of white box testing the tester needs knowledge of \emph{how} the application does what it is supposed to do as well as knowledge about programming. The strong point of white box testing is its ability to uncover errors or problems, and were they are located. Black box testing can detect errors as well, but it can be harder to locate the origin of the errors.
-
-\begin{description}
-  \item[Unit Test] The first item
-  \item[Integration Test] The second item
-  \item[System Test] The third etc
-  \item[Usability Test]
-  \item[Acceptance Test]
-\end{description}
-
-
-\subsection{Testing Approach}
-
-\subsubsection{What will be tested}
-
-Unit testing is a very important part of every software development project. If a unit test fails it is relatively easy to detect the error, and they can be detected early in process. If, or rather when, code is changed, the impact the change has on other parts of the code can easily be determined through unit testing. Due to the limited resources
-the group possesses in both time and people, unit tests will only be written if there is time. 
-
-The main focus will lie on functionality testing. Functionality testing is a type of black box testing and it will be performed on an iPhone and an Android phone running the game app.
-
-Usability testing will also be an imortant part of the project, considering that if users find the app diffucult to use or hard to understand, they can well decide not to use it, as there are thousands of other games out there.
-
-A user acceptance test will be performed at the end of the project to let the customer test the final product and
-approve or disapprove it.
-
-\subsubsection{What will not be tested}
-
-
-Integration testing: Because the application does not use servers or databases, an integration test would be superfluous. Testing of the application as a whole will be done through the various functional tests.
-
-Performance testing: Tests if the system working according to the performance demands from the customer. YESNO??????
-
 \subsection{Test Case Overview}
 
 Test cases have been developed for the testing of the fuction of the application. Each test case has been given an identification FT-XX, where FT stands for Functional Test and XX is the number of the test.
@@ -61,7 +13,7 @@ Below is the template for the test cases.
 		Test Id & Identifier of the test \\ 
 		Feature to be tested & States the functionality to be tested \\ 
 		Requirement & The corresponding requirements that are tested \\ 
-		Pre-conditions & Conditions that are fulfilled and can be assumed is working before the test is executed. \\ 
+		Pre-conditions & Conditions that are fulfilled and can be assumed is working before the test is executed. The pre-conditions of a given pre-condition are also expected to be fulfilled. \\ 
 		Steps of Execution & The steps of how the test is to be carried out. \\ 
 		Expected result & The expected outcomes of the steps carried out above. \\ 
 	\end{tabular}
@@ -75,7 +27,7 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Map navigation \\ 
+		Name & Map and Navigation \\ 
 		Test Id & FT-01 \\ 
 		Feature to be tested & That user should be able to see a small part of the game map and be able to navigate around it.\\ 
 		Requirement & FR6.1 and FR6.2 \\ 
@@ -117,7 +69,7 @@ Below is the template for the test cases.
 		Steps of Execution & 1. Double tap the screen in zoomed-in mode.\\ 
 		& 2. Double tap the screen in zoomed-out mode. \\
 		Expected result & 1. The screen will show the whole game map. \\
-		& 2. The game will show the part of the game map where the player tapped the screen. \\
+		& 2. The screen will show the part of the game map where the player tapped the screen. \\
 	\end{tabular}
 	\caption{Functional test 3}
 \end{table}
@@ -177,62 +129,27 @@ Below is the template for the test cases.
 		Test Id & FT-06 \\ 
 		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. Proportional COST!! \\ 
 		Requirement & FR2.3, FR5.2, FR6.8 \\ 
-		Pre-conditions & FT-01 \\ 
+		Pre-conditions & FT-02, FT-05. \\ 
 		Steps of Execution & \\ 
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 6}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{table}[H]
 \centering
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Exit Game \\ 
-		Test Id & FT-02 \\ 
-		Feature to be tested & Test that the game is paused when exiting the game. \\ 
-		Requirement & FR1.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & 1. Leave the game by tapping the home button on the phone. \\
-		& 2. Open the game app. \\
-		& 3. Tap 'Load Game'. \\
-		Expected result & 3. The game is paused at the point where it was left. \\  
-	\end{tabular}
-	\caption{Functional test 2}
-\end{table}
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & Upgrade Power Plant\\ 
+		Name & Information on Buildings and Power Plants \\ 
 		Test Id & FT-07 \\ 
-		Feature to be tested & That it is possible to upgrade a power plant. \\ 
-		Requirement & FR2.4, FR5.3, FR6.3 \\ 
-		Pre-conditions & First the player does not have enough money. Subsequently the player does have enough money. \\ 
-		Steps of Execution & 1. Tap a power plant. \\ 
-		& 2. Choose 'Upgrade Power Plant'. \\
-		& 3. Choose "Upgrade" from the pop up. \\
-		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
-		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
-		& 3. When not having enough money the system gives accordant feedback. \\
-		& 3. When having enough money the system upgrades the power plant. \\
+		Feature to be tested & That information specific to the building appears when tapping them. \\ 
+		Requirement & FR2.8 \\ 
+		Pre-conditions & FT-02, FT-05. \\ 
+		Steps of Execution & 1. Tap a building. \\
+		& 2. Tap a Power Plant that has not been upgraded. \\
+		& 3. Tap an upgraded Power Plant. \\
+		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 7}
 \end{table}
@@ -242,13 +159,43 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Enter next level \\ 
+		Name & Upgrade Power Plant\\ 
+		Test Id & FT-08 \\ 
+		Feature to be tested & That it is possible to upgrade a power plant. \\ 
+		Requirement & FR2.4, FR5.3, FR6.3 \\ 
+		Pre-conditions & FT-07. First the player does not have enough money. Subsequently the player does have enough money. \\ 
+		Steps of Execution & 1. Tap a power plant. \\ 
+		& 2. Choose 'Upgrade Power Plant'. \\
+		& 3. Choose "Upgrade" from the pop up. \\
+		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
+		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
+		& 3. When not having enough money the system gives accordant feedback. \\
+		& 3. When having enough money the system reduces the players amount of money by the cost of the power plant, and upgrades the power plant. \\
+	\end{tabular}
+	\caption{Functional test 8}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Building Mode \\ 
 		Test Id & FT-09 \\ 
-		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
-		Requirement & FR4.1 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Feature to be tested & That the game is set in "Building Mode" when building power plants or power cables. \\ 
+		Requirement & FR6.9 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & 1. Drag the build menu into view. \\ 
+		& 2. Tap the Power Plant. \\
+		& 3. Tap an emty location on the screen. \\
+		& 4. Tap 'Cancel'. \\
+		& 5. Tap the Power Cable. \\
+		& 6. Tap an emty location on the screen. \\
+		& 7. Tap 'Cancel'. \\
+		Expected result & 2. Building Mode is avtivated. \\ 
+		& 4. Building Mode is ended. \\
+		& 5. Building Mode is activated. \\
+		& 7. Building Mode is ended. \\
 	\end{tabular}
 	\caption{Functional test 9}
 \end{table}
@@ -258,19 +205,13 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Game Over \\ 
+		Name & Tilting \\ 
 		Test Id & FT-10 \\ 
-		Feature to be tested & That the game is over when the health score reaches zero. \\ 
-		Requirement & FR4.2 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & 1. Let several buildings not get power. \\ 
-		& 2. Let the health score decrease to zero. \\
-		& 3. Tap "Start new game". \\
-		& 4. Tap "Back to main menu". \\
-		Expected result & 1. The health score is decreasing and houses not supplied are red. \\
-		& 2. The "Game Over" page is displayed. \\
-		& 3. A new game is started. \\
-		& 4. The main menu page is displayed. \\
+		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
+		Requirement & FR1.12 \\ 
+		Pre-conditions & FT-01 \\ 
+		Steps of Execution & 1. Tilt the phone. \\ 
+		Expected result & The screen picture stays in place. \\ 
 	\end{tabular}
 	\caption{Functional test 10}
 \end{table}
@@ -281,13 +222,38 @@ Below is the template for the test cases.
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Collect money \\ 
+		Test Id & FT-11 \\ 
+		Feature to be tested & That it is possible to collect money from different buildings connected to the power plants at regular intervals. \\
+		Requirement & FR3.4, FR5.1 \\ 
+		Pre-conditions & FT-06. \\ 
+		Steps of Execution & 1. Buildings are ready to pay for their electricity. \\
+		& 2. Tap a certain type of building. \\ 
+		& 3. Repeat step 2 for all different buildings. \\
+		Expected result & 1. The building has a collect money sign. \\
+		& 2. The players money is updated and the sign disappears. \\
+		& 3. The buildings pay different amounts of money depending on their type. \\
+	\end{tabular}
+	\caption{Functional test 11}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & No Power and Health Bar \\ 
 		Test Id & FT-12 \\ 
-		Feature to be tested & That it is possible to collect money from buildings connected to the power plants at regular intervals. \\
-		Requirement & FR5.1 \\ 
-		Pre-conditions & A building is ready to pay for power. \\ 
-		Steps of Execution & 1. Tap the building. \\ 
-		Expected result & 0. The building has a collect money sign. \\
-		& 1. The players money is updated and the sign disappears. \\
+		Feature to be tested & That it is visible that a building has not been supplied with power for a while. And that eventually the house dissapears and the player's health score decreases. \\
+		Requirement & FR3.6, FR6.10 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution &  1. Observe a building that is not connected to a Power Plant. \\ 
+		& 2. Observe the building when the time limit has been reached. \\
+		& 3. Observe the Health Bar. \\
+		& 4. Connect an unconnected house to a power plant. \\
+		Expected result & 1 A bar placed next to the building slowly decreases. \\
+		& 2. The house disappears, when the bar is emty. \\
+		& 3. The Health Bar decreases by a certain amount. \\
+		& 4. The buildings bar disappears. \\
 	\end{tabular}
 	\caption{Functional test 12}
 \end{table}
@@ -297,13 +263,19 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Tilting \\ 
+		Name & Game Over \\ 
 		Test Id & FT-13 \\ 
-		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
-		Requirement & FR1.12 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & 1. Tilt the phone. \\ 
-		Expected result & The screen picture stays in place. \\ 
+		Feature to be tested & That the game is over when the health score reaches zero. \\ 
+		Requirement & FR4.2 \\ 
+		Pre-conditions & FT-13 \\ 
+		Steps of Execution & 1. Let several buildings not get power. \\ 
+		& 2. Let the health score decrease to zero. \\
+		& 3. Tap "Start new game". \\
+		& 4. Tap "Back to main menu". \\
+		Expected result & 1. The health score is decreasing and houses not supplied are red. \\
+		& 2. The "Game Over" page is displayed. \\
+		& 3. A new game is started. \\
+		& 4. The main menu page is displayed. \\
 	\end{tabular}
 	\caption{Functional test 13}
 \end{table}
@@ -313,12 +285,12 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Building Mode \\ 
-		Test Id & FT.14 \\ 
-		Feature to be tested & That the game is set in "Building Mode" when building power plants or power cables. \\ 
-		Requirement & FR6.9 \\ 
-		Pre-conditions &  \\ 
-		Steps of Execution &  \\ 
+		Name & Enter next level \\ 
+		Test Id & FT-14 \\ 
+		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
+		Requirement & FR4.1 \\ 
+		Pre-conditions & FT-11. \\ 
+		Steps of Execution & \\ 
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 14}
@@ -329,13 +301,15 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & No Power and Health Bar \\ 
-		Test Id & FT.15 \\ 
-		Feature to be tested & \\ 
-		Requirement & FR3.6, FR6.10 \\ 
-		Pre-conditions &  \\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Name & Exit Game \\ 
+		Test Id & FT-15 \\ 
+		Feature to be tested & Test that the game is paused when exiting the game. \\ 
+		Requirement & FR1.2 \\ 
+		Pre-conditions & FT-04. \\ 
+		Steps of Execution & 1. Leave the game by tapping the home button on the phone. \\
+		& 2. Open the game app. \\
+		& 3. Tap 'Load Game'. \\
+		Expected result & 3. The game is paused at the point where it was left. \\  
 	\end{tabular}
 	\caption{Functional test 15}
 \end{table}
@@ -345,47 +319,93 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Information on Building \\ 
+		Name & Limited Power \\ 
 		Test Id & FT-16 \\ 
-		Feature to be tested &  \\ 
-		Requirement & FR2.8 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution & \\ 
+		Feature to be tested & Test that the amount of power avaialbe to the player is limited, and the effects of upgrading. \\ 
+		Requirement & FR2.5 \\ 
+		Pre-conditions & FT-06, FT-08\\ 
+		Steps of Execution &  \\ 
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 16}
 \end{table}
 
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Remove Power Cables \\ 
+		Test Id & FT-17 \\ 
+		Feature to be tested & That it is possible to remove Power Cables from the map. \\ 
+		Requirement & FR2.6 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 17}
+\end{table}
 
-\subsection{Test Plan Schedule}
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Number of Power Plants \\ 
+		Test Id & FT-18 \\ 
+		Feature to be tested & That it is only possible to build a certain amount of Power Plants specific to the level. \\ 
+		Requirement & FR2.7 \\ 
+		Pre-conditions & FT-05, FT-14. \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 18}
+\end{table}
 
-This section outlines the schedule of which sprints the test cases were executed, as seen in table XX. Some of the tests were executed in several sprints. The schedule shows the first sprint in which the test was performed. The results of the tests are avaiable in the Test section of each sprint.
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Different Buildings \\ 
+		Test Id & FT-19 \\ 
+		Feature to be tested & That different buildings have different power requirements. \\ 
+		Requirement & FR3.3 \\ 
+		Pre-conditions & FT-06, FT-07\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 19}
+\end{table}
 
-\definecolor{lightgray}{gray}{0.9}
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & New level and appearance of buildings \\ 
+		Test Id & FT-20 \\ 
+		Feature to be tested & That new buildings appear more rapidly in higher levels. \\ 
+		Requirement & FR4.3 \\ 
+		Pre-conditions & FT-02, FT-14\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 20}
+\end{table}
 
-\begin{tabular}{| l | l | l |}
-	\hline
-	\rowcolor{lightgray}
-	{\bf Test Case} & {\bf Sprint} \\ \hline
-	FT-01 & \\ \hline
-	FT-02 & \\ \hline
-	FT-03 & \\ \hline
-	FT-04 & \\ \hline
-	FT-05 & \\ \hline
-	FT-06 & \\ \hline
-	FT-07 & \\ \hline
-	FT-08 & \\ \hline
-	FT-09 & \\ \hline
-	FT-10 & \\ \hline
-	FT-11 & \\ \hline
-	FT-12 & \\ \hline
-	FT-13 & \\ \hline
-	FT-14 & \\ \hline
-	FT-15 & \\ \hline
-	FT-16 & \\ \hline
-	FT-17 & \\ \hline
-	FT-18 & \\ \hline
-	FT-19 & \\ \hline
-	FT-20 & \\
-	\hline
-\end{tabular}
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & New Obstacles \\ 
+		Test Id & FT-XX \\ 
+		Feature to be tested & That the player is informed about new obstacles. \\ 
+		Requirement & FR3.5 \\ 
+		Pre-conditions & FT-20, ?MoreObstacles?\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test XX}
+\end{table}
