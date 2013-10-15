@@ -113,7 +113,7 @@ Below is the template for the test cases.
 		Expected result & 2.1 If player has enough money the game is set to building mode. \\
 		& 2.2 If player does not have enough money, information is displayed. \\
 		& 3. Nothing happens. \\ 
-		& 4. The player is aksed to either buy or cancel. \\
+		& 4. The player is asked to either buy or cancel. \\
 		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. \\
 		& 6. Leave building mode. \\
 	\end{tabular}
@@ -127,11 +127,23 @@ Below is the template for the test cases.
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Build Power Lines \\ 
 		Test Id & FT-06 \\ 
-		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. Proportional COST!! \\ 
+		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. \\ 
 		Requirement & FR2.3, FR5.2, FR6.8 \\ 
-		Pre-conditions & FT-02, FT-05. \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Pre-conditions & FT-02, FT-05. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant.\\ 
+		Steps of Execution & 1. Drag the build menu into view. \\
+		& 2. Tap the power cable icon. \\
+		& 3. Tap somewhere on the map where a power cable can not be placed. \\
+		& 4. Tap a Power Plant, then tap a building. \\
+		& 5. Observe the player's money bag. \\
+		& 6. Try to connect an already connected building to another power plant. \\
+		& 7. Connect a building and a power plant, and try to let the power cable cross another power cable. \\
+		Expected result & 2.1 If player has enough money the game is set to building mode. \\
+		& 2.2 If player does not have enough money, information is displayed. \\
+		& 3. Nothing happens. \\
+		& 4. The two are connected by a cable. \\
+		& 5. The power cable cost some amount of money proportional to the length. \\
+		& 6. Should not be allowed. \\
+		& 7. Should not be allowed. \\
 	\end{tabular}
 	\caption{Functional test 6}
 \end{table}
@@ -141,15 +153,18 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Information on Buildings and Power Plants \\ 
+		Name & Upgrade Power Plant\\ 
 		Test Id & FT-07 \\ 
-		Feature to be tested & That information specific to the building appears when tapping them. \\ 
-		Requirement & FR2.8 \\ 
-		Pre-conditions & FT-02, FT-05. \\ 
-		Steps of Execution & 1. Tap a building. \\
-		& 2. Tap a Power Plant that has not been upgraded. \\
-		& 3. Tap an upgraded Power Plant. \\
-		Expected result & \\ 
+		Feature to be tested & That it is possible to upgrade a power plant. \\ 
+		Requirement & FR2.4, FR5.3, FR6.3 \\ 
+		Pre-conditions & FT-05. First the player does not have enough money. Subsequently the player does have enough money. \\ 
+		Steps of Execution & 1. Tap a power plant. \\ 
+		& 2. Choose 'Upgrade Power Plant'. \\
+		& 3. Choose "Upgrade" from the pop up. \\
+		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
+		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
+		& 3. When not having enough money the system gives accordant feedback. \\
+		& 3. When having enough money the system reduces the players amount of money by the cost of the power plant, and upgrades the power plant. This is displayed on the power plant. \\
 	\end{tabular}
 	\caption{Functional test 7}
 \end{table}
@@ -159,18 +174,16 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Upgrade Power Plant\\ 
+		Name & Information on Buildings and Power Plants \\ 
 		Test Id & FT-08 \\ 
-		Feature to be tested & That it is possible to upgrade a power plant. \\ 
-		Requirement & FR2.4, FR5.3, FR6.3 \\ 
-		Pre-conditions & FT-07. First the player does not have enough money. Subsequently the player does have enough money. \\ 
-		Steps of Execution & 1. Tap a power plant. \\ 
-		& 2. Choose 'Upgrade Power Plant'. \\
-		& 3. Choose "Upgrade" from the pop up. \\
-		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
-		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
-		& 3. When not having enough money the system gives accordant feedback. \\
-		& 3. When having enough money the system reduces the players amount of money by the cost of the power plant, and upgrades the power plant. \\
+		Feature to be tested & That information specific to the building appears when tapping them. \\ 
+		Requirement & FR2.8 \\ 
+		Pre-conditions & FT-02, FT-05, FT-07. \\ 
+		Steps of Execution & 1. Tap different kinds of buildings. \\
+		& 2. Tap a Power Plant that has not been upgraded. \\
+		& 3. Tap an upgraded Power Plant. \\
+		Expected result & 1. Information on how much power the building needs is displayed. \\
+		& 2. Information on which level of upgrade the player can upgrade to is displayed as well as information on how much it costs and what it does for the power plant. \\
 	\end{tabular}
 	\caption{Functional test 8}
 \end{table}
@@ -253,7 +266,7 @@ Below is the template for the test cases.
 		Expected result & 1 A bar placed next to the building slowly decreases. \\
 		& 2. The house disappears, when the bar is emty. \\
 		& 3. The Health Bar decreases by a certain amount. \\
-		& 4. The buildings bar disappears. \\
+		& 4. The building's bar disappears. \\
 	\end{tabular}
 	\caption{Functional test 12}
 \end{table}
@@ -270,12 +283,12 @@ Below is the template for the test cases.
 		Pre-conditions & FT-13 \\ 
 		Steps of Execution & 1. Let several buildings not get power. \\ 
 		& 2. Let the health score decrease to zero. \\
-		& 3. Tap "Start new game". \\
-		& 4. Tap "Back to main menu". \\
-		Expected result & 1. The health score is decreasing and houses not supplied are red. \\
-		& 2. The "Game Over" page is displayed. \\
-		& 3. A new game is started. \\
-		& 4. The main menu page is displayed. \\
+		& 3. Tap 'OK'. \\
+		& 4. Tap 'New Game'. \\
+		Expected result & 1. The health score is decreasing as houses not supllied with power disappears. \\
+		& 2. The "Game Over" page is displayed, with an 'OK' button. \\
+		& 3. The main menu page is displayed. \\
+		& 4. A new game is started. \\
 	\end{tabular}
 	\caption{Functional test 13}
 \end{table}
@@ -324,8 +337,13 @@ Below is the template for the test cases.
 		Feature to be tested & Test that the amount of power avaialbe to the player is limited, and the effects of upgrading. \\ 
 		Requirement & FR2.5 \\ 
 		Pre-conditions & FT-06, FT-08\\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Connect a power plant and a building with a power cable. \\
+		& 2. Repeat step 1 for other buildings, using the same power plant, until and after the power bar is emty. \\
+		& 3. Upgrade the power plant. \\
+		& 5. Connect the power plant to another building. \\
+		Expected result & 2. The power plant is not able to serve more buildings and a splash screen will appear. \\ 
+		& 4. The power bar will gain more content and the power plant is now able to serve more power. \\
+		& 5. This is now possible, no error message appears. \\
 	\end{tabular}
 	\caption{Functional test 16}
 \end{table}
@@ -356,8 +374,10 @@ Below is the template for the test cases.
 		Feature to be tested & That it is only possible to build a certain amount of Power Plants specific to the level. \\ 
 		Requirement & FR2.7 \\ 
 		Pre-conditions & FT-05, FT-14. \\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Build a power plant. \\ 
+		& 2. Build power plants until the number of power plants reaches 0, and try beyond that. \\
+		Expected result & 1. The number on the power plant in the hud (Initially toatal number of power plant one can build.) decreases by one. \\
+		& 2. When the number reaches 0 and one tries to build another one, an error message is displayed. \\
 	\end{tabular}
 	\caption{Functional test 18}
 \end{table}
@@ -369,11 +389,13 @@ Below is the template for the test cases.
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Different Buildings \\ 
 		Test Id & FT-19 \\ 
-		Feature to be tested & That different buildings have different power requirements. \\ 
+		Feature to be tested & There are different buildings and they have different power requirements. \\ 
 		Requirement & FR3.3 \\ 
-		Pre-conditions & FT-06, FT-07\\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Pre-conditions & FT-06, FT-08 \\ 
+		Steps of Execution & 1. Connect a power plant to the smallest type of building. \\
+		& 2. Repeat for the five other types of buildings. \\
+		Expected result & 1. The power bar on the power station decreases by a small amount. \\
+		& 2. The bigger the building is the more the power bar decreases. \\
 	\end{tabular}
 	\caption{Functional test 19}
 \end{table}
@@ -399,13 +421,45 @@ Below is the template for the test cases.
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & New Obstacles \\ 
-		Test Id & FT-XX \\ 
-		Feature to be tested & That the player is informed about new obstacles. \\ 
-		Requirement & FR3.5 \\ 
-		Pre-conditions & FT-20, ?MoreObstacles?\\ 
+		Name & New level and more unstable power lines. \\ 
+		Test Id & FT-21 \\ 
+		Feature to be tested & That unstable power lines appear more rapidly in higher levels. \\ 
+		Requirement & FR4.4 \\ 
+		Pre-conditions & FT-06, FT-14\\ 
 		Steps of Execution &  \\ 
 		Expected result & \\ 
 	\end{tabular}
-	\caption{Functional test XX}
+	\caption{Functional test 21}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Damaged Power Lines \\ 
+		Test Id & FT-22 \\ 
+		Feature to be tested & That arbitrary power lines may be damaged and then fixed, throughout the game. \\ 
+		Requirement & FR3.1, FR3.2  \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & 1. \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 22}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & New Obstacles \\ 
+		Test Id & FT-23 \\ 
+		Feature to be tested & That the player is informed about new obstacles. \\ 
+		Requirement & FR3.5 \\ 
+		Pre-conditions & FT-01, FT-21, ?MoreObstacles?\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 23}
 \end{table}
