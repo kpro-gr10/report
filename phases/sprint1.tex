@@ -45,31 +45,34 @@
 \subsection{Implementation}
 
 \subsubsection*{Models}
-We have been using Backbone to implement the game models in this project. In Sprint 1 we have implemented 
-the following models to store game data.
-	\subsubsection*{Building}
-	The building model stores information about the buildings location on the game map as well as a reference 
-	to the image that should be drawn on the map.
-	\subsubsection*{Level}
-	This model contains the map and player object. It is this object's job to handle the logic responsible for 
-	updating the state of the game models.
-	\subsubsection*{Map}
-	The map model has two main functions. The first is to hold a Backbone Collection with all the buildings 
-	that are placed on the map. The second is to maintain which part of the map that should be painted.
-	\subsubsection*{Player} 
-	The player model stores how many lives the player has and how much money the player has available to them.
+	We have been using Backbone to implement the game models in this project. In Sprint 1 we have implemented 
+	the following models to store game data.
+	\begin{itemize}
+		\item {\bf Building}
+		The building model stores information about the buildings location on the game map as well as a reference 
+		to the image that should be drawn on the map.
+		\item {\bf Level}
+		This model contains the map and player object. It is this object's job to handle the logic responsible for 
+		updating the state of the game models.
+		\item {\bf Map}
+		The map model has two main functions. The first is to hold a Backbone Collection with all the buildings 
+		that are placed on the map. The second is to maintain which part of the map that should be painted.
+		\item {\bf Player} 
+		The player model stores how many lives the player has and how much money the player has available to them.
+	\end{itemize}
 
 \subsubsection*{Presenters}
-	Backbone Presenters are the JavaScript objects that connects the Backbone Models to the visual HTML code. 
-	They listen to changes to the Backbone Models and changes the HTML objects accordingly. The Presenters also 
-	handles input events from the HTML objects.
-	\subsubsection*{Menu Screen}
-
-	\subsubsection*{Game Screen}
-	\subsubsection*{Instruction screen}
-	\subsubsection*{Highscore screen}
-
-	\begin{figure}[!ht]
+	Backbone Presenters are the JavaScript objects that connects the Backbone Models 
+	to the visual HTML code. They listen to changes to the Backbone Models and changes 
+	the HTML objects accordingly. The Presenters also handles input events from the HTML objects.
+	
+	\begin{itemize}
+		\item {\bf Menu Screen}
+		\item {\bf Game Screen}
+		\item {\bf Instruction screen}
+		\item {\bf Highscore screen}
+	\end{itemize}
+	\begin{figure}[H]
 	\centering
 	\subfigure{
 		\includegraphics[scale=0.2]{pictures/game_screenshot_2}
@@ -79,19 +82,17 @@ the following models to store game data.
 	}
 	\end{figure}
 
-\subsubsection*{Game Logic}
-	\subsubsection*{Place buildings on map}
-
-\subsubsection*{Other Implementations}
-	\subsubsection*{Rendering}
-	\subsubsection*{Game Loop}
+	\subsubsection*{Other Implementations}
+		\begin{itemize}
+			\item {\bf Place buildings on map}
+			\item {\bf Rendering}
+			\item {\bf Game Loop}
+		\end{itemize}
 
 \subsection{Testing}
+	There has been minimal testing in the first sprint. Much time has been spent getting to know the programming tools to be used and the focus has been on creating a base for further programming as well as something more visual to show the customer, as opposed to planning tests to be executed. The testing that has been carried out has been manual testing as well as debugging using Android Debug Monitor. The manual testing has been carried out in parallell with programming using an actual Android phone as well as Android Virtual Device. Android Virtual Device is an emulator configuration that lets one model an actual device by defining hardware and software options to be emulated. This approach has been sufficient for the first sprint, but as the amount of code grows and more logic is added there will be need for more proper testing, such as unit-, integration- and usability testing. More planned out tests will take place in the next and following sprints. The manual tests executed can be found in table XXX.
 
-There has been minimal testing in the first sprint. Much time has been spent getting to know the programming tools to be used and the focus has been on creating a base for further programming as well as something more visual to show the customer, as opposed to planning tests to be executed. The testing that has been carried out has been manual testing as well as debugging using Android Debug Monitor. The manual testing has been carried out in parallell with programming using an actual Android phone as well as Android Virtual Device. Android Virtual Device is an emulator configuration that lets one model an actual device by defining hardware and software options to be emulated. This approach has been sufficient for the first sprint, but as the amount of code grows and more logic is added there will be need for more proper testing, such as unit-, integration- and usability testing. More planned out tests will take place in the next and following sprints. The manual tests executed can be found in table XXX.
-
-
-The functional tests executed in this sprint were as follows:
+	The functional tests executed in this sprint were as follows:
 
 \definecolor{lightgray}{gray}{0.9}
 
@@ -105,34 +106,53 @@ The functional tests executed in this sprint were as follows:
 \end{tabular}
 
 \subsection{Group dynamics}
-In the start of this sprint we had a major problem that many of the group members was ill or 
-that many members didn't have the time to contribute to the project. This is one of the risk factors 
-that we have listed in the risk analysis. 
-Apart form that, we had some problems with the group dynamics. The members in the group are 
-quite different and like to work in different ways. The main problem was that many of the group members
-have different experiences with this kind of group work, technology as well as we have 
-different personalities.
-We managed to solve this problem by sitting down and discussing the problem. We discovered that
-one of the main problems was that the role allocation and the responsability had not been present.
-After we allocated the roles with a specific responsability, many of our problems was solved and
-we have been able to work better as a group.
+	In the start of this sprint we had a major problem that many of the group members was ill or 
+	that many members didn't have the time to contribute to the project. 
+	This is one of the risk factors 
+	that we have listed in the risk analysis. 
+	Apart form that, we had some problems with the group dynamics. The members in the group are 
+	quite different and like to work in different ways. The main problem was 
+	that many of the group members
+	have different experiences with this kind of group work, technology as well as we have 
+	different personalities.
+	We managed to solve this problem by sitting down and discussing the problem. We discovered that
+	one of the main problems was that the role allocation and the responsability had not 
+	been present.
+	After we allocated the roles with a specific responsability, many of our problems was solved and
+	we have been able to work better as a group.
 
-Sprint 1 was the first phase in the project with implementation and coding. In the start, many in the group had
-some problems with setting up the development environment (specially on windows). We managed
-to solve this problem, but it affected the total implementation because the whole group couldn't 
-contribute as much as we hopeded. One solution was to go over from windows to ubuntu. 
-In the end of the sprint, everyone had a working development environment.
+	Sprint 1 was the first phase in the project with implementation and coding. In the start, 
+	many in the group had
+	some problems with setting up the development environment (specially on windows). We managed
+	to solve this problem, but it affected the total implementation because the whole group couldn't 
+	contribute as much as we hopeded. One solution was to go over from windows to ubuntu. 
+	In the end of the sprint, everyone had a working development environment.
 
-Since no members in the group have alot experience with the technology, it was sometimes hard
-to be able to do the implementations fast enough, or even know where to start. 
-Hopefully we will not have as much problems in the next sprints, but it is still a risk factor 
-since we are still quite inexperienced with javascript, mobile development and the framworks we use. 
+	Since no members in the group have alot experience with the technology, it was sometimes hard
+	to be able to do the implementations fast enough, or even know where to start. 
+	Hopefully we will not have as much problems in the next sprints, but it is still a risk factor 
+	since we are still quite inexperienced with javascript, mobile development and the framworks we use. 
 
 \subsection{Customer feedback}
-	This is the feeback from the customers and the feedback from us to the customers (good/bad/what could be better?)
+	In this sprint we did not get any feedback from the customer. We hope that the customer
+	will get more involved in the next sprint. In the next sprint the group would like to have
+	more feedback on the requirements. This is crutial because of the chosen working 
+	methodology.
 
 \subsection{Sprint retrospective}
-	\subsubsection*{}
-	\subsubsection*{}
-	\subsubsection*{}
-	\subsubsection*{}
+	\subsubsection*{Start doing: } 
+		\begin{itemize}
+			\item require that the customer will give us feedback on the
+			requirement specification in the next sprint.
+			\item when one from the scrum team start implementing on a new feature, 
+			it is a good practice to make a own branch in git for that. 
+			\item always pull regulary from the master branch when developing
+			on a own feature branch.
+			\item start talking more to the other group members. This is crutial 
+			for working together as a team.
+		\end{itemize}
+	\subsubsection*{Stop doing: } 
+		\begin{itemize}
+			\item stop coming late to the group appointments.
+		\end{itemize}
+	\subsubsection*{Continue doing: } 
