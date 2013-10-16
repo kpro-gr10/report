@@ -71,8 +71,10 @@
 		ID & Description & Estimate \\ \hline
 		FR1.1 & The user should be able to read game instructions from the main menu
 		& \\ \hline
+
+		FR1.12 & The user should not get the opportunity to tilt the screen by tilting the phone. & \\ \hline
 		
-		R2.2 & The user should be able to buy and place several power stations on the game map.
+		FR2.2 & The user should be able to buy and place several power stations on the game map.
 		& \\ \hline
 
 		FR2.3 & The user should be able to buy and place power cables on the map. &  \\ \hline
@@ -279,40 +281,51 @@
 \clearpage
 \subsection{Testing}
 
-	The functional tests executed in this sprint were as follows:
+	\subsubsection{Tests introduced in this sprint}
+
+	The functional tests executed in this sprint are listed here. The test cases can be found in chapter 7.4.
 
 	\definecolor{lightgray}{gray}{0.9}
 
-	\begin{tabular}{| p{2cm} | p{7cm} | p{2cm} |}
+	\begin{tabular}{| p{2cm} | p{7cm} | p{3cm} |}
+		\hline
+		\rowcolor{lightgray}
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
+	  	
+	  	FT-04 Main Menu & Works as expected. & Pass. \\ \hline
+
+		FT-05 Build Power Plants & It is still possible to build on top of other buildings, otherwise it works as expected. & Needs minor adjustment. Retest. \\ \hline
+
+		FT-06 Build Power Lines & Building power lines is currently free, it is possible to connect a building to several power plants, and Power lines may cross each other. Otherwise it works as expected. & Needs minor adjustments. Retest. \\ \hline
+
+		FT-07 Information on Buildings and Power Plants & No information on buildings yet. No information on what upgrade does for the Power Plant, but the rest of the information is there. Most of the logic is there. & Retest.\\ \hline
+
+		FT-08 Upgrade Power Plant & Upgrading a power plant cost money and changes the information on the power plant, but does not yet affect the amount the power plant can supply. This will be implemented at a later stage. & Pass. Retest. \\ \hline
+
+		FT-09 Building Mode & Works as expected & Pass. \\ \hline
+
+		FT-10 Tilting & Works as expected & Pass. \\ \hline
+
+		FT-11 Collect Money & Works as expected & Pass. \\ \hline
+
+		FT-12 No Power and Health Bar & Works as expected & Pass. \\ \hline
+
+		FT-13 Game Over & Works as expected. & Pass. \\ \hline
+
+	\end{tabular}
+
+	\subsubsection{Redone tests}
+
+	The following are the tests that has been executed again this sprint, because they did not pass last sprint:
+
+	\begin{tabular}{| p{2cm} | p{7cm} | p{3cm} |}
 		\hline
 		\rowcolor{lightgray}
 		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
-	  	FT-04 Main Menu & & \\ \hline
-		FT-05 Build Power Plants & & \\ \hline
-		FT-06 Build Power Lines & & \\ \hline
-		FT-07 Upgrade Power Plant & & \\ \hline
-		FT-10 Game Over & & \\ \hline
-		FT-12 Collect Money & & \\ \hline
-		FT-14 Building Mode & & \\ \hline
-		FT-15 No Power and Health Bar & & \\ \hline
-		FT-16 Information on building & & \\ \hline
+
+		FT-02 Appearance of buildings & Buildings appear at a more controlled rate and now has the ability to disappear. But they can appear on top of each other. & Needs some minor adjustments. Retest. \\ \hline
+
 	\end{tabular}
-
-	Redone Tests
-
-	\begin{tabular}{| p{2cm} | p{7cm} | p{2cm} |}
-		\hline
-		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
-		FT-02 Appearance of buildings (?) & & \\ \hline
-	  	FT-03 Zooming & \\ \hline
-	\end{tabular}
-
-
-
-	The test cases can be found in chapter XX.
-
-	+ Hvis tester fra Sprint 1 ble gjennomført på nytt, legg til.
 
 \subsection{Changes to the requirements}
 	In this sprint the group have made some changes. Since last sprint meeting, 
