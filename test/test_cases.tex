@@ -1,0 +1,507 @@
+\section{Test Cases}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Map and Navigation \\ 
+		Test Id & FT-01 \\ 
+		Feature to be tested & That user should be able to see a small part of the game map and be able to navigate around it.\\ 
+		Requirement & FR6.1 and FR6.2 \\ 
+		Pre-conditions & None \\ 
+		Steps of Execution & 1. Drag a finger over the screen. \\
+		& 2. Try to navigate outside the game map. \\
+		Expected result & 1. The screen will move across the map in the opposite direction of the finger.\\ 
+		& 2. Nothing happens. \\
+	\end{tabular}
+	\caption{Functional test 1}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Appearance of buildings \\ 
+		Test Id & FT-02 \\ 
+		Feature to be tested & That buildings appear around the map at arbitrary intervals and locations. \\ 
+		Requirement & FR2.1 \\ 
+		Pre-conditions & FT-01 \\ 
+		Steps of Execution & 1. Observe that buildings appear around the map at arbitrary intervals and locations.\\ 
+		Expected result & 1. Buildings appear around the map at arbitrary intervals and locations at a satisfying rate.\\ 
+	\end{tabular}
+	\caption{Functional test 2}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Zooming \\ 
+		Test Id & FT-03 \\ 
+		Feature to be tested & The shifting between zoomed-out and zoomed-in screens. \\ 
+		Requirement & FR6.4 \\ 
+		Pre-conditions & FT-01 \\ 
+		Steps of Execution & 1. Double tap the screen in zoomed-in mode.\\ 
+		& 2. Double tap the screen in zoomed-out mode. \\
+		Expected result & 1. The screen will show the whole game map. \\
+		& 2. The screen will show the part of the game map where the player tapped the screen. \\
+	\end{tabular}
+	\caption{Functional test 3}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Main Menu \\ 
+		Test Id & FT-04 \\ 
+		Feature to be tested & That the buttons in the main menu directs to the correct pages. \\ 
+		Requirement & FR1.1, FR6.7 ?Highscore?, ?Start Game? \\ 
+		Pre-conditions & FT-01 \\ 
+		Steps of Execution & 1. Tap the 'New Game' button. \\
+		& 2. Tap the 'Instructions' button. \\
+		& 3. Tap the 'Highscore' button. \\
+		Expected result & 1. A new game is started. \\
+		& 2. The page showing the game instructions is shown. \\
+		& 3. The page showing the high score is shown. \\
+	\end{tabular}
+	\caption{Functional test 4}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Build Power Plants \\ 
+		Test Id & FT-05 \\ 
+		Feature to be tested & That it is possible to buy and place power plants on the game map. \\ 
+		Requirement & FR2.2, FR6.8 \\ 
+		Pre-conditions & FT-01. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant. \\
+		Steps of Execution & 1. Drag the build menu into view. \\ 
+		& 2. Tap the power plant icon. \\
+		& 3. Tap somewhere on the map where a power plant can not be placed e.g. a building. \\
+		& 4. Tap an emty area on the map. \\
+		& 5. Tap 'OK'. \\
+		& 6. Repeat, but tap 'Cancel'. \\
+		Expected result & 2.1 If player has enough money the game is set to building mode. \\
+		& 2.2 If player does not have enough money, information is displayed. \\
+		& 3. Nothing happens. \\ 
+		& 4. The player is asked to either buy or cancel. \\
+		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. \\
+		& 6. Leave building mode. \\
+	\end{tabular}
+	\caption{Functional test 5}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Build Power Lines \\ 
+		Test Id & FT-06 \\ 
+		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. \\ 
+		Requirement & FR2.3, FR5.2, FR6.8 \\ 
+		Pre-conditions & FT-02, FT-05. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant.\\ 
+		Steps of Execution & 1. Drag the build menu into view. \\
+		& 2. Tap the power cable icon. \\
+		& 3. Tap somewhere on the map where a power cable can not be placed. \\
+		& 4. Tap a Power Plant, then tap a building. \\
+		& 5. Observe the player's money bag. \\
+		& 6. Try to connect an already connected building to another power plant. \\
+		& 7. Connect a building and a power plant, and try to let the power cable cross another power cable. \\
+		Expected result & 2.1 If player has enough money the game is set to building mode. \\
+		& 2.2 If player does not have enough money, information is displayed. \\
+		& 3. Nothing happens. \\
+		& 4. The two are connected by a cable. \\
+		& 5. The power cable cost some amount of money proportional to the length. \\
+		& 6. Should not be allowed. \\
+		& 7. Should not be allowed. \\
+	\end{tabular}
+	\caption{Functional test 6}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Upgrade Power Plant\\ 
+		Test Id & FT-07 \\ 
+		Feature to be tested & That it is possible to upgrade a power plant. \\ 
+		Requirement & FR2.4, FR5.3, FR6.3 \\ 
+		Pre-conditions & FT-05. First the player does not have enough money. Subsequently the player does have enough money. \\ 
+		Steps of Execution & 1. Tap a power plant. \\ 
+		& 2. Choose 'Upgrade Power Plant'. \\
+		& 3. Choose "Upgrade" from the pop up. \\
+		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
+		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
+		& 3. When not having enough money the system gives accordant feedback. \\
+		& 3. When having enough money the system reduces the players amount of money by the cost of the power plant, and upgrades the power plant. This is displayed on the power plant. \\
+	\end{tabular}
+	\caption{Functional test 7}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Information on Buildings and Power Plants \\ 
+		Test Id & FT-08 \\ 
+		Feature to be tested & That information specific to the building appears when tapping them. \\ 
+		Requirement & FR2.8 \\ 
+		Pre-conditions & FT-02, FT-05, FT-07. \\ 
+		Steps of Execution & 1. Tap different kinds of buildings. \\
+		& 2. Tap a Power Plant that has not been upgraded. \\
+		& 3. Tap an upgraded Power Plant. \\
+		Expected result & 1. Information on how much power the building needs is displayed. \\
+		& 2. Information on which level of upgrade the player can upgrade to is displayed as well as information on how much it costs and what it does for the power plant. \\
+	\end{tabular}
+	\caption{Functional test 8}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Building Mode \\ 
+		Test Id & FT-09 \\ 
+		Feature to be tested & That the game is set in "Building Mode" when building power plants or power cables. \\ 
+		Requirement & FR6.9 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & 1. Drag the build menu into view. \\ 
+		& 2. Tap the Power Plant. \\
+		& 3. Tap an emty location on the screen. \\
+		& 4. Tap 'Cancel'. \\
+		& 5. Tap the Power Cable. \\
+		& 6. Tap an emty location on the screen. \\
+		& 7. Tap 'Cancel'. \\
+		Expected result & 2. Building Mode is avtivated. \\ 
+		& 4. Building Mode is ended. \\
+		& 5. Building Mode is activated. \\
+		& 7. Building Mode is ended. \\
+	\end{tabular}
+	\caption{Functional test 9}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Tilting \\ 
+		Test Id & FT-10 \\ 
+		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
+		Requirement & FR1.12 \\ 
+		Pre-conditions & FT-01 \\ 
+		Steps of Execution & 1. Tilt the phone. \\ 
+		Expected result & The screen picture stays in place. \\ 
+	\end{tabular}
+	\caption{Functional test 10}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Collect money \\ 
+		Test Id & FT-11 \\ 
+		Feature to be tested & That it is possible to collect money from different buildings connected to the power plants at regular intervals. \\
+		Requirement & FR3.4, FR5.1 \\ 
+		Pre-conditions & FT-06. \\ 
+		Steps of Execution & 1. Buildings are ready to pay for their electricity. \\
+		& 2. Tap a certain type of building. \\ 
+		& 3. Repeat step 2 for all different buildings. \\
+		Expected result & 1. The building has a collect money sign. \\
+		& 2. The players money is updated and the sign disappears. \\
+		& 3. The buildings pay different amounts of money depending on their type. \\
+	\end{tabular}
+	\caption{Functional test 11}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & No Power and Health Bar \\ 
+		Test Id & FT-12 \\ 
+		Feature to be tested & That it is visible that a building has not been supplied with power for a while. And that eventually the house dissapears and the player's health score decreases. \\
+		Requirement & FR3.6, FR6.10 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution &  1. Observe a building that is not connected to a Power Plant. \\ 
+		& 2. Observe the building when the time limit has been reached. \\
+		& 3. Observe the Health Bar. \\
+		& 4. Connect an unconnected house to a power plant. \\
+		Expected result & 1 A bar placed next to the building slowly decreases. \\
+		& 2. The house disappears, when the bar is emty. \\
+		& 3. The Health Bar decreases by a certain amount. \\
+		& 4. The building's bar disappears. \\
+	\end{tabular}
+	\caption{Functional test 12}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Game Over \\ 
+		Test Id & FT-13 \\ 
+		Feature to be tested & That the game is over when the health score reaches zero. \\ 
+		Requirement & FR4.2 \\ 
+		Pre-conditions & FT-13 \\ 
+		Steps of Execution & 1. Let several buildings not get power. \\ 
+		& 2. Let the health score decrease to zero. \\
+		& 3. Tap 'OK'. \\
+		& 4. Tap 'New Game'. \\
+		Expected result & 1. The health score is decreasing as houses not supllied with power disappears. \\
+		& 2. The "Game Over" page is displayed, with an 'OK' button. \\
+		& 3. The main menu page is displayed. \\
+		& 4. A new game is started. \\
+	\end{tabular}
+	\caption{Functional test 13}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Win Game \\ 
+		Test Id & FT-11 \\ 
+		Feature to be tested & That it is possible to win the game \\ 
+		Requirement & FR4.6 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 14}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Exit Game \\ 
+		Test Id & FT-15 \\ 
+		Feature to be tested & Test that the game is paused when exiting the game. \\ 
+		Requirement & FR1.2 \\ 
+		Pre-conditions & FT-04. \\ 
+		Steps of Execution & 1. Leave the game by tapping the home button on the phone. \\
+		& 2. Open the game app. \\
+		& 3. Tap 'Load Game'. \\
+		Expected result & 3. The game is paused at the point where it was left. \\  
+	\end{tabular}
+	\caption{Functional test 15}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Limited Power \\ 
+		Test Id & FT-16 \\ 
+		Feature to be tested & Test that the amount of power avaialbe to the player is limited, and the effects of upgrading. \\ 
+		Requirement & FR2.5 \\ 
+		Pre-conditions & FT-06, FT-08\\ 
+		Steps of Execution & 1. Connect a power plant and a building with a power cable. \\
+		& 2. Repeat step 1 for other buildings, using the same power plant, until and after the power bar is emty. \\
+		& 3. Upgrade the power plant. \\
+		& 5. Connect the power plant to another building. \\
+		Expected result & 2. The power plant is not able to serve more buildings and a splash screen will appear. \\ 
+		& 4. The power bar will gain more content and the power plant is now able to serve more power. \\
+		& 5. This is now possible, no error message appears. \\
+	\end{tabular}
+	\caption{Functional test 16}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Remove Power Cables \\ 
+		Test Id & FT-17 \\ 
+		Feature to be tested & That it is possible to remove Power Cables from the map. \\ 
+		Requirement & FR2.6 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 17}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Number of Power Plants \\ 
+		Test Id & FT-18 \\ 
+		Feature to be tested & That it is only possible to build a certain amount of Power Plants specific to the level. \\ 
+		Requirement & FR2.7 \\ 
+		Pre-conditions & FT-05, FT-14. \\ 
+		Steps of Execution & 1. Build a power plant. \\ 
+		& 2. Build power plants until the number of power plants reaches 0, and try beyond that. \\
+		Expected result & 1. The number on the power plant in the hud (Initially toatal number of power plant one can build.) decreases by one. \\
+		& 2. When the number reaches 0 and one tries to build another one, an error message is displayed. \\
+	\end{tabular}
+	\caption{Functional test 18}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Different Buildings \\ 
+		Test Id & FT-19 \\ 
+		Feature to be tested & There are different buildings and they have different power requirements. \\ 
+		Requirement & FR3.3 \\ 
+		Pre-conditions & FT-06, FT-08 \\ 
+		Steps of Execution & 1. Connect a power plant to the smallest type of building. \\
+		& 2. Repeat for the five other types of buildings. \\
+		Expected result & 1. The power bar on the power station decreases by a small amount. \\
+		& 2. The bigger the building is the more the power bar decreases. \\
+	\end{tabular}
+	\caption{Functional test 19}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Appearance of buildings in new levels \\ 
+		Test Id & FT-20 \\ 
+		Feature to be tested & That new buildings appear more rapidly in higher levels. \\ 
+		Requirement & FR4.3 \\ 
+		Pre-conditions & FT-02, FT-14\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 20}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & More unstable power lines in new levels \\ 
+		Test Id & FT-21 \\ 
+		Feature to be tested & That unstable power lines appear more rapidly in higher levels. \\ 
+		Requirement & FR4.4 \\ 
+		Pre-conditions & FT-06, FT-14\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 21}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Damaged Power Lines \\ 
+		Test Id & FT-22 \\ 
+		Feature to be tested & That arbitrary power lines may be damaged and then fixed, throughout the game. \\ 
+		Requirement & FR3.1, FR3.2  \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & 1. \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 22}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & New Obstacles \\ 
+		Test Id & FT-23 \\ 
+		Feature to be tested & That the player is informed about new obstacles. \\ 
+		Requirement & FR3.5 \\ 
+		Pre-conditions & FT-01, FT-21, ?MoreObstacles?\\ 
+		Steps of Execution &  \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 23}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Enter next level \\ 
+		Test Id & FT-24 \\ 
+		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
+		Requirement & FR4.1 \\ 
+		Pre-conditions & FT-14. \\ 
+		Steps of Execution & \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 24}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Selected houses \\ 
+		Test Id & FT-25 \\ 
+		Feature to be tested & That it is visible that a house has been selected when building power cables \\ 
+		Requirement & FR6.11 \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 25}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name &  Color of power cable \\ 
+		Test Id & FT-26 \\ 
+		Feature to be tested & That the color of the cable changes when it is connected to a power station \\ 
+		Requirement & FR6.12 \\ 
+		Pre-conditions &  \\ 
+		Steps of Execution & \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 26}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Power bar at power plant \\ 
+		Test Id & FT-27 \\ 
+		Feature to be tested & That the power bar decrease/increase when a building is connected/disconnected. \\ 
+		Requirement & FR6.13 \\ 
+		Pre-conditions &  \\ 
+		Steps of Execution & \\ 
+		Expected result & \\ 
+	\end{tabular}
+	\caption{Functional test 27}
+\end{table}
