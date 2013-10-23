@@ -280,9 +280,11 @@
 		Test Id & FT-14 \\ 
 		Feature to be tested & That it is possible to win the game \\ 
 		Requirement & FR4.6 \\ 
-		Pre-conditions & \\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Pre-conditions & FT-11 \\ 
+		Steps of Execution & 1. Connect buildings to power plants and collect money. \\ 
+		& 2. Repeat step 1 until the player's amount of money reaches the specified goal. \\
+		Expected result & 1. The player's amount of money will increase when money is collected. \\ 
+		& 2. When the goal is reached a 'You have won!' pop-up screen will appear with a 'Next Level' button. \\
 	\end{tabular}
 	\caption{Functional test 14}
 \end{table}
@@ -312,16 +314,15 @@
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Limited Power \\ 
 		Test Id & FT-16 \\ 
-		Feature to be tested & Test that the amount of power avaialbe to the player is limited, and the effects of upgrading. \\ 
-		Requirement & FR2.5 \\ 
-		Pre-conditions & FT-06, FT-08\\ 
-		Steps of Execution & 1. Connect a power plant and a building with a power cable. \\
-		& 2. Repeat step 1 for other buildings, using the same power plant, until and after the power bar is emty. \\
+		Feature to be tested & Test that the amount of power available to the player is limited, and the effects of upgrading. \\ 
+		Requirement & FR2.5 FR6.13 \\ 
+		Pre-conditions & FT-06, FT-08 \\ 
+		Steps of Execution & 1. Connect building to a specific power plant with power cables. \\
+		& 2. Repeat step 1 until the power bar reaches zero. \\
 		& 3. Upgrade the power plant. \\
-		& 5. Connect the power plant to another building. \\
-		Expected result & 2. The power plant is not able to serve more buildings and a splash screen will appear. \\ 
-		& 4. The power bar will gain more content and the power plant is now able to serve more power. \\
-		& 5. This is now possible, no error message appears. \\
+		Expected result & 1. The power bar belonging to the power plant will decrease. \\
+		& 2. The power plant is not able to serve more buildings and one or more buildings will not get power, depending on the breadth first search. The power bar will be a little above zero when some buildings do not get powre anymore. \\ 
+		& 3. The power bar will gain more content and the power plant is now able to serve more buildings. \\
 	\end{tabular}
 	\caption{Functional test 16}
 \end{table}
@@ -336,8 +337,14 @@
 		Feature to be tested & That it is possible to remove Power Cables from the map. \\ 
 		Requirement & FR2.6 \\ 
 		Pre-conditions & FT-06 \\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Tap a power line.  \\ 
+		& 2. Press 'OK'. \\
+		& 3. Press a power line. \\
+		& 4. Press 'Cancel'. \\
+		Expected result & 1. A splash screen appears asking if the player wants to remove the power line. \\ 
+		& 2. The power line disappears. The player's money is reduced. The house is no longer served and the buildings bar starts decreasing. \\
+		& 3. A splash screen appears asking if the player wants to remove the power line. \\
+		& 4. Nothing happens. \\
 	\end{tabular}
 	\caption{Functional test 17}
 \end{table}
@@ -354,7 +361,7 @@
 		Pre-conditions & FT-05, FT-14. \\ 
 		Steps of Execution & 1. Build a power plant. \\ 
 		& 2. Build power plants until the number of power plants reaches 0, and try beyond that. \\
-		Expected result & 1. The number on the power plant in the hud (Initially toatal number of power plant one can build.) decreases by one. \\
+		Expected result & 1. The number on the power plant in the hud (Initially toatal number of power plant one can build) decreases by one. \\
 		& 2. When the number reaches 0 and one tries to build another one, an error message is displayed. \\
 	\end{tabular}
 	\caption{Functional test 18}
@@ -383,12 +390,12 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Appearance of buildings in new levels \\ 
+		Name & Damaged Power Lines \\ 
 		Test Id & FT-20 \\ 
-		Feature to be tested & That new buildings appear more rapidly in higher levels. \\ 
-		Requirement & FR4.3 \\ 
-		Pre-conditions & FT-02, FT-14\\ 
-		Steps of Execution &  \\ 
+		Feature to be tested & That arbitrary power lines may be damaged and then fixed, throughout the game. \\ 
+		Requirement & FR3.1, FR3.2  \\ 
+		Pre-conditions & FT-06 \\ 
+		Steps of Execution & 1. \\ 
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 20}
@@ -399,13 +406,15 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & More unstable power lines in new levels \\ 
+		Name & Enter next level \\ 
 		Test Id & FT-21 \\ 
-		Feature to be tested & That unstable power lines appear more rapidly in higher levels. \\ 
-		Requirement & FR4.4 \\ 
-		Pre-conditions & FT-06, FT-14\\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
+		Requirement & FR4.1 \\ 
+		Pre-conditions & FT-14.\\ 
+		Steps of Execution & 1. A game has been won as done in FT-14.\\
+		& 2. Press "Next Level". \\
+		Expected result & 1. A "You have won!" splash screen appears with a "Next level" button. \\
+		& 2. A new level is started. \\
 	\end{tabular}
 	\caption{Functional test 21}
 \end{table}
@@ -415,13 +424,17 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Damaged Power Lines \\ 
+		Name & Appearance of buildings in new levels \\ 
 		Test Id & FT-22 \\ 
-		Feature to be tested & That arbitrary power lines may be damaged and then fixed, throughout the game. \\ 
-		Requirement & FR3.1, FR3.2  \\ 
-		Pre-conditions & FT-06 \\ 
-		Steps of Execution & 1. \\ 
-		Expected result & \\ 
+		Feature to be tested & That new buildings appear more rapidly in higher levels. \\ 
+		Requirement & FR4.3 \\ 
+		Pre-conditions & FT-20 \\ 
+		Steps of Execution & 1. Start level 1 and observe the appearance of buildings. \\ 
+		& 2. Start level 2 and observe the appearance of buildings. \\
+		& 3. Start subsequent levels and observe the appearance of buildings. \\
+		Expected result & 1. The buildings appear at a relatively slow rate. \\
+		& 2. Buildings appear at a faster rate relative to that of level 1. \\
+		& 3. Buildings appear at an increasingly faster rate. \\
 	\end{tabular}
 	\caption{Functional test 22}
 \end{table}
@@ -431,13 +444,17 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & New Obstacles \\ 
+		Name & More unstable power lines in new levels \\ 
 		Test Id & FT-23 \\ 
-		Feature to be tested & That the player is informed about new obstacles. \\ 
-		Requirement & FR3.5 \\ 
-		Pre-conditions & FT-01, FT-21, ?MoreObstacles?\\ 
-		Steps of Execution &  \\ 
-		Expected result & \\ 
+		Feature to be tested & That unstable power lines appear more rapidly in higher levels. \\ 
+		Requirement & FR4.4 \\ 
+		Pre-conditions & FT-06, FT-14\\ 
+		Steps of Execution & 1. Start level 1 and observe the appearance of unstable power lines. \\
+		& 1. Start level 2 and observe the appearance of unstable power lines. \\ 
+		& 1. Start subsequent levels and observe the appearance of unstable power lines. \\  
+		Expected result & 1. Unstable power lines appear at a relatively slow rate. \\
+		& 2. Unstable power lines appear at a faster rate relative to that of level 1. \\
+		& 3. Unstable power line appear at an increasingly faster rate. \\
 	\end{tabular}
 	\caption{Functional test 23}
 \end{table}
@@ -447,12 +464,12 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Enter next level \\ 
+		Name & New Obstacles \\ 
 		Test Id & FT-24 \\ 
-		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
-		Requirement & FR4.1 \\ 
-		Pre-conditions & FT-14. \\ 
-		Steps of Execution & \\ 
+		Feature to be tested & That the player is informed about new obstacles. \\ 
+		Requirement & FR3.5 \\ 
+		Pre-conditions & FT-01, FT-21, ?MoreObstacles?\\ 
+		Steps of Execution &  \\ 
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 24}
@@ -488,20 +505,4 @@
 		Expected result & \\ 
 	\end{tabular}
 	\caption{Functional test 26}
-\end{table}
-
-\begin{table}[H]
-\centering
-	\begin{tabular}{ l | p{8cm} }
-		\hline
-		{\bf Item} & {\bf Description} \\ \hline
-		Name & Power bar at power plant \\ 
-		Test Id & FT-27 \\ 
-		Feature to be tested & That the power bar decrease/increase when a building is connected/disconnected. \\ 
-		Requirement & FR6.13 \\ 
-		Pre-conditions &  \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
-	\end{tabular}
-	\caption{Functional test 27}
 \end{table}
