@@ -20,6 +20,9 @@
 \usepackage{array}
 \usepackage{sidecap}
 \usepackage{appendix}
+\usepackage{fancyhdr}
+
+
 
 \hypersetup{%
     pdfborder = {0 0 0}
@@ -39,7 +42,10 @@
 	\clearpage
 
 %CHAPTER 1: INTRODUCTION
-\pagestyle{plain}
+
+\pagestyle{fancy}
+\fancyheadoffset{2 cm} 
+
 \pagenumbering{gobble}
 \pagenumbering{arabic}
 \setcounter{page}{1}
