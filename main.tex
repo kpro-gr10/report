@@ -28,25 +28,30 @@
 }
 
 \begin{document}
-\pagenumbering{gobble}
 
 %\input{section/#section name}
-\input{frontpage.tex}
-\newpage
-\input{abstract.tex}
-\newpage
-\tableofcontents
-\newpage
-\pagenumbering{arabic}
-
-\listoffigures
-
+\input{frontpage.tex}\pagestyle{empty}
 \clearpage
 
-\listoftables
+\input{abstract.tex}\pagestyle{empty}
 
 \clearpage
+\tableofcontents\pagestyle{empty}
 
+
+
+\clearpage
+\listoffigures\pagestyle{empty}
+
+\clearpage
+\listoftables\pagestyle{empty}
+\clearpage
+
+\pagenumbering{gobble}\pagestyle{empty}
+\pagenumbering{arabic}\pagestyle{empty}
+
+\pagestyle{plain}
+\setcounter{page}{1}
 \section{Introduction}
 \input{introduction/project_description}
 \input{introduction/customer}
