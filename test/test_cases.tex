@@ -13,7 +13,7 @@
 		Steps of Execution & 1. Drag a finger over the screen. \\
 		& 2. Try to navigate outside the game map. \\
 		Expected result & 1. The screen will move across the map in the opposite direction of the finger.\\ 
-		& 2. Nothing happens. \\
+		& 2. It is not possible to move outside the map, the screen will stay in place. \\
 	\end{tabular}
 	\caption{Functional test 1}
 \end{table}
@@ -28,8 +28,10 @@
 		Feature to be tested & That buildings appear around the map at arbitrary intervals and locations. \\ 
 		Requirement & FR2.1 \\ 
 		Pre-conditions & FT-01 \\ 
-		Steps of Execution & 1. Observe that buildings appear around the map at arbitrary intervals and locations.\\ 
-		Expected result & 1. Buildings appear around the map at arbitrary intervals and locations at a satisfying rate.\\ 
+		Steps of Execution & 1. Observe the appearance buildings around the map.\\
+		& 2. Build power plants and power lines. \\ 
+		Expected result & 1. Buildings appear around the map at arbitrary intervals and locations at a satisfying rate. No buildings appear on top of each other. \\
+		& 2. No buildings appear on top of power plants or power lines. \\
 	\end{tabular}
 	\caption{Functional test 2}
 \end{table}
@@ -62,12 +64,16 @@
 		Feature to be tested & That the buttons in the main menu directs to the correct pages. \\ 
 		Requirement & FR1.1, FR6.7 ?Highscore?, ?Start Game? \\ 
 		Pre-conditions & FT-01 \\ 
-		Steps of Execution & 1. Tap the 'New Game' button. \\
-		& 2. Tap the 'Instructions' button. \\
+		Steps of Execution & 1. Tap the 'Instructions' button. \\
+		& 2. Go back to main menu using the in-game back button, and repeat using the back button on phone. \\
 		& 3. Tap the 'Highscore' button. \\
-		Expected result & 1. A new game is started. \\
-		& 2. The page showing the game instructions is shown. \\
+		& 4. Go back to main menu using the in-game back button, and repeat using the back button on phone. \\
+		& 5. Tap the 'New Game' button. \\
+		Expected result & 1. The page showing the game instructions is shown. \\
+		& 2. Both ways will take you to the main menu. \\
 		& 3. The page showing the high score is shown. \\
+		& 4. Both ways will take you to the main menu. \\
+		& 5. A new game is started. \\
 	\end{tabular}
 	\caption{Functional test 4}
 \end{table}
@@ -82,17 +88,17 @@
 		Feature to be tested & That it is possible to buy and place power plants on the game map. \\ 
 		Requirement & FR2.2, FR6.8 \\ 
 		Pre-conditions & FT-01. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant. \\
-		Steps of Execution & 1. Drag the build menu into view. \\ 
+		Steps of Execution & 1. Drag the hud into view. \\ 
 		& 2. Tap the power plant icon. \\
-		& 3. Tap somewhere on the map where a power plant can not be placed e.g. a building. \\
+		& 3. Tap various places on the map where a power plant can not be placed i.e. on top of a building, a power plant, a power line. \\
 		& 4. Tap an emty area on the map. \\
 		& 5. Tap 'OK'. \\
 		& 6. Repeat, but tap 'Cancel'. \\
 		Expected result & 2.1 If player has enough money the game is set to building mode. \\
 		& 2.2 If player does not have enough money, information is displayed. \\
-		& 3. Nothing happens. \\ 
+		& 3. An error message is displayed. \\ 
 		& 4. The player is asked to either buy or cancel. \\
-		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. \\
+		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. Building modes is ended. \\
 		& 6. Leave building mode. \\
 	\end{tabular}
 	\caption{Functional test 5}
@@ -108,20 +114,24 @@
 		Feature to be tested &  That it is possible to buy power cables and connect buildings and power plants. \\ 
 		Requirement & FR2.3, FR5.2, FR6.8 \\ 
 		Pre-conditions & FT-02, FT-05. First the player can afford a Power Plant, subsequently the player can not afford a Power Plant.\\ 
-		Steps of Execution & 1. Drag the build menu into view. \\
+		Steps of Execution & 1. Drag the hud into view. \\
 		& 2. Tap the power cable icon. \\
-		& 3. Tap somewhere on the map where a power cable can not be placed. \\
+		& 3. Tap various places on the map where a power cable can not be placed i.e. anywhere that is not a building or power plant. \\
 		& 4. Tap a Power Plant, then tap a building. \\
-		& 5. Observe the player's money bag. \\
-		& 6. Try to connect an already connected building to another power plant. \\
-		& 7. Connect a building and a power plant, and try to let the power cable cross another power cable. \\
-		Expected result & 2.1 If player has enough money the game is set to building mode. \\
-		& 2.2 If player does not have enough money, information is displayed. \\
+		& 5. Connect an already connected building to another power plant. \\
+		& 6. Connect two power plants. \\
+		& 7. Connect two building where neither is connected to a power plant. \\
+		& 8. Connect a building and a power plant, and try to let the power cable cross another power cable. \\
+		& 9. Try to connect two already connected buildings again. \\
+		Expected result & 2.1 If the player has enough money the game is set to building mode. \\
+		& 2.2 If the player does not have enough money, information is displayed. \\
 		& 3. Nothing happens. \\
-		& 4. The two are connected by a cable. \\
-		& 5. The power cable cost some amount of money proportional to the length. \\
-		& 6. Should not be allowed. \\
-		& 7. Should not be allowed. \\
+		& 4. The two are connected by a cable. The player's money are reduces with an amount proportional to the length of the power line. Building mode is ended. \\
+		& 5. Same as step 4 (However, the new power line has no effect on the power plants or buildings) \\
+		& 6. Same as step 5. \\
+		& 7. Same as step 5. \\
+		& 8. An error message is displayed. \\
+		& 9. An error message is displayed. \\
 	\end{tabular}
 	\caption{Functional test 6}
 \end{table}
@@ -135,14 +145,17 @@
 		Test Id & FT-07 \\ 
 		Feature to be tested & That it is possible to upgrade a power plant. \\ 
 		Requirement & FR2.4, FR5.3, FR6.3 \\ 
-		Pre-conditions & FT-05. First the player does not have enough money. Subsequently the player does have enough money. \\ 
+		Pre-conditions & FT-05. \\ 
 		Steps of Execution & 1. Tap a power plant. \\ 
-		& 2. Choose 'Upgrade Power Plant'. \\
-		& 3. Choose "Upgrade" from the pop up. \\
-		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed. \\
-		& 2. The system asks whether to 'Upgrade' or 'Cancel'. \\
-		& 3. When not having enough money the system gives accordant feedback. \\
-		& 3. When having enough money the system reduces the players amount of money by the cost of the power plant, and upgrades the power plant. This is displayed on the power plant. \\
+		& 2. Tap 'OK'. \\
+		& 3. Repeat step 1 and tap 'Cancel'. \\
+		& 4. Upgrade until the number of upgrades equals the number of allowed upgrades displayed on the power plant. And try to tap the power plant again. \\
+		& 5. Try to upgrade a power plant with not enough money. \\
+		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed, and asks to upgrade or cancel. \\
+		& 2. The system reduces the players amount of money by the cost of the upgrade, and upgrades the power plant. This is displayed by increasing the number on the power plant by 1. The power plant's power bar also increases. \\
+		& 3. The information box disappears, nothing happens with the power plant. \\
+		& 4. Nothing happens. \\
+		& 5. The system gives accordant feedback. \\
 	\end{tabular}
 	\caption{Functional test 7}
 \end{table}
@@ -152,16 +165,15 @@
 	\begin{tabular}{ l | p{8cm} }
 		\hline
 		{\bf Item} & {\bf Description} \\ \hline
-		Name & Information on Buildings and Power Plants \\ 
+		Name & Information on Power Plants \\ 
 		Test Id & FT-08 \\ 
-		Feature to be tested & That information specific to the building appears when tapping them. \\ 
+		Feature to be tested & That information specific to the power plant appears when tapping them. \\ 
 		Requirement & FR2.8 \\ 
 		Pre-conditions & FT-02, FT-05, FT-07. \\ 
-		Steps of Execution & 1. Tap different kinds of buildings. \\
-		& 2. Tap a Power Plant that has not been upgraded. \\
-		& 3. Tap an upgraded Power Plant. \\
-		Expected result & 1. Information on how much power the building needs is displayed. \\
-		& 2. Information on which level of upgrade the player can upgrade to is displayed as well as information on how much it costs and what it does for the power plant. \\
+		Steps of Execution & 1.Tap a Power Plant that has not been upgraded. \\
+		& 2. Upgrade the Power Plant and tap it. \\
+		Expected result & 1. Information that the power plant is on level 1 and the cost of upgrading is displayed. \\
+		& 2. Information that the power plant is on level 2 and the cost of upgrading is displayed. \\
 	\end{tabular}
 	\caption{Functional test 8}
 \end{table}
@@ -183,7 +195,7 @@
 		& 5. Tap the Power Cable. \\
 		& 6. Tap an emty location on the screen. \\
 		& 7. Tap 'Cancel'. \\
-		Expected result & 2. Building Mode is avtivated. \\ 
+		Expected result & 2. Building Mode is activated. \\ 
 		& 4. Building Mode is ended. \\
 		& 5. Building Mode is activated. \\
 		& 7. Building Mode is ended. \\
@@ -201,8 +213,12 @@
 		Feature to be tested & That the screen picture is not tiltet when the phone is tilted. \\ 
 		Requirement & FR1.12 \\ 
 		Pre-conditions & FT-01 \\ 
-		Steps of Execution & 1. Tilt the phone. \\ 
-		Expected result & The screen picture stays in place. \\ 
+		Steps of Execution & 1. Tilt the phone when in Main Menu. \\
+		& 2. Tilt the phone when zoomed in, in game mode. \\
+		& 3. Tilt the phone when zoomed out, in game mode. \\
+		Expected result & 1. The screen picture stays in place. \\ 
+		& 2. The screen picture stays in place. \\
+		& 3. The screen picture stays in place. \\
 	\end{tabular}
 	\caption{Functional test 10}
 \end{table}
@@ -220,7 +236,7 @@
 		Steps of Execution & 1. Buildings are ready to pay for their electricity. \\
 		& 2. Tap a certain type of building. \\ 
 		& 3. Repeat step 2 for all different buildings. \\
-		Expected result & 1. The building has a collect money sign. \\
+		Expected result & 1. The building has a money icon. \\
 		& 2. The players money is updated and the sign disappears. \\
 		& 3. The buildings pay different amounts of money depending on their type. \\
 	\end{tabular}
@@ -241,7 +257,7 @@
 		& 2. Observe the building when the time limit has been reached. \\
 		& 3. Observe the Health Bar. \\
 		& 4. Connect an unconnected house to a power plant. \\
-		Expected result & 1 A bar placed next to the building slowly decreases. \\
+		Expected result & 1 The bar belonging to the building slowly decreases. \\
 		& 2. The house disappears, when the bar is emty. \\
 		& 3. The Health Bar decreases by a certain amount. \\
 		& 4. The building's bar disappears. \\
@@ -392,11 +408,18 @@
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Damaged Power Lines \\ 
 		Test Id & FT-20 \\ 
-		Feature to be tested & That arbitrary power lines may be damaged and then fixed, throughout the game. \\ 
+		Feature to be tested & That arbitrary power lines may be damaged throughout the game, and that they are possible to repair. \\ 
 		Requirement & FR3.1, FR3.2  \\ 
 		Pre-conditions & FT-06 \\ 
-		Steps of Execution & 1. \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Build various power lines around the map. \\ 
+		& 2. Tap a red power line. \\
+		& 3. Tap 'Cancel'. \\
+		& 4. Repeat step 2. \\
+		& 5. Tap 'OK'. \\
+		Expected result & 1. Some of the power line will after some time get a red streak, indicating that it is damaged, and the bar belonging to the building whose power line is red, will decrease, indicating that the building is nor receiving any power. \\
+		& 2. A splash screen asking if you want to repair it and the cost of repair appears. \\
+		& 3. The spash screen disappears. Nothing happens to the power line. \\
+		& 5. The power line now turns yellow, and the building's bar disappears. \\
 	\end{tabular}
 	\caption{Functional test 20}
 \end{table}
@@ -485,8 +508,11 @@
 		Feature to be tested & That it is visible that a house has been selected when building power cables \\ 
 		Requirement & FR6.11 \\ 
 		Pre-conditions & FT-06 \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Open the hud and tap the build power line option. \\
+		& 2. Tap a building to build from. \\
+		& 3. Tap a building to build to. \\
+		Expected result & 2. A circle covers the background of the chosen building. \\
+		& 3. A circle covers the background of the chosed building. \\
 	\end{tabular}
 	\caption{Functional test 25}
 \end{table}
@@ -501,8 +527,16 @@
 		Feature to be tested & That the color of the cable changes when it is connected to a power station \\ 
 		Requirement & FR6.12 \\ 
 		Pre-conditions &  \\ 
-		Steps of Execution & \\ 
-		Expected result & \\ 
+		Steps of Execution & 1. Connect two building, that are not connected to a power plant, with a power line. \\ 
+		& 2. Connect one of the buildings to a power plant. \\
+		& 3. Connect more buildings to a power plant than it can serve. \\
+		& 4. Connect to power plants with a power line. \\
+		& 5. Connect an already connected building to another power plant. \\
+		Expected result & 1. The power line should be all black, showing no power is passing through. \\
+		& 2. The new power line and the first power line built should now have a yellow streak, showing that power i passing through. \\
+		& 3. The power lines connected to buildings the power plant is not able to serve will turn all black. These will always be end buildings. \\
+		& 4. The power line is all black, indicating that no power runs through it. \\
+		& 5. The power line is all black, indicating that no power runs through it. \\
 	\end{tabular}
 	\caption{Functional test 26}
 \end{table}
