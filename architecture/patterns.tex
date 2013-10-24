@@ -1,6 +1,6 @@
 \subsection{Architectural Patterns}
 
-\subsubsection{Model-View-Presenter}
+\subsubsection*{Model-View-Presenter}
 This project will primarily be using the Model-View-Presenter pattern for its architecture and will 
 be using the JavaScript library Backbone to implement the pattern. Model-View-Presenter is a slightly
 modified version of Model-View-Controller, made to work better with HTML and JavaScript. The Presenter
@@ -8,11 +8,11 @@ is a JavaScript object which connects a Backbone Model to the HTML object which 
 
 \includegraphics{pictures/mvc_mvp}
 
-\subsubsection{Game Loop}
+\subsubsection*{Game Loop}
 The game runs a loop using the JavaScript requestAnimationFrame function. This loop updates the parts 
 of the game which needs to be updated and repaints the parts of the screen which needs to be repainted.
 
-\subsubsection{Singletons}
+\subsubsection*{Singletons}
 There are 2 singleton objects in the game. One is an Image Library. This object is responsible for 
 loading and storing the sprites the game will draw to the screen. This will allow us to only read and 
 store each sprite one time, saving memory and improving performance. The second singleton object is 
