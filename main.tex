@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[11pt, a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{lscape}   % Make a page in landscape format \begin{landscape}
 \usepackage{colortbl} % To color table cells
@@ -19,47 +19,41 @@
 \usepackage{wrapfig}
 \usepackage{array}
 \usepackage{sidecap}
-
-
-\restylefloat{table}
+\usepackage{appendix}
 
 \hypersetup{%
     pdfborder = {0 0 0}
 }
 
 \begin{document}
+	%\input{section/#section name}
+	\input{frontpage.tex}\thispagestyle{empty}\pagestyle{empty}
+	\clearpage
+	\input{abstract.tex}\thispagestyle{empty}\pagestyle{empty}
+	\clearpage
+	\input{tableOfContent}\thispagestyle{empty}\pagestyle{empty}
+	\clearpage
+	\input{listOfFigures}\thispagestyle{empty}\pagestyle{empty}
+	\clearpage
+	\input{listOfTables}\thispagestyle{empty}\pagestyle{empty}
+	\clearpage
 
-%\input{section/#section name}
-\input{frontpage.tex}\pagestyle{empty}
-\clearpage
-
-\input{abstract.tex}\pagestyle{empty}
-
-\clearpage
-\tableofcontents\pagestyle{empty}
-
-
-
-\clearpage
-\listoffigures\pagestyle{empty}
-
-\clearpage
-\listoftables\pagestyle{empty}
-\clearpage
-
-\pagenumbering{gobble}\pagestyle{empty}
-\pagenumbering{arabic}\pagestyle{empty}
-
+%CHAPTER 1: INTRODUCTION
 \pagestyle{plain}
+\pagenumbering{gobble}
+\pagenumbering{arabic}
 \setcounter{page}{1}
-\section{Introduction}
+\input{introduction/introductionChapter.tex}
+\clearpage
 \input{introduction/project_description}
 \input{introduction/customer}
 \clearpage
 \input{introduction/stakeholders}
 
+%CHAPTER 2: PROJECT DIRECTIVE
 \clearpage
-\section{Project Directive}
+\input{projectplanManagement/projectDirectiveChapter}
+\clearpage
 \input{projectplanManagement/projectplan}
 \clearpage
 \input{projectplanManagement/methodology}
@@ -72,9 +66,11 @@
 \clearpage
 \input{projectplanManagement/quality_assurance}
 
+
+%CHAPTER 3: PRELIMINARY STUDY
 \clearpage
-\section{Preliminary Studies}
-\input{preliminaryStudies/introPreStudy}
+\input{preliminaryStudies/preliminaryStudiesChapter}
+\clearpage
 \input{preliminaryStudies/methodology}
 \clearpage
 \input{preliminaryStudies/concept}
@@ -85,14 +81,19 @@
 \clearpage
 \input{preliminaryStudies/tools}
 
+%CHAPTER 4: GAME CONCEPT
 \clearpage
-\section{Game Concept}
+\input{gameConcept/gameConceptChapter}
+\clearpage
 \input{gameConcept/introduction}
 \input{gameConcept/gameConcept}
 %ohmville, spillrolle, elementer, mål, oppgaver, hindringer, levler, etc.
 
+
+%CHAPTER 5: REQUIREMENT SPECIFICATION
 \clearpage
-\section{Requirement specification}
+\input{requirementSpecification/reqSpesificationChapter}
+\clearpage
 \input{requirementSpecification/introduction}
 \input{requirementSpecification/functional_requirements}
 \clearpage
@@ -104,8 +105,9 @@
 \clearpage
 \input{requirementSpecification/estimation}
 
+%CHAPTER 6: GAME ARCHITECTURE
 \clearpage
-\section{Game Architecture}
+\input{architecture/architectureChapter}
 \input{architecture/drivers}
 \clearpage
 \input{architecture/tactics}
@@ -116,9 +118,10 @@
 \clearpage
 \input{architecture/rationale}
 
-\newpage
-\section{Test Plan}
-\input{test/intro}
+%CHAPTER 7: TEST
+\clearpage
+\input{test/testChapter}
+\clearpage
 \input{test/testMethods}
 \input{test/testingApproach}
 \clearpage
@@ -128,7 +131,9 @@
 \clearpage
 \input{test/usabilityTest}
 
-%Sprint chapters
+% CHAPTER 8: PROJECT PHASES
+\clearpage
+\input{phases/phasesChapter}
 \clearpage
 \input{phases/planning}
 \clearpage
@@ -142,31 +147,35 @@
 \clearpage
 \input{phases/delivery}
 
+%CHAPTER 9: CONCLUSION AND EVALUATION
 \clearpage
-\section{Conclusion and Evaluation}
+\input{conclusionAndEvaluation/conEvChapter}
+\clearpage
 \input{conclusionAndEvaluation/evaluation}
 \input{conclusionAndEvaluation/conclusion}
 \input{conclusionAndEvaluation/further_work}
 
-\newpage
+\clearpage
 \input{references.tex}
 \clearpage
 
-\section*{Appendices}
-\appendix
-\input{appendix/glossary}
-\clearpage
-\input{appendix/user_guide}
-\clearpage
-\input{templateAndStandards/templates}
-\clearpage
-\input{templateAndStandards/standards}
-\clearpage
-\input{test/test_cases}
-\clearpage
-\input{test/usabilityForm}
-\clearpage
-\input{test/observation_form}
+%APPENDICES
+\chapter*{Appendices}
+\begin{appendices}
+	\input{appendix/glossary}
+	\clearpage
+	\input{appendix/user_guide}
+	\clearpage
+	\input{templateAndStandards/templates}
+	\clearpage
+	\input{templateAndStandards/standards}
+	\clearpage
+	\input{test/test_cases}
+	\clearpage
+	\input{test/usabilityForm}
+	\clearpage
+	\input{test/observation_form}
+\end{appendices}
 
 
 

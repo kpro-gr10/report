@@ -1,14 +1,14 @@
-\subsection{Architectural Rationale}
+\section{Architectural Rationale}
 
-A common architectual pattern for video games, is to use a while loop that runs for the duration 
-of the game. Often using some timing mechanism to update the game at a steady rate and repaints 
-the game every frame. On a mobile platform redrawing the entire screen every frame would waste 
-battery when no visible change has occured. It can also be demanding on the hardware and can run 
-badly on slower hardware. Therefore this project will be using the Model-View-Presenter pattern 
-using the JavaScript library Backbone. The reason for using MVP is to collect all the changes 
-that has occured, and find out which of them needs to be repainted. MVP also let's us make 
-independent models for high cohesion and loose coupling. MVP is not often used for modern video 
-games, because it is common that the game needs to be redrawn every frame anyway so using MVP 
-serves no purpose and just creates extra overhead. However for this project the screen will not 
-need to be redrawn 30 to 60 times a second just to accommodate the high quality 3D idle animations 
-of the game characters.
+	A common architectual pattern for video games, is to use a while loop that runs for the duration 
+	of the game. Often using some timing mechanism to update the game at a steady rate and repaints 
+	the game every frame. On a mobile platform redrawing the entire screen every frame would waste 
+	battery when no visible change has occured. It can also be demanding on the hardware and can run 
+	badly on slower hardware. Therefore this project will be using the Model-View-Presenter pattern 
+	using the JavaScript library Backbone. The reason for using MVP is to collect all the changes 
+	that has occured, and find out which of them needs to be repainted. MVP also let's us make 
+	independent models for high cohesion and loose coupling. MVP is not often used for modern video 
+	games, because it is common that the game needs to be redrawn every frame anyway so using MVP 
+	serves no purpose and just creates extra overhead. However for this project the screen will not 
+	need to be redrawn 30 to 60 times a second just to accommodate the high quality 3D idle animations 
+	of the game characters.

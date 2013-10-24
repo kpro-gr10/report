@@ -1,5 +1,5 @@
 \definecolor{gray}{gray}{0.6}
-\subsection{Quality Requirements}
+\section{Quality Requirements}
 
 This section describes the quality requirements for the game and will briefly describe all requirements under each quality requirement. Each requirement will be described with a quality attribute scenario that looks like this:
 
@@ -27,7 +27,7 @@ This section describes the quality requirements for the game and will briefly de
 \end{itemize}
 
 
-\subsubsection{Modifiability}
+\subsection{Modifiability}
 
 Modifiability is about the cost of change. It brings up two concerns: What can change (the artifact)? 
 When is the change made and who makes it (the environment)? 
@@ -43,7 +43,7 @@ Changes the customer might want to add to the game is more buildings and more ob
 the game to a more complex state. Good models have therefore been added so that it will be easy for 
 the customer to make further development on this part.
 
-\subsubsection*{M1: Add new elements}
+\subsection*{M1: Add new elements}
 In the game a small set of elements like powerplants, houses, powerlines, etc. has been specified.
 In order to have the oppertunity to add new buildings a model for each element with specific attributes has been made. When a developer wants to add more elements, he or she can use these models and easily add the wanted parameters. 
 
@@ -62,7 +62,7 @@ In order to have the oppertunity to add new buildings a model for each element w
 \caption{Modifiability scenario}
 \end{table}
 
-\subsubsection* {M2: Increase game difficulty}
+\subsection* {M2: Increase game difficulty}
 If the game is made to easy for the user it is possible for the developer to adjust the
 parameters in the models. The difficulty of the game is based on these parameters.
 
@@ -81,9 +81,9 @@ parameters in the models. The difficulty of the game is based on these parameter
 \caption{Performance scenario}
 \end{table}
 
-\subsubsection{Performance}
+\subsection{Performance}
 
-\subsubsection*{P1: Rendering (Repaint)}
+\subsection*{P1: Rendering (Repaint)}
 When changes occure to the game models, the screen should identify if the change 
 is visible on the screen. If the change can be seen, the screen should repaint 
 that part of the display at the beginning of the next game update.
@@ -100,11 +100,11 @@ that part of the display at the beginning of the next game update.
 	Response Measure & Less than 16 ms\\ \hline
 \end{tabular}
 
-\subsubsection{Other Quality attributes}
-\subsubsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.
+\subsection{Other Quality attributes}
+\subsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.
 
-\subsubsection*{Testability: } Since the game is made as a prototype, the focus has been on having
+\subsection*{Testability: } Since the game is made as a prototype, the focus has been on having
 test on the main functionality so the customer can run test under further developing.
 In order to have test, testable code needs to be written.
 
-\subsubsection*{Compitability: } The game has to run on different kinds of platforms. A cross-platform framwork has been chosen for development to make it it easier to adapt to new platforms.
+\subsection*{Compitability: } The game has to run on different kinds of platforms. A cross-platform framwork has been chosen for development to make it it easier to adapt to new platforms.
