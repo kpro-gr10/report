@@ -1,6 +1,4 @@
-    \begin{figure}[H]
-    	\includegraphics[scale=0.40]{pictures/logo2.png}
-    \end{figure}
+ 
 
 \section{About}
     Game concept is a detailed description of the game, including information such as high concept, genre,
@@ -10,13 +8,13 @@
     Several of these points like the risk analysis and hardware platforms have been brought up in other 
     sections of the report and will not be discussed here. This section will mainly be about the gameplay. 
     The game concept is the basis for the game's functional requirement. It is easier to explain the game 
-    as well as decide on the functional equirements for the game on the basis of the game concept. 
+    as well as decide on the functional requirements for the game on the basis of the game concept. 
 
 
 \section{High Concept}
     The name for the game we settled on is Power Supply. It is in the construction and management 
     simulation genre and is inspired by games like SimCity, only in a more limited scope. You are 
-    tasked with managing the delivery of electricity to cities and factories in an area, while the 
+    tasked with managing the delivery of electricity to buildings and factories in an area, while the 
     ultimate goal of the game is making money as the tycoon of the local power company, without going 
     bankrupt.
 
@@ -68,10 +66,14 @@
 
 
 \subsection*{Buildings}
-    In the game, buildings is are appearing randomly at random positions. The buildings are different
-    because in the real world, the bigger the house, then the house require more power. There is 6 kind
-    of buildings that will appear on the map. 
-
+    Connecting buildings to powerplants is the main aspect of the gameplay. New buildings appear at 
+    different locations on the map after a certain amount of time. Where the buildings appear and how 
+    often they appear is random to a certain extent. There are also different types of buildings and 
+    some of them require more power than others, for example factories. However buildings that require 
+    more power also awards the player with more money. The player has to collect the money manually 
+    by navigating the map and clicking on the buildings. If the buildings aren't connected to any 
+    powerplants, they will eventually become abandoned and disappear from the map. If too many buildings 
+    become abandoned it is game over.
 
     \begin{figure}[!ht]
     \centering
@@ -97,6 +99,7 @@
     \caption{The buildings in the game}
     \end{figure}
 
-\subsection*{Goal}
-    When you start a new game you will always get a goal. The goal is how money you need to
-    reach in order to go to the next level. 
+\subsection*{Level and goal}
+    Each level has a monetary goal that the player has to reach to proceed to the next level. When 
+    the next level is reached the map is cleared and the player is presented with a new goal they 
+    have to reach. The map becomes larger and the sum of money the player has to earn is also increased.
