@@ -1,14 +1,28 @@
 \section{Sprint 3}
 
 \subsection{Sprint planning}
+	In sprint 3 the group planned on implementing the final requirements with high priority, as well as most of the requirements with medium priority. This is the second to last sprint, and it is important that in the last sprint the  only remaining requirements are medium to low requirements, so that time can also be spent fixing bugs and make the game work properly on iOS. The goal for this sprint will be to get a fully playable game, with only minor requirements missing.
 
-\subsection{Expected sprint results}
-	In this sprint, the group expect to be finished with the most of the requirements 
-	with the critical and high priority. Sprint 4 is the last sprint, so it is important
-	to only work with bugfixing and implementation of requirements with low priority.
+	A usability test will be carried out in the last week of the sprint to discover potential bugs or errors we have yet to discover, as well as ideas for improvements that may be implemented in the next sprint.
 
+	Concerning the report, we plan to finish the content up until this sprint.
 
-\subsection{Duration and worklaod}
+\subsection{Duration and workload}
+	
+	{\bf Duration:} 14.10 - 27.10 (2 weeks)\\
+	{\bf Workload:} This is the list with hours spent (the whole grup) on the project in this sprint.
+	\begin{itemize}
+		\item {\bf Planning:} 15.5 hours
+		\item {\bf Development:} 44 hours
+		\item {\bf Design:} 0 hours
+		\item {\bf Documentation (report):} 59.5 hours
+		\item {\bf Testing:} 20.5 hours 
+	\end{itemize}
+	{\bf Total workload: } 139.5 hours \\
+	The group's goal was to work at least 20 hours pr/person every week in this sprint. 
+	The group did manage the a workload with an avrage of 17.4 hours/week (139.5 hours/4 persons/2 weeks = 20.6 hours). The reason for the low numbers is because one of the group members did not
+	participate as much as he should. The 3 other group members did work over 20 hours. 
+
 
 \clearpage
 \subsection{Sprint backlog}
@@ -69,8 +83,31 @@
 	\end{tabular}
 
 \subsection{Implementation}
+	
+	\subsubsection{Powerlines}
+		\begin{itemize}
+			\item {\bf Build Power Lines: }
+			\item {\bf Remove Power Cables: }
+			\item {\bf Damaged Power Lines: }
+			\item {\bf More unstable power lines in new levels: }
+			\item {\bf Color of power cable: }
+			\item {\bf Selected houses when building powerlines: }
+		\end{itemize}
 
-	Write about algorithms and implementations done!
+	\subsubsection{Other implementations}
+		\begin{itemize}
+			\item {\bf Collect Money: }
+			\item {\bf Win Game: }
+			\item {\bf Powerplant with Limited Power: }
+			\item {\bf Number of Power Plants: }
+			\item {\bf Different Buildings: }
+			\item {\bf Enter next level: }
+			\item {\bf Appearance of buildings in new levels: }
+		\end{itemize}
+
+	
+
+	
 	
 	\subsection*{Algorithms}
 
@@ -150,28 +187,58 @@
 	\end{tabular}
 
 \subsection{Changes to the requirements}
+
+	As we worked during thi sprint we made some changes to the requirement specification.
+	The first is FR 1.2 that we changed priority on. 
+
+	The requirement (FR 6.5) with notification for new obstacles is removed. 
+	The group defined a sound as a notification and will discuss within the group if
+	we want to have a sound of not, but the visual notification will not be implemented. 
+
+	Since the game is in a state where it is playable we have focused some more on the 
+	GUI, and therefore have added some new requirements (FR 1.11 - FR 1.13) that were missing 
+	from the specification.
 	
-	{\bf Changes on version 3 of the requirement specification:} \\
+	{\bf All changes on version 3 of the requirement specification:} \\
 	\begin{tabular}{| p{1.5cm} | p{12cm} |}
 		\hline
 		\rowcolor{lightgray}
 		{\bf FR} & {\bf Change} \\ \hline
+		FR 1.2 & {\bf \color{orange}[CHANGED PRIORITY FROM HIGH TO MEDIUM]} The user should be able 
+		to exit the game at any time, and the game state should be saved and loaded when the user 
+		returns to the game \\ \hline
 		FR 4.6 & {\bf \color{green}[NEW]} The user should be able to win the game by reaching the goal in the current level. The goal is level specific. \\ \hline
-		FR6.11 & {\bf \color{green}[NEW]} The user should be able to see which houses is selected when building power cables. \\ \hline
-		FR6.12 & {\bf \color{green}[NEW]} The cables should change color if it is connected to a power 
+		FR 6.5 & {\bf \color{red}[REMOVED]} The user shoud get a notification of new events outside 
+		the screen \\ \hline
+		FR 6.11 & {\bf \color{green}[NEW]} The user should be able to see which houses is selected when building power cables. \\ \hline
+		FR 6.12 & {\bf \color{green}[NEW]} The cables should change color if it is connected to a power 
 		station. \\ \hline
-		FR6.13 & {\bf \color{green}[NEW]} The user should be able to see how much power the powerplant have left. 
-		This bar should decrease if a building is connected to the powerplant and should be 
-		increase if a building is removed. The colors should be yellow whit white 
+		FR 6.13 & {\bf \color{green}[NEW]} The user should be able to see how much power the 
+		powerplant have left. This bar should decrease if a building is connected to the powerplant 
+		and should be increase if a building is removed. The colors should be yellow whit white 
 		background. \\ \hline
 	\end{tabular}
 
 
 \subsection{Group dynamics}
+	As a group, it is important to have fun. In the start of the project, the group had some
+	problems with the communication, but this is not a problem anymore.
+	When the group work we talk about what we read on reddit, what we did yesterday and 
+	"bully" each other for funny writing typo, if found, in this report. 
+
+	The harmony in the group is now great and it helps us keep up the good work and meet 
+	our sprint goals. We belive having fun is the key to succeed in this project. 
 
 \subsection{Customer feedback}
 
 \subsection{Sprint retrospective}
-	\subsubsection*{Start doing: } 
-	\subsubsection*{Stop doing: }
-	\subsubsection*{Continue doing: }
+	In this sprint, we did not do the sprint retrospective, but all the team members did
+	get the chance to add changes to the next and last sprint. We are quite pleased with the way 
+	we work and non of the group members had anything specific to add or remove in the next sprint.
+
+	We have only had one situation where two of the team members worked on the same implementation, 
+	but we dont think that would happend again and have not been a problem up until now. 
+	The group need to ensure a good communication within the group as well as give good status
+	updates while working. 
+
+	The group agreed to keep up the good work. "Team spirit!".
