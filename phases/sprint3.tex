@@ -72,10 +72,45 @@
 
 	Write about algorithms and implementations done!
 	
-	\begin{figure}[H]
-		\includegraphics[scale=0.6]{pictures/touchInStroke.png}
-		\caption{Test code running}
-	\end{figure}
+	\subsection*{Algorithms}
+
+		\subsubsection*{Breath First Search}
+			Breath First Search is a standard algorithm taught in both Discrete Mathematics and 
+			Algorithm courses. Breath First Search (from now on refered to as BFS) traverses a graph 
+			by exploring one level of the graph at a time. BFS is used to distribute power from the 
+			powerplants to the buildings on the map. The graph is defined by having all buildings 
+			and powerplants be vertices and the powerlines are edges. The algorithm runs once for 
+			each powerplant on the map every time there is a change to the graph.
+
+		\subsubsection*{Point to Line Segment Distance}
+			The Point to Line Segment Distance works by projecting the point \emph{p} onto the line 
+			defined by going through the point \emph{v} and the point \emph{w}. Then the algorithm 
+			examines the following three different locations for the projection on the line: 
+			\begin{enumerate}
+				\item Before \emph{v}.
+				\item After \emph{w}.
+				\item Between \emph{v} and \emph{w}.
+			\end{enumerate}
+			If the projection lies before \emph{v} on the line, then the distance from \emph{p} to 
+			the line segment from \emph{v} to \emph{w} is simply the distance from \emph{p} to 
+			\emph{v}. If the projection lies after \emph{w} on the line, then the distance from 
+			\emph{p} to the line segment is the distance from \emph{p} to \emph{w}. In the last case 
+			where the projection lies between \emph{v} and \emph{w}, the answer is the distance from 
+			\emph{p} to the location of the projection. There is also the special case where the 
+			length of the line segment from \emph{v} to \emph{w} is 0. In that case the distance 
+			from \emph{p} to the line segment is just the distance from \emph{p} to either \emph{v} 
+			or \emph{w}.
+
+			\begin{figure}[H]
+			\centering
+			\subfigure{
+				\includegraphics[scale=0.75]{pictures/PtLSplot}
+			}
+			\caption{Plot of Point to Line Segment Distance}
+			\end{figure}
+
+			Theory source: \url{http://math.stackexchange.com/a/322836} \newline
+			Code source: \url{http://stackoverflow.com/a/1501725} \newline
 
 \subsection{Testing}
 
