@@ -10,7 +10,7 @@
 \subsection{Duration and workload}
 	
 	{\bf Duration:} 14.10 - 27.10 (2 weeks)\\
-	{\bf Workload:} This is the list with hours spent (the whole grup) on the project in this sprint.
+	{\bf Workload:} This is the list with hours spent (the whole group) on the project in this sprint.
 	\begin{itemize}
 		\item {\bf Planning:} 15.5 hours
 		\item {\bf Development:} 44 hours
@@ -20,7 +20,7 @@
 	\end{itemize}
 	{\bf Total workload: } 139.5 hours \\
 	The group's goal was to work at least 20 hours pr/person every week in this sprint. 
-	The group did manage the a workload with an avrage of 17.4 hours/week (139.5 hours/4 persons/2 weeks = 20.6 hours). The reason for the low numbers is because one of the group members did not
+	The group did manage the a workload with an average of 17.4 hours/week (139.5 hours/4 persons/2 weeks = 20.6 hours). The reason for the low numbers is because one of the group members did not
 	participate as much as he should. The 3 other group members did work over 20 hours. 
 
 
@@ -75,8 +75,8 @@
 		FR6.12 & The cables should change color if it is connected to a power 
 		station. & \\ \hline
 
-		FR6.13 & The user should be able to see how much power the powerplant have 
-		left. This bar should decrease if a building is connected to the powerplant 
+		FR6.13 & The user should be able to see how much power the power plant have 
+		left. This bar should decrease if a building is connected to the power plant 
 		and should be increase if a building is removed. The colors should be yellow 
 		with white background. & \\ \hline
 
@@ -84,7 +84,7 @@
 
 \subsection{Implementation}
 	
-	\subsubsection{Powerlines}
+	\subsubsection{Power lines}
 		\begin{itemize}
 			\item {\bf Build Power Lines: } the user is now able to build powerlines
 			between buildings. There is no restrictions of what buildings you can connect, 
@@ -171,13 +171,13 @@
 
 	\subsection*{Algorithms}
 		\begin{itemize}
-			\item{Breadth First Search}
+			\item{\bf Breadth First Search}
 			Breadth First Search is a standard algorithm taught in both Discrete Mathematics and 
 			Algorithm courses. Breadth First Search (from now on refered to as BFS) traverses a graph 
 			by exploring one level of the graph at a time. BFS is used to distribute power from the 
-			powerplants to the buildings on the map. The graph is defined by having all buildings 
-			and powerplants be vertices and the powerlines are edges. The algorithm runs once for 
-			each powerplant on the map every time there is a change to the graph.
+			power plants to the buildings on the map. The graph is defined by having all buildings 
+			and power plants be vertices and the power lines are edges. The algorithm runs once for 
+			each power plant on the map every time there is a change to the graph.
 
 			\item {\bf Point to Line Segment Distance}
 			The Point to Line Segment Distance works by projecting the point \emph{p} onto the line 
@@ -212,44 +212,61 @@
 
 \subsection{Testing}
 
+	The following test cases were executed at the end of this sprint:
+
 	\definecolor{lightgray}{gray}{0.9}
 
-	\begin{tabular}{| p{2cm} | p{7cm} | p{3cm} |}
+	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
 		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
 
-	  	FT-06 Build Power Lines &  &  \\ \hline
+	  	FT-11 Collect Money & The function works as expected, but if one waits with collecting money, the money accumulates and this is something we need to discuss how we are going to do & Pass. \\ \hline
 
-	  	FT-11 Collect Money &  &  \\ \hline
-
-	  	FT-14 Win Game &  &  \\ \hline
+	  	FT-14 Win Game & Works as expected. & Pass. \\ \hline
 	  	
-	  	FT-16 Limited Power &  &  \\ \hline
+	  	FT-16 Limited Power & Works as expected. & Pass. \\ \hline
 	  	
-	  	FT-17 Remove Power Cables &  &  \\ \hline
+	  	FT-17 Remove Power Lines & Works as expected. & Pass. \\ \hline
 	  	
-	  	FT-18 Number of Power Plants &  &  \\ \hline
+	  	%FT-18 Number of Power Plants & Currently not implemented. &  \\ \hline
 	  	
-	  	FT-19 Different Buildings &  &  \\ \hline
+	  	FT-19 Different Buildings & Works as expected. & Pass. \\ \hline
 
-	  	FT-20 Damaged Power Lines &  &  \\ \hline
+	  	FT-20 Damaged Power Lines & Power lines are damaged throughout the game, but are not possible 
+	  	to fix at the moment. & Retest. \\ \hline
 	  	
-	  	FT-21 Enter next level &  &  \\ \hline
+	  	FT-21 Enter next level & Works as expected. & Pass. \\ \hline
 
-	  	FT-22 Appearance of buildings in new levels &  &  \\ \hline
+	  	FT-22 Appearance of buildings in new levels & Works as expected. & Pass. \\ \hline
 
-	  	FT-23 More unstable power lines in new levels &  &  \\ \hline
+	  	FT-23 More unstable power lines in new levels & Works as expected. & Pass \\ \hline
 
-	  	FT-25 Selected houses &  &  \\ \hline
+	  	FT-25 Selected houses & Works as expected. & Pass. \\ \hline
 
-	  	FT-26 Color of power cable &  &  \\ \hline
+	  	FT-26 Color of power lines & Works as expected. & Pass. \\ \hline
 
+	\end{tabular}
+
+	The following test cases were retested this sprint:
+
+	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
+		\hline
+		\rowcolor{lightgray}
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
+
+		FT-02  Appearance of buildings & & \\ \hline
+
+	  	FT-05 Build Power Plants &  &  \\ \hline
+
+	  	FT-06 Build Power Lines &  & \\ \hline
+
+	  	FT-07 Upgrade Power Plant &  & \\ \hline
 	\end{tabular}
 
 \subsection{Changes to the requirements}
 
-	As we worked during thi sprint we made some changes to the requirement specification.
+	As we worked during the sprint we made some changes to the requirement specification.
 	The first is FR 1.2 that we changed priority on. 
 
 	The requirement (FR 6.5) with notification for new obstacles is removed. 
