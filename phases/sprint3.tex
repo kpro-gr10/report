@@ -210,7 +210,7 @@
 			Theory source: \url{http://math.stackexchange.com/a/322836} \newline
 			Code source: \url{http://stackoverflow.com/a/1501725} \newline
 
-\subsection{Testing}
+\subsection{Manual Testing}
 
 	The following test cases were executed at the end of this sprint:
 
@@ -248,21 +248,112 @@
 
 	\end{tabular}
 
-	The following test cases were retested this sprint:
+	The following test cases did not pass previous tests and were retested this sprint:
 
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
 
-		FT-02  Appearance of buildings & & \\ \hline
+		FT-02 Appearance of buildings & Building can still appear on top of each other & Retest. \\ \hline
 
-	  	FT-05 Build Power Plants &  &  \\ \hline
+	  	FT-05 Build Power Plants & The power plants are still possible to place on top of other buildings & Retest. \\ \hline
 
-	  	FT-06 Build Power Lines &  & \\ \hline
+	  	FT-06 Build Power Lines & The power lines now cost money. It is still possible to build power lines that cross each other and it is still possible to connect several power lines to one building. & Retest. \\ \hline
 
-	  	FT-07 Upgrade Power Plant &  & \\ \hline
+	  	FT-07 Upgrade Power Plant & The amount of power the power plant can supply is now increased by an upgrade. & Pass. \\ \hline
 	\end{tabular}
+
+\subsection{Usability test}
+
+	\subsubsection*{How far the game was from completion}
+
+	The most apparent missing feature in the game at the time of testing was the possibility 
+	to fix damaged power lines. At this point a damaged power line had to be removed and then 
+	rebuilt. There are still no boundaries for where buildings can appear within the map, or 
+	where power plants can be placed. Another aspect that affected the testing was that the balance 
+	between the game parameters, for a given level, were not optimal as this was something that 
+	would be difficult and time consuming to get just right. The parameters are the rate at which 
+	buildings appear, the rate at which the health bar decreases when a building disappears, 
+	how long it should take for a house without electricity to disappear, how much power a power 
+	plant should be able to serve and how much effect an upgrade should have, and lastly how much 
+	building should cost and how much money one should earn from the households. One game parameter 
+	that affected the testing was the fact that the health bar decreased extremely slowly, a house 
+	disappearing had almost no effect on the health bar. The objective was to not get a game over too fast, 
+	and to not stress the testers while playing so that they had time to give us their thought 
+	while playing. When looking back the health bar could have decreased faster and still not 
+	make the game end too fast. Other features that were not implemented but did not noteworthy 
+	affect the testing was high score, pausing the game and sounds.
+
+	\subsubsection*{Feedback from the usability test}
+
+		\textit{Zooming}%\mbox{}\\
+
+			Some testers found double tapping to zoom non-intuitive, and some wished it had 
+			been possible to zoom by placing the thumb and pointer finger at opposing points 
+			of the screen and moving the fingers away from each other.
+
+			Several people wished it was possible to build also in zoomed-out mode.
+
+		\textit{The Hud}
+
+			Those who had not read the game instructions in advance had trouble finding out that 
+			the hud was possible to move up.
+
+			Some people found the goal to be unclear and did not notice the "players money" vs. "goal" at the bottom of the screen.
+
+			Several players did not understand what the health bar was, but when they were told what it was they understood it. A possible reason to why they did not understand that it was a health bar is explained in the section "How far the game was from completion".
+
+		\textit{The Coins}
+
+			Several players ignored the coins because they did not know they had a function.
+
+			All the players struggled with collecting money from the households. The reason for this was that they tapped the coin instead of the building and this lead to the money not being collected.
+
+		\textit{Power Lines}
+
+			Many people had trouble understanding that the red power line indicated that the power line was damaged, and some thought it meant that there were not enough power.
+
+			One person had trouble understanding that power line could be connected between buildings and connected them all directly to the power plant.
+
+			At some points the players found it hard to tap the power line if it was to small.
+
+		\textit{Power Plants}
+
+			It was not obvious to the players what the number on the power plant meant, i.e. the number indicating the number of upgrades done and the number of upgrades still available. Most of the players also did not understand that it was possible to upgrade the power plant, which might have led to the confusion about the numbers.
+
+		\textit{Buildings}
+
+			Not everyone understood what the bar belonging to the house was, and some assumed that when the house disappeared they were punished in some way, but was unsure how. This may be caused by the fact that a disappearing house had little effect on the health bar.
+
+			One player found it hard to play when buildings appeared very closed or almost on top of each other.
+
+		\textit{Other}
+
+			At the very beginning of a new game, before the first house appeared nothing seemed 
+			to be happening and this confused many of the testers.
+
+			One player missed a sign telling him which level he was at.
+
+			Some players wanted an in-game introduction to the different elements of the game and how it was played.
+
+	\subsubsection*{Improvements to be made}
+
+	These are changes and improvements that need to be made to the game as a result of the feedback from the usability test.
+
+	Each level will start with an alert message that tells the player how much money he or she needs to earn in order to reach the next level. This will make the player more aware of what the goal is and that it is changing and will hopefully make the start of a new game less confusing.
+
+	The zoomed out mode was intended for just giving an overview of the game, making the game a little harder considering that the player did not know of all buildings needing power at all time, but if the possibility to build in zoomed-out mode will make the game more playable, then this will be done.
+
+	There should be an indication that the hud can be lifted into view, such as some form of handle, but considering the feedback from the customer, the building icons should always be visible in game mode to make building more effectively, thus solving both issues. One user liked that the hud was no visible because this made more room for the map, but we will strive to make the icons not clogging the screen.
+
+	It is obviously more intuitive to tap the coin as opposed to the building. The coin will be moved closer to the building, so that when tapping the coin, the building will also be tapped.
+
+	That a power line is damaged will be indicated by making a cut in it. It will still be red to attract the attention of the player.
+
+	In order to make it more visible to the player that the power plants can be upgraded, an arrow of some sort will be placed over the building.
+
+	Which level the player is at should be visible when playing.
 
 \subsection{Changes to the requirements}
 
