@@ -1,7 +1,7 @@
 \section{Sprint 3}
 
 \subsection{Sprint planning}
-	In sprint 3 the group planned on implementing the final requirements with high priority, as well as most of the requirements with medium priority. This is the second to last sprint, and it is important that in the last sprint the  only remaining requirements are medium to low requirements, so that time can also be spent fixing bugs and make the game work properly on iOS. The goal for this sprint will be to get a fully playable game, with only minor requirements missing.
+	In sprint 3 the group planned to implement the final requirements with high priority, as well as most of the requirements with medium priority. This is the second to last sprint, and it is important that in the last sprint the  only remaining requirements are medium to low requirements, so that time can also be spent fixing bugs and make the game work properly on iOS. The goal for this sprint will be to get a fully playable game, with only minor requirements missing.
 
 	A usability test will be carried out in the last week of the sprint to discover potential bugs or errors we have yet to discover, as well as ideas for improvements that may be implemented in the next sprint.
 
@@ -19,7 +19,8 @@
 		\item {\bf Testing:} 20.5 hours 
 	\end{itemize}
 	{\bf Total workload: } 139.5 hours \\
-	The group's goal was to work at least 20 hours pr/person every week in this sprint. 
+	
+	The group's goal was to work at least 20 hours per person every week in this sprint. 
 	The group did manage the a workload with an average of 17.4 hours/week (139.5 hours/4 persons/2 weeks = 20.6 hours). The reason for the low numbers is because one of the group members did not
 	participate as much as he should. The 3 other group members did work over 20 hours. 
 
@@ -93,7 +94,7 @@
 			\item {\bf Remove Power Cables: } there is implemented a remove powerline. The 
 			algorithm used is described under "algorithms" in this section. 
 			\item {\bf Damaged Power Lines: } it was implemented functionality to set a 
-			powerline to be in "dagamed" mode. 
+			powerline to be in "damaged" mode. 
 			\item {\bf More damaged power lines in new levels: } when the user reaches a higher level
 			there is now appearing more damaged power lines that needs to be fixed. 
 			\item {\bf Color of power cable: } A powerline is black if there is no power served between
@@ -101,7 +102,7 @@
 			connected og if the powerplant cannot serve the houses. If the line is yellow, it 
 			signalize that there is sent power to the house. 
 			\item {\bf Selected houses when building powerlines: } when building a powerline, 
-			the user tap on the building he/she wants to connect the line between. When tapping on the
+			the user tap on the building he or she wants to connect the line between. When tapping on the
 			first house, it is 
 		\end{itemize}
 
@@ -134,7 +135,7 @@
 		\subfigure{
 			\includegraphics[scale=0.18]{pictures/sprint3-screen/buildPowerline_2.png}
 		}
-		\caption{1) User connect buildings}
+		\caption{User connecting buildings}
 	\end{figure}
 	\begin{figure}[H]
 	\centering	
@@ -144,7 +145,7 @@
 		\subfigure{
 			\includegraphics[scale=0.18]{pictures/sprint3-screen/buildPowerline_5.png}
 		}
-		\caption{2) Power is served and money can be collected}
+		\caption{Power is served and money can be collected}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -155,7 +156,7 @@
 		\subfigure{
 			\includegraphics[scale=0.18]{pictures/sprint3-screen/nextLevel.png}
 		}
-		\caption{1) Damanged red powerline, 2) Next level screen}
+		\caption{Damaged red powerline and next level screen}
 	\end{figure}
 
 	\begin{figure}[H]
@@ -166,7 +167,7 @@
 		\subfigure{
 			\includegraphics[scale=0.18]{pictures/sprint3-screen/serve.png}
 		}
-		\caption{1) House not served 2) powerplant upgraded and house is served}
+		\caption{Upgrade Powerplants to deliver more power}
 	\end{figure}
 
 	\subsection*{Algorithms}
@@ -180,8 +181,8 @@
 			each power plant on the map every time there is a change to the graph.
 
 			\item {\bf Point to Line Segment Distance}
-			The Point to Line Segment Distance works by projecting the point \emph{p} onto the line 
-			defined by going through the point \emph{v} and the point \emph{w}. Then the algorithm 
+			The Point to Line Segment Distance algorithm works by projecting the point \emph{p} onto the line 
+			defined as going through the point \emph{v} and the point \emph{w}. Then the algorithm 
 			examines the following three different locations for the projection on the line: 
 			\begin{enumerate}
 				\item Before \emph{v}.
@@ -197,7 +198,6 @@
 			length of the line segment from \emph{v} to \emph{w} is 0. In that case the distance 
 			from \emph{p} to the line segment is just the distance from \emph{p} to either \emph{v} 
 			or \emph{w}.
-		\end{itemize}
 
 			\begin{figure}[H]
 			\centering
@@ -209,8 +209,9 @@
 
 			Theory source: \url{http://math.stackexchange.com/a/322836} \newline
 			Code source: \url{http://stackoverflow.com/a/1501725} \newline
+		\end{itemize}
 
-\subsection{Testing}
+\subsection{Manual Testing}
 
 	The following test cases were executed at the end of this sprint:
 
@@ -248,21 +249,112 @@
 
 	\end{tabular}
 
-	The following test cases were retested this sprint:
+	The following test cases did not pass previous tests and were retested this sprint:
 
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
 
-		FT-02  Appearance of buildings & & \\ \hline
+		FT-02 Appearance of buildings & Building can still appear on top of each other & Retest. \\ \hline
 
-	  	FT-05 Build Power Plants &  &  \\ \hline
+	  	FT-05 Build Power Plants & The power plants are still possible to place on top of other buildings & Retest. \\ \hline
 
-	  	FT-06 Build Power Lines &  & \\ \hline
+	  	FT-06 Build Power Lines & The power lines now cost money. It is still possible to build power lines that cross each other and it is still possible to connect several power lines to one building. & Retest. \\ \hline
 
-	  	FT-07 Upgrade Power Plant &  & \\ \hline
+	  	FT-07 Upgrade Power Plant & The amount of power the power plant can supply is now increased by an upgrade. & Pass. \\ \hline
 	\end{tabular}
+
+\subsection{Usability test}
+
+	\subsubsection*{How far the game was from completion}
+
+	The most apparent missing feature in the game at the time of testing was the possibility 
+	to fix damaged power lines. At this point a damaged power line had to be removed and then 
+	rebuilt. There are still no boundaries for where buildings can appear within the map, or 
+	where power plants can be placed. Another aspect that affected the testing was that the balance 
+	between the game parameters, for a given level, were not optimal as this was something that 
+	would be difficult and time consuming to get just right. The parameters are the rate at which 
+	buildings appear, the rate at which the health bar decreases when a building disappears, 
+	how long it should take for a house without electricity to disappear, how much power a power 
+	plant should be able to serve and how much effect an upgrade should have, and lastly how much 
+	building should cost and how much money one should earn from the households. One game parameter 
+	that affected the testing was the fact that the health bar decreased extremely slowly, a house 
+	disappearing had almost no effect on the health bar. The objective was to not get a game over too fast, 
+	and to not stress the testers while playing so that they had time to give us their thought 
+	while playing. When looking back the health bar could have decreased faster and still not 
+	make the game end too fast. Other features that were not implemented but did not noteworthy 
+	affect the testing was high score, pausing the game and sounds.
+
+	\subsubsection*{Feedback from the usability test}
+
+		\textit{Zooming}%\mbox{}\\
+
+			Some testers found double tapping to zoom non-intuitive, and some wished it had 
+			been possible to zoom by placing the thumb and pointer finger at opposing points 
+			of the screen and moving the fingers away from each other.
+
+			Several people wished it was possible to build also in zoomed-out mode.
+
+		\textit{The Hud}
+
+			Those who had not read the game instructions in advance had trouble finding out that 
+			the hud was possible to move up.
+
+			Some people found the goal to be unclear and did not notice the "players money" vs. "goal" at the bottom of the screen.
+
+			Several players did not understand what the health bar was, but when they were told what it was they understood it. A possible reason to why they did not understand that it was a health bar is explained in the section "How far the game was from completion".
+
+		\textit{The Coins}
+
+			Several players ignored the coins because they did not know they had a function.
+
+			All the players struggled with collecting money from the households. The reason for this was that they tapped the coin instead of the building and this lead to the money not being collected.
+
+		\textit{Power Lines}
+
+			Many people had trouble understanding that the red power line indicated that the power line was damaged, and some thought it meant that there were not enough power.
+
+			One person had trouble understanding that power line could be connected between buildings and connected them all directly to the power plant.
+
+			At some points the players found it hard to tap the power line if it was to small.
+
+		\textit{Power Plants}
+
+			It was not obvious to the players what the number on the power plant meant, i.e. the number indicating the number of upgrades done and the number of upgrades still available. Most of the players also did not understand that it was possible to upgrade the power plant, which might have led to the confusion about the numbers.
+
+		\textit{Buildings}
+
+			Not everyone understood what the bar belonging to the house was, and some assumed that when the house disappeared they were punished in some way, but was unsure how. This may be caused by the fact that a disappearing house had little effect on the health bar.
+
+			One player found it hard to play when buildings appeared very closed or almost on top of each other.
+
+		\textit{Other}
+
+			At the very beginning of a new game, before the first house appeared nothing seemed 
+			to be happening and this confused many of the testers.
+
+			One player missed a sign telling him which level he was at.
+
+			Some players wanted an in-game introduction to the different elements of the game and how it was played.
+
+	\subsubsection*{Improvements to be made}
+
+	These are changes and improvements that need to be made to the game as a result of the feedback from the usability test.
+
+	Each level will start with an alert message that tells the player how much money he or she needs to earn in order to reach the next level. This will make the player more aware of what the goal is and that it is changing and will hopefully make the start of a new game less confusing.
+
+	The zoomed out mode was intended for just giving an overview of the game, making the game a little harder considering that the player did not know of all buildings needing power at all time, but if the possibility to build in zoomed-out mode will make the game more playable, then this will be done.
+
+	There should be an indication that the hud can be lifted into view, such as some form of handle, but considering the feedback from the customer, the building icons should always be visible in game mode to make building more effectively, thus solving both issues. One user liked that the hud was no visible because this made more room for the map, but we will strive to make the icons not clogging the screen.
+
+	It is obviously more intuitive to tap the coin as opposed to the building. The coin will be moved closer to the building, so that when tapping the coin, the building will also be tapped.
+
+	That a power line is damaged will be indicated by making a cut in it. It will still be red to attract the attention of the player.
+
+	In order to make it more visible to the player that the power plants can be upgraded, an arrow of some sort will be placed over the building.
+
+	Which level the player is at should be visible when playing.
 
 \subsection{Changes to the requirements}
 
@@ -286,13 +378,13 @@
 		to exit the game at any time, and the game state should be saved and loaded when the user 
 		returns to the game \\ \hline
 		FR 4.6 & {\bf \color{green}[NEW]} The user should be able to win the game by reaching the goal in the current level. The goal is level specific. \\ \hline
-		FR 6.5 & {\bf \color{red}[REMOVED]} The user shoud get a notification of new events outside 
+		FR 6.5 & {\bf \color{red}[REMOVED]} The user should get a notification of new events outside 
 		the screen \\ \hline
 		FR 6.11 & {\bf \color{green}[NEW]} The user should be able to see which houses is selected when building power cables. \\ \hline
 		FR 6.12 & {\bf \color{green}[NEW]} The cables should change color if it is connected to a power 
 		station. \\ \hline
 		FR 6.13 & {\bf \color{green}[NEW]} The user should be able to see how much power the 
-		powerplant have left. This bar should decrease if a building is connected to the powerplant 
+		power plant have left. This bar should decrease if a building is connected to the power plant 
 		and should be increase if a building is removed. The colors should be yellow whit white 
 		background. \\ \hline
 	\end{tabular}
@@ -305,9 +397,11 @@
 	"bully" each other for funny writing typo, if found, in this report. 
 
 	The harmony in the group is now great and it helps us keep up the good work and meet 
-	our sprint goals. We belive having fun is the key to succeed in this project. 
+	our sprint goals. We believe having fun is the key to succeed in this project. 
 
 \subsection{Customer feedback}
+
+	Before the sprint 3 delivery meeting the customer was provided with a presentation of the game instructions as well as a newly updated playable game. The customer had therefore been able to play the game in advance and had made up some thoughts about the current state of the game. Their first concern was that it is tiresome and not optimal to slide up the building menu every time one would want to build power plants and power lines. A solution to this would be to keep the building icons on the screen continuous. The second problem was that one would often like to build several power lines in one go. With the current solution this is not optimal as the player has to press the power line icon for each new power line. A solution to this could be to let the player exit the building mode on own initiative and be able to build power lines as long as he or she is in building mode.
 
 \subsection{Sprint retrospective}
 	In this sprint, we did not do the sprint retrospective, but all the team members did
@@ -315,7 +409,7 @@
 	we work and non of the group members had anything specific to add or remove in the next sprint.
 
 	We have only had one situation where two of the team members worked on the same implementation, 
-	but we dont think that would happend again and have not been a problem up until now. 
+	but we don't think that would happened again and have not been a problem up until now. 
 	The group need to ensure a good communication within the group as well as give good status
 	updates while working. 
 
