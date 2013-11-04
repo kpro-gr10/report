@@ -551,11 +551,110 @@
 		Feature to be tested & That the map size increases in higher levels. \\ 
 		Requirement & FR4.5 \\ 
 		Pre-conditions & \\ 
-		Steps of Execution & 1.  \\
-		Expected result & 1. \\
+		Steps of Execution & 1. Start level 1 and observe the size of the map. \\
+		& 2. Start level 2 and observe the size of the map. \\
+		& 3. Start subsequent levels and observe the size of the map. \\
+		Expected result & 2. The size of the map has increased from the previous level. \\
+		& 3. The size of the map has increased from the previous level. \\
 	\end{tabular}
 	\caption{Functional test 27}
 \end{table}
 
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Restart level \\ 
+		Test Id & FT-28 \\ 
+		Feature to be tested & \\ 
+		Requirement & FR1.3 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & 1.  \\
+		Expected result & 1. \\
+	\end{tabular}
+	\caption{Functional test 28}
+\end{table}
 
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Highscore \\ 
+		Test Id & FT-29 \\ 
+		Feature to be tested & That the player gets a correct high score and that it can be improved. \\ 
+		Requirement & FR1.4, FR1.5 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & 1. Complete level 1 for the first time. \\
+		& 2. Complete level 2. \\
+		& 3. Go to highscore page. \\
+		& 4. Complete level 1 with a better time. And quit level 2 before finishing. \\
+		& 5. Go to high score page. \\
+		& 6. Complete level 1 with a worse time. \\
+		& 7. Go to high score page. \\
+		Expected result & 3. The highscore page is updated with the time used on level 1 and level 2. \\
+		& 5. Level 1 is updated with the new time. The old score of level 2 is still there. \\
+		& 7. The old high scores are still there. \\
+	\end{tabular}
+	\caption{Functional test 29}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Pause Game \\ 
+		Test Id & FT-30 \\ 
+		Feature to be tested & That it is possible to pause the game at any given point. \\ 
+		Requirement & FR1.6 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & 1. Start a game and press the 'Pause' button. \\
+		& 2. Press the 'OK' button of the alert message. \\
+		Expected result & 1. An alert message appears telling the player that the game has been pausen. \\
+		& 2. The game is started again. Nothing has changed since the game was paused. The timer starts from the point when the game was paused. \\
+	\end{tabular}
+	\caption{Functional test 30}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Sound Effects \\ 
+		Test Id & FT-31 \\ 
+		Feature to be tested & That there is background music and sound effects, and that these can be muted \\ 
+		Requirement & FR1.7, FR1.8, FR1.9, FR1.10, FR1.11 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & 1. Start a new game. \\
+		2. Collect money from buildings. \\
+		3. Upgrade a power plant. \\
+		4. Build a power line. \\
+		Expected result & 1. Background music is playing. \\
+		& 2. An appropriate sound is made. \\
+		& 3. An appropriate sound is made. \\
+		& 4. An appropriate sound is made. \\
+	\end{tabular}
+	\caption{Functional test 31}
+\end{table}
+
+\begin{table}[H]
+\centering
+	\begin{tabular}{ l | p{8cm} }
+		\hline
+		{\bf Item} & {\bf Description} \\ \hline
+		Name & Power Preservation Tip \\ 
+		Test Id & FT-32 \\ 
+		Feature to be tested & That a power preservation tip appears between levels. \\ 
+		Requirement & FR6.6 \\ 
+		Pre-conditions & \\ 
+		Steps of Execution & 1. Complete level 1. \\
+		& 2. Complete subsequent levels. \\
+		Expected result & 1. A power preservation tip appears. \\
+		& 2. A new power preservation tip appears for each level. \\
+	\end{tabular}
+	\caption{Functional test 32}
+\end{table}
 

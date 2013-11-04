@@ -46,18 +46,59 @@
 
 \subsection{Redesign and bug fixing}
 	
-	\subsection*{Changes to hud}
+	\subsubsection*{Changes to hud}
 		**Made the hud static**
-	\subsection*{Scaling GUI elements on Ios}
+		After receiving feedback from the customer and through observations during the usability test in sprint 3, it was decided that the hud was going to be static, i.e. it was not going to be necessary to move it up in order to build.The two icons for building power plants and power lines were made slightly smaller to not make the screen look cluttered.
+	\subsubsection*{Scaling GUI elements on Ios}
 		**Make the elements fit on ios**
-	\subsection{Improvements of the appearence of buildings}
-		**Changed map***
-	\subsection{Input handling on Ios}
+	\subsubsection*{Improvements on the appearance of buildings}
+		**Changed map**
+		A grid was added to the map...
+	\subsubsection*{Input handling on Ios}
 		**Fungerer nå på android og Ios**
 
 \subsection{Testing}
 
+	The following test cases were executed at the end of this sprint:
+
+	\definecolor{lightgray}{gray}{0.9}
+
+	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
+		\hline
+		\rowcolor{lightgray}
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
+		FT-15 Exit Game &  & \\ \hline
+		FT-24 New Obstacles &  & \\ \hline
+		FT-28 Restart Level &  & \\ \hline
+		FT-29 Highscore &  & \\ \hline
+		FT-30 Pause Game &  & \\ \hline
+		FT-31 Sound Effects &  & \\ \hline
+		FT-32 Power Preservation Tip &  & \\ \hline
+	\end{tabular}
+
+	The following test cases did not pass previous tests and were retested this sprint:
+
+	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
+		\hline
+		\rowcolor{lightgray}
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
+		FT-02 Appearance of buildings & & \\ \hline
+		FT-05 Build Power Plants & & \\ \hline
+		FT-06 Build Power Lines & & \\ \hline
+		FT-20 Damaged Power Lines & & \\ \hline
+	\end{tabular}
+
 \subsection{Changes to the requirements}
+
+	During testing early in the sprint it was discovered that despite the improvements on the appearance of buildings, i.e.the grid, new buildings could still appear on top of power lines, something which complicates removing and fixing these power lines, as well as making a clutter when building power lines to the buildings. An optimal solution would be to make another constraint on were buildings can appear regarding the power lines. As this was the last sprint and fixing this could be potentially difficult and time consuming, the group decided on another solution to this problem as seen  in requirement FR6.14. 
+
+	{\bf All changes on version 4 of the requirement specification:} \\
+	\begin{tabular}{| p{1.5cm} | p{12cm} |}
+		\hline
+		\rowcolor{lightgray}
+		{\bf FR} & {\bf Change} \\ \hline
+		FR6.14 & {\bf \color{green}[NEW]} The user should be able to click a button, and go into "powerline view mode", where the buildings aren't rendered and cannot be interacted with. This is to make it easier to see power lines behind buildings etc. \\ \hline
+	\end{tabular}
 
 \subsection{Group dynamics}
 
