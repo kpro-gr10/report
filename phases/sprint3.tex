@@ -5,7 +5,7 @@
 
 	A usability test will be carried out in the last week of the sprint to discover potential bugs or errors we have yet to discover, as well as ideas for improvements that may be implemented in the next sprint.
 
-	Concerning the report, we plan to finish the content up until this sprint.
+	Concerning the report, we plan to finish the chapters up until this sprint.
 
 \subsection{Duration and workload}
 	
@@ -40,7 +40,7 @@
 		& \\ \hline
 
 		FR2.7 & The player should only be allowed to build a level-specific 
-		number of power plants. & \\ \hline
+		number of power plants. & Added to sprint 4, not 3 though \\ \hline
 
 		FR3.1 & Arbitrary power lines may be damaged throughout the game & \\ \hline
 
@@ -220,18 +220,14 @@
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Not pass} \\ \hline
-
-	  	FT-11 Collect Money & The function works as expected, but if one waits with collecting money, the money accumulates and this is something we need to discuss how we are going to do & Pass. \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
 
 	  	FT-14 Win Game & Works as expected. & Pass. \\ \hline
 	  	
 	  	FT-16 Limited Power & Works as expected. & Pass. \\ \hline
 	  	
 	  	FT-17 Remove Power Lines & Works as expected. & Pass. \\ \hline
-	  	
-	  	%FT-18 Number of Power Plants & Currently not implemented. &  \\ \hline
-	  	
+	  		  	
 	  	FT-19 Different Buildings & Works as expected. & Pass. \\ \hline
 
 	  	FT-20 Damaged Power Lines & Power lines are damaged throughout the game, but are not possible 
@@ -266,6 +262,8 @@
 	\end{tabular}
 
 \subsection{Usability test}
+
+	The usability test proved to be very helpful in terms of increasing the user friendliness of the user interfaces and making the game more enjoyable to play.
 
 	\subsubsection*{How far the game was from completion}
 
@@ -338,38 +336,33 @@
 
 			Some players wanted an in-game introduction to the different elements of the game and how it was played.
 
-	\subsubsection*{Improvements to be made}
+	\subsubsection*{Results of the feedback}
 
-	These are changes and improvements that need to be made to the game as a result of the feedback from the usability test.
+	The following are suggestions to changes and improvements that should be made, as a result of the feedback from the usability test.
 
 	Each level will start with an alert message that tells the player how much money he or she needs to earn in order to reach the next level. This will make the player more aware of what the goal is and that it is changing and will hopefully make the start of a new game less confusing.
 
-	The zoomed out mode was intended for just giving an overview of the game, making the game a little harder considering that the player did not know of all buildings needing power at all time, but if the possibility to build in zoomed-out mode will make the game more playable, then this will be done.
+	The zoomed out mode was intended for just giving an overview of the game, making the game a little harder considering that the player did not know of all buildings needing power at all time, but if the possibility to build in zoomed-out mode will make the game more enjoyable, then this will be done.
 
 	There should be an indication that the hud can be lifted into view, such as some form of handle, but considering the feedback from the customer, the building icons should always be visible in game mode to make building more effectively, thus solving both issues. One user liked that the hud was no visible because this made more room for the map, but we will strive to make the icons not clogging the screen.
 
-	It is obviously more intuitive to tap the coin as opposed to the building. The coin will be moved closer to the building, so that when tapping the coin, the building will also be tapped.
+	When collecting money, it is obviously more intuitive to tap the coin as opposed to the building. The coin will be moved closer to the building, so that when tapping the coin, the building will also be tapped, and as a result the money will be collected.
 
-	That a power line is damaged will be indicated by making a cut in it. It will still be red to attract the attention of the player.
+	It should be made clearer to the player that a power line is damaged. This can be done by making a cut to it. It should still be red to attract the attention of the player.
 
-	In order to make it more visible to the player that the power plants can be upgraded, an arrow of some sort will be placed over the building.
+	In order to make it more visible to the player that the power plants can be upgraded, an arrow of some sort should be placed over the building.
 
 	Which level the player is at should be visible when playing.
 
 \subsection{Changes to the requirements}
 
-	As we worked during the sprint we made some changes to the requirement specification.
-	The first is FR 1.2 that we changed priority on. 
+	The first change to the requirements during sprint 3 was the change of priority in requirement FR 1.2. The priority was changed from high to medium, because it is not an essential feature to have in order to have a working game, but can still be an improvement in the user experience.
 
-	The requirement (FR 6.5) with notification for new obstacles is removed. 
-	The group defined a sound as a notification and will discuss within the group if
-	we want to have a sound of not, but the visual notification will not be implemented. 
+	The requirements FR 6.5 and FR 3.5 were duplicates and were removed. The visual notification will not be implemented. The group defined a sound as a notification and added requirement FR 1.13.
 
-	Since the game is in a state where it is playable we have focused some more on the 
-	GUI, and therefore have added some new requirements (FR 1.11 - FR 1.13) that were missing 
-	from the specification.
+	Other requirements were also added as the group discovered that they were either missing or would be an improvement to the design.
 	
-	{\bf All changes on version 3 of the requirement specification:} \\
+	{\bf Changes to version 3 of the requirement specification:} \\
 	\begin{tabular}{| p{1.5cm} | p{12cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -377,6 +370,8 @@
 		FR 1.2 & {\bf \color{orange}[CHANGED PRIORITY FROM HIGH TO MEDIUM]} The user should be able 
 		to exit the game at any time, and the game state should be saved and loaded when the user 
 		returns to the game \\ \hline
+		FR1.13 & {\bf \color{green}[NEW]} The user should get a sound notification of when new obstacles appear. \\ \hline
+		FR3.5 & {\bf \color{red}[REMOVED]}  The user should get a notification of new obstacles outside the screen. \\ \hline
 		FR 4.6 & {\bf \color{green}[NEW]} The user should be able to win the game by reaching the goal in the current level. The goal is level specific. \\ \hline
 		FR 6.5 & {\bf \color{red}[REMOVED]} The user should get a notification of new events outside 
 		the screen \\ \hline
@@ -401,14 +396,24 @@
 
 \subsection{Customer feedback}
 
-	Before the sprint 3 delivery meeting the customer was provided with a presentation of the game instructions as well as a newly updated playable game. The customer had therefore been able to play the game in advance and had made up some thoughts about the current state of the game. Their first concern was that it is tiresome and not optimal to slide up the building menu every time one would want to build power plants and power lines. A solution to this would be to keep the building icons on the screen continuous. The second problem was that one would often like to build several power lines in one go. With the current solution this is not optimal as the player has to press the power line icon for each new power line. A solution to this could be to let the player exit the building mode on own initiative and be able to build power lines as long as he or she is in building mode.
+	Before the sprint 3 delivery meeting the customer was provided with a presentation 
+	of the game instructions as well as a newly updated playable game. The customer had 
+	therefore been able to play the game in advance and had made up some thoughts about 
+	the current state of the game. Their first concern was that it is tiresome and not 
+	optimal to slide up the building menu every time one would want to build power plants 
+	and power lines. A solution to this would be to keep the building icons on the screen 
+	continuous. The second problem was that one would often like to build several power 
+	lines in one go. With the current solution this is not optimal as the player has to 
+	press the power line icon for each new power line. A solution to this could be to let 
+	the player exit the building mode on own initiative and be able to build power lines as 
+	long as he or she is in building mode.
 
 \subsection{Sprint retrospective}
 	In this sprint, we did not do the sprint retrospective, but all the team members did
 	get the chance to add changes to the next and last sprint. We are quite pleased with the way 
-	we work and non of the group members had anything specific to add or remove in the next sprint.
+	we work and none of the group members had anything specific to add or remove in the next sprint.
 
-	We have only had one situation where two of the team members worked on the same implementation, 
+	We have had one situation where two of the team members worked on the same implementation, 
 	but we don't think that would happened again and have not been a problem up until now. 
 	The group need to ensure a good communication within the group as well as give good status
 	updates while working. 
