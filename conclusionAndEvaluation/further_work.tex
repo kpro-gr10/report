@@ -1,8 +1,72 @@
 \section{Further work}
 
+This section describes various features that could be implemented in order to have a 
+more user friendly and enjoyable application, but that have not been implemented in 
+this project due to time limits and/or low priority.
 
-Power plants skal ikke kunne bygges for nær (dvs i ruten ved siden av) en bygning og bygninger skal ikke kunne havne for nær en allerede bygd power plant. Grunn: Power Line blir så liten at den ikke kan trykkes på.
+\textit{Placing of buildings, power plants and power lines}
 
-Power lines kan nå bygges hvor som helst og bygninger kan havne oppå dem.
+In the final version of the game a power plant may be built quite close beside a building 
+and a building may appear quite close to an already built power plant. When building a power 
+line from the power plant to the building, it can turn out quite short and it may be difficult 
+to click on. A solution would be to have a constraint on where buildings may appear relative 
+to power plants, as well as where it is possible to build power plants. Another solutions 
+could be to somehow make the power line bigger and more clickable despite the short distance. 
+
+Another problem in terms of were game elements are placed on the game map is the fact that 
+there are no constraints on where power lines may be built as long as they are drawn between 
+two buildings, either power plants or general buildings. There are either no constraints in 
+where other buildings are placed in relation to a power line. This means that buildings may 
+appear on top of a power line, which consequently can make the power line difficult to click 
+and also make the screen look cluttered. Similarly it is possible to build a power plant on 
+top of a power line or build a power line under a building or power plant. Power lines always 
+appear under buildings. A solution could be to make a constraints on where power plants 
+may be built and where buildings may appear in relations to power lines, or make constraints 
+to where power lines may be built. Making the power line appear over power plants will in return 
+make the power plant difficult to click. An easier solution could be to have a 
+"Power line view mode" as stated in requirement 6.14, where buildings are not rendered and 
+cannot be interacted with, but which makes power lines more visible and easier to interact with.
+This requirement was not implemented due to time limitations and because it was added to the 
+requirement specification at a late point.
+
+\textit{Zooming}
+
+The feedback from the usability test showed that several of the users wished it had been 
+possible to build also in zoomed out mode. This feature has not been implemented due to 
+time limitations. A possibly better way to handle zooming as opposed to double tapping, 
+could be gradually zooming by using two fingers. These two features implemented together 
+could lead to a more user friendly game.
+
+\textit{Visualization}
+
+Most of the users in the usability test had a problem understanding that a damaged power 
+line was in fact damaged. That a power line is damaged could be indicated better by making 
+it appear to be cut for instance.
+
+The users also had difficult understanding that a power plant could be upgraded. This could 
+be visualized better by having an arrow above the power plant, which then could be clicked in 
+order to upgrade.
 
 Visual notification?
+
+\textit{Other}
+
+Functional requirements 6.6 stated that a power preservation tip should appear when the user 
+reached a new level. This had a low priority, because the customer stated at the first meeting 
+that this was not important to the game, and has not been implemented. It is however room for a 
+power preservation tip on the screen that appears after the user has completed a level, and it 
+should be easy to implement this.
+
+The customer stated in the sprint 3 delivery meeting that it would be nice to be able to build 
+several power lines in a row without having to press the power line icon each time. This got 
+somewhat easier after making the building icons visible at all time, but could be supported even 
+more by adding a persistent building mode for power lines. That is, when a user presses the power 
+line building icon and has built the first power line, the building mode is not ended, and the user 
+can continue building without pressing the build power line icon, until he or she exits the building 
+mode by pressing an exit button.
+
+\textit{Support/Compatibility}
+
+Music that is supported on several versions of android and on ios(?)
+
+Better support on different android phones.
