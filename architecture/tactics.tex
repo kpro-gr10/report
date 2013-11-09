@@ -1,12 +1,10 @@
 \section{Architectural Tactics}
-	In this section we will list the most important quality attributes as well as plan the tactis to 
-	ensure that we maintain the quality.
+In this section we will list the most important quality attributes as well as plan the tactis to 
+ensure that we maintain the quality.
 
-
-\subsection*{What is architectural tactics? }
+\subsection*{What is Architectural Tactics? }
 Architectual tactics are design decisions that influence the control of a quality attribute reponse. 
-Each tactic is a design option for the architect. 
-Source: \url{http://www.ece.ubc.ca/~matei/EECE417/BASS/ch05lev1sec1.html}
+Each tactic is a design option for the architect. \cite{architecturalTactics}
 
 \subsection*{Modifiability}
 To achieve good modifiability for our code, we will use well known patterns, like MVP and create 
@@ -18,7 +16,8 @@ increases modifiability.
 
 \subsection*{Performance}
 The most critical resource for the performance of this project is CPU power. JavaScript is not very 
-efficient, so making the code efficient is very important. A tactic we will be using to achieve this 
-is to control the event sampling frequency. A typical event is a change to the game state which 
-requires the game to be repainted. By only repainting the game at fixed intervals and only when a 
-notable change has occured, we can improve the performance of the code.
+efficient and there is no garantee that Android and iOS supports hardware acceleration for drawing 
+to the HTML5 canvas, so making the code efficient is very important. A tactic we will be using to 
+achieve this is to control the event sampling frequency. A typical event is a change to the game 
+state which requires the game to be repainted. By only repainting the game at fixed intervals and 
+only when a notable change has occured, we can improve the performance of the code.
