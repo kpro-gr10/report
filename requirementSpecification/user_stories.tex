@@ -3,14 +3,16 @@
 This section will focus on the user stories in the game. Each story will be desribed as a scenario. All the scenarios have a certain number of attributes: Actors, preconditions, flow of events and exceptions. Before describing the flow of events, one needs to know who is involved in the scenario (the actors) and what preconditions that needs to be fullfilled in order for the scenario to take place. In the flow of events, the actions will be described step by step. If a step in the flow of events can occur, but is not a consistent part of the flow, it is described in the bottom of each table.\\
 
 \definecolor{lightgray}{gray}{0.6}
+\definecolor{lightergray}{gray}{0.9}
 
-\begin{table}
+\begin{table}[H]
 	\begin{tabular}{| l | p{10cm} |}
 		\hline
 		\rowcolor{lightgray}
 		{\bf Scenario \#1:} & {\bf Build Power Plant.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & User has initiated a game. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: &  \\ \hline
 		1 & The player drags the build menu into view. \\ \hline
 		2 & The player taps the Power Plant button. \\ \hline
@@ -22,6 +24,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		6 & The system places a Power Plant at det given spot. \\ \hline
 		7 & The system reduces the amount of money the player has by the cost of the Power Plant. \\ \hline
 		8 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		3.2 & The player is not able to afford the Power Plant. A message is displayed, to let the player know. \\ \hline
 		4.1 & The player taps a spot where a building, a Power Line or another Power Plant is already placed. Sound notification. Go to 4. \\ \hline
@@ -36,6 +39,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#2:} & {\bf Build Power Line.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & User has initiated a game. There exists at least one Power Plant and at least on building on the map. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player drags the build menu into view. \\ \hline
 		2 & The player taps the Power Line button. \\ \hline
@@ -49,6 +53,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		7 & The system places a Power Line where the player dragged the line. \\ \hline
 		8 & The system reduces the amount of money the player has by the cost of the Power Line. \\ \hline
 		9 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		3.1 & The maximun number of Power Plants has been met. A message will be displayed. \\ \hline
 		4.2 & The player is not able to afford the Power Line. A message is displayed. \\ \hline
@@ -67,6 +72,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#3:} & {\bf Repair damaged Power Line.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & User has initiated a game. There exists a damaged Power Line on the map. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player taps the damaged Power Line. \\ \hline
 		2 & The system asks whether the player wants to 'Remove' or 'Repair' the Power Line, or 'Cancel'. \\ \hline
@@ -75,6 +81,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		3 & The system checks whether the player is able to afford the repair cost. \\ \hline
 		3.1 & The player can afford the repair cost and the damaged Power Line is replaced by a new. \\ \hline
 		4 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		1.1 & The player does not tap a damaged Power Line. Notification Sound. Go to 1. \\ \hline
 		3.2 & The player cannot afford the repair cost. A message is displayed. Go to 4 \\ \hline
@@ -90,6 +97,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#4:} & {\bf Upgrade Power Plant} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & User has initiated a game. A Power Plant is ready to be upgraded. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player taps the Power Plant ready to be updated. \\ \hline
 		2 & The system displays an information box belonging to the given Power Plant. \\ \hline
@@ -100,6 +108,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		5 & The system checks whether the player is able to afford the Upgrade. \\ \hline
 		6 & The system incerases the amount of power the Power Plant is able to supply. \\ \hline
 		7 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		4.1 & The player is not able to afford the Upgrade. A message is displayed. Go to 7 \\ \hline 
 	\end{tabular}
@@ -113,10 +122,12 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#5:} & {\bf Navigate around the map.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & The user has initiated a game. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player drags his finger over the screen to navigate. \\ \hline
 		2 & The player double taps the screen to zoom out or zoom in. \\ \hline
 		3 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		1.1 & The player tries to navigate outside the map. Nothing happens. \\ \hline
 	\end{tabular}
@@ -130,6 +141,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#6:} & {\bf Pause the game} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & A game has been initiated. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player pauses the game. \\ \hline
 		1.1 & The player taps the Pause button. \\ \hline
@@ -140,6 +152,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		3.2 & The player taps 'Load Game' from Game Menu \\ \hline
 		4 & The system returns to the saved game. \\ \hline
 		5 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 	\end{tabular}
 	\caption{Scenario: Pause the game}
@@ -152,6 +165,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#7:} & {\bf Remove Power Line} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & A game has been initiated. There exists a Power Line on the game map. \\ \hline
+		\rowcolor{lightergray}		
 		Flow of events: & \\ \hline
 		1 & The player taps the Power Line he wants to remove. \\ \hline
 		2 & The system asks whether the player wants to 'Remove' or 'Repair' the Power Line, or 'Cancel' \\ \hline
@@ -160,6 +174,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		4 & The system checks whether the playe is able to afford to remove the Power Line \\ \hline
 		5 & The system removes the Power Line. \\ \hline
 		6 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		4.1 & The player can not afford to remove the Power Line. Display message. Go to 6. \\ \hline
 	\end{tabular}
@@ -173,11 +188,13 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#8:} & {\bf Get information about building} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & A game has been initiated. There exists a building on the map. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The player taps the building he wants more information about. \\ \hline
 		2 & The system displays a box with information. \\ \hline
 		3 & The player taps 'OK' when he is done. \\ \hline
 		4 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 		1.1 & The building is ready to pay for the power. The player must collect money before information is shown. \\ \hline
 	\end{tabular}
@@ -191,6 +208,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#9:} & {\bf Building is not served with power.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & A game has been initiated. At least one house is not connected to a Power Plant. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The house's timer starts going. \\ \hline
 		1.2 & The player does not connect the house to a Power Plant. Go to 2. \\ \hline
@@ -202,6 +220,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		4.1.1 & The Healthbar is not below 0. Go to 5 \\ \hline
 		4.1.2 & The Healthbar is below zero. Game Over. \\ \hline
 		5 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline	
 	\end{tabular}
 	\caption{Scenario: Building is not served with power}
@@ -214,6 +233,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		{\bf Scenario \#10:} & {\bf Collect money from building.} \\ \hline
 		Actors: & Player \\ \hline
 		Preconditions: & The game has been initiated. There exists a building on the map. The building is ready to pay for the power. \\ \hline
+		\rowcolor{lightergray}
 		Flow of events: & \\ \hline
 		1 & The system shows that the building is ready to pay for the power. \\ \hline
 		2 & The player taps the building he wants to collect money from. \\ \hline
@@ -222,6 +242,7 @@ This section will focus on the user stories in the game. Each story will be desr
 		4.1 & The player has reached the goal and is sent to the next level. \\ \hline
 		4.2 & The player has not reached the goal. \\ \hline
 		5 & End scenario. \\ \hline
+		\rowcolor{lightergray}
 		Exceptions: & \\ \hline
 	\end{tabular}
 \caption{Scenario: Collect money from building}

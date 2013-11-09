@@ -17,9 +17,9 @@
 		ID & Description & Estimate \\ \hline
 		FR1.2 &  The user should be able to exit the game at any time, and the game state should be saved and loaded when the user returns to the game. & \\ \hline
 
-		FR1.4 & The user should get a highscore based on the time spent finishing the level. & \\ \hline
+		FR1.4 & The user should get a high score based on the time spent finishing the level. & \\ \hline
 
-		FR1.5 & The user should be able to improve the highscore on any level by beating previous highscores. & \\ \hline
+		FR1.5 & The user should be able to improve the high score on any level by beating previous high scores. & \\ \hline
 
 		FR1.6 & The user should be able to pause the game at any time. & \\ \hline
 
@@ -33,17 +33,17 @@
 
 		FR1.11 & There should be played a sound effect when the player builds a power cable & \\ \hline
 
-		FR1.13 & There should be a sound notification for when new obstacels appear. & \\ \hline
+		FR1.13 & There should be a sound notification for when new obstacles appear. & \\ \hline
 
 		FR1.14 & There should be played a sound effect when the player builds a power plant. & \\ \hline
 
-		FR2.7 & The player should only be allowed to build a level-specific number of power plants. & \\ \hline
+		FR2.7 & The player should only be allowed to build a level-specific number of power plants. & Not implemented. \\ \hline
 
 		FR2.9 & The houses should not appear on top of each other. & \\ \hline
 		
-		FR6.6 & A power preservation tip should appear when the user reaches a new level. & \\ \hline
+		FR6.6 & A power preservation tip should appear when the user reaches a new level. & Not implemented. \\ \hline
 
-		FR6.14 & The user should be able to click a button, and go into "powerline view mode", where the buildings aren't rendered and cannot be interacted with. This is to make it easier to see powerlines behind buildings etc. & \\ \hline
+		FR6.14 & The user should be able to click a button, and go into "powerline view mode", where the buildings aren't rendered and cannot be interacted with. This is to make it easier to see power lines behind buildings etc. & Not implemented. \\ \hline
 	\end{tabular}
 
 \subsection{Implementation}
@@ -70,12 +70,25 @@
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
-		FT-15 Exit Game &  & \\ \hline
-		FT-29 Highscore &  & \\ \hline
-		FT-30 Pause Game &  & \\ \hline
-		FT-31 Sound Effects &  & \\ \hline
-		FT-32 Power Preservation Tip &  & \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+
+		FT-25 High score & Works as expected. & Pass. \\ \hline
+
+		FT-26 Pause Game & If one leaves the game while paused the alert follows to the main menu. In order 
+		to get anything done in the main menu one need to press 'Resume', which makes the game continue while 
+		the player is in the main menu. It can be intuitive for the player to pause the game before going to 
+		the main menu, but in the case of our game this works better by just leaving the game. Otherwise the 
+		pause function works. & Partially pass. \\ \hline
+
+		FT-27 Sound Effects & Sound does not work on some devices. & Partially pass. \\ \hline
+
+		FT-28 Exit Game & If the game is left when a level is completed, but before the next level has been 
+		entered, the game returns to main menu and the player needs to start at level 1 again. When exiting 
+		the game while in playing mode, it works. & Partially pass. \\ \hline
+
+
+
+		%FT-32 Power Preservation Tip &  & \\ \hline 
 	\end{tabular}
 
 	The following test cases did not pass previous tests and were retested this sprint:
@@ -83,12 +96,20 @@
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
-		FT-02 Appearance of buildings & & \\ \hline
-		FT-05 Build Power Plants & & \\ \hline
-		FT-06 Build Power Lines & & \\ \hline
-		FT-20 Damaged Power Lines & & \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+		FT-02 Appearance of buildings & Buildings do not appear on top of each other anymore. & Pass. \\ \hline
+		FT-05 Build Power Plants & Power Plant are not possible to place on top of other buildings. & Pass. \\ \hline
+		FT-06 Build Power Lines & There is still no constraints on where power lines can be built as long as it is between two buildings. Otherwise they work. & Partially pass. \\ \hline
+		FT-20 Damaged Power Lines & Power lines are now possible to fix. & Pass. \\ \hline
 	\end{tabular}
+
+	The test cases that are marked with 'partially pass', works mostly as expected, but has some bugs 
+	that we will not be able to fix before delivery.
+
+	Other bugs that was were discovered during testing was that if a building or a power plant is placed 
+	too far on the right side on the game map, their bar is not visible to the player. Also after having 
+	changed the styling of the dialog box for building power lines, it was no longer possible to decline 
+	building a power line when asked.
 
 \subsection{Changes to the requirements}
 
