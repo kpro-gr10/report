@@ -1,7 +1,7 @@
 \definecolor{gray}{gray}{0.6}
 \section{Quality Requirements}
 
-This section describes the quality requirements for the game and will briefly describe all requirements under each quality requirement. Each requirement will be described with a quality attribute scenario that looks like this:
+This section describes the quality requirements for the game and will briefly describe all requirements under each quality requirement. Each requirement will be described with a quality attribute scenario that looks like this \cite{qualityAttribute}:
 
 \begin{itemize}
 	\item {\bf Source of stimulus:} Human, computer, or other actor that generates the stimulus
@@ -17,8 +17,6 @@ This section describes the quality requirements for the game and will briefly de
 	\caption{Quality attribute scenario}
 \end{figure}
 
-{\bf What is a quality attribute?:}
-
 {\bf Priority of quality attributes:} It is not possible to meet all quality requirements because some decisions will affect others. This will result in a priority of the quality attributes that we need to meet and some that are less important. We have picked two main quality attributes: Modifiability and performance.
 
 \begin{itemize}
@@ -29,7 +27,8 @@ This section describes the quality requirements for the game and will briefly de
 
 \subsection{Modifiability}
 
-Modifiability is about the cost of change. It brings up two concerns: What can change (the artifact)? 
+Modifiability \cite{attributes} is about the cost of change. It brings up two concerns: 
+What can change (the artifact)? 
 When is the change made and who makes it (the environment)? 
 Once a change has been specified, the new implementation must be designed, 
 implemented, tested, and deployed. All of these actions take time and money, both of which can be measured.
@@ -82,6 +81,7 @@ parameters in the models. The difficulty of the game is based on these parameter
 \end{table}
 
 \subsection{Performance}
+\cite{attributes}
 
 \subsection*{P1: Rendering (Repaint)}
 When changes occure to the game models, the screen should identify if the change 
@@ -101,10 +101,10 @@ that part of the display at the beginning of the next game update.
 \end{tabular}
 
 \subsection{Other Quality attributes}
-\subsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.
+\subsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.\cite{attributes}
 
 \subsection*{Testability: } Since the game is made as a prototype, the focus has been on having
 test on the main functionality so the customer can run test under further developing.
-In order to have test, testable code needs to be written.
+In order to have test, testable code needs to be written.\cite{attributes}
 
 \subsection*{Compitability: } The game has to run on different kinds of platforms. A cross-platform framwork has been chosen for development to make it it easier to adapt to new platforms.
