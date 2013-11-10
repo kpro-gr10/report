@@ -197,7 +197,7 @@
 			\emph{p} to the location of the projection. There is also the special case where the 
 			length of the line segment from \emph{v} to \emph{w} is 0. In that case the distance 
 			from \emph{p} to the line segment is just the distance from \emph{p} to either \emph{v} 
-			or \emph{w}.
+			or \emph{w}.\cite{pldTheory}\cite{pldCode}
 
 			\begin{figure}[H]
 			\centering
@@ -206,9 +206,6 @@
 			}
 			\caption{Plot of Point to Line Segment Distance}
 			\end{figure}
-
-			Theory source: \url{http://math.stackexchange.com/a/322836} \newline
-			Code source: \url{http://stackoverflow.com/a/1501725} \newline
 		\end{itemize}
 
 \subsection{Manual Testing}
@@ -222,26 +219,28 @@
 		\rowcolor{lightgray}
 		{\bf Test Case} & {\bf Result} & {\bf Pass/Retest} \\ \hline
 
-	  	FT-14 Win Game & Works as expected. & Pass. \\ \hline
+	  	FT-14 Complete Level & Works as expected. & Pass. \\ \hline
 	  	
-	  	FT-16 Limited Power & Works as expected. & Pass. \\ \hline
+	  	FT-15 Limited Power & Works as expected. & Pass. \\ \hline
 	  	
-	  	FT-17 Remove Power Lines & Works as expected. & Pass. \\ \hline
+	  	FT-16 Remove Power Line & Works as expected. & Pass. \\ \hline
 	  		  	
-	  	FT-19 Different Buildings & Works as expected. & Pass. \\ \hline
+	  	FT-17 Different Buildings & Works as expected. & Pass. \\ \hline
 
-	  	FT-20 Damaged Power Lines & Power lines are damaged throughout the game, but are not possible 
+	  	FT-18 Damaged Power Lines & Power lines are damaged throughout the game, but are not possible 
 	  	to fix at the moment. & Retest. \\ \hline
 	  	
-	  	FT-21 Enter next level & Works as expected. & Pass. \\ \hline
+	  	FT-19 Enter next level & Works as expected. & Pass. \\ \hline
 
-	  	FT-22 Appearance of buildings in new levels & Works as expected. & Pass. \\ \hline
+	  	FT-20 Appearance of buildings in new levels & Works as expected. & Pass. \\ \hline
 
-	  	FT-23 More unstable power lines in new levels & Works as expected. & Pass \\ \hline
+	  	FT-21 More unstable power lines in new levels & Works as expected. & Pass \\ \hline
 
-	  	FT-25 Selected houses & Works as expected. & Pass. \\ \hline
+	  	FT-22 Selected houses & Works as expected. & Pass. \\ \hline
 
-	  	FT-26 Color of power lines & Works as expected. & Pass. \\ \hline
+	  	FT-23 Color of power lines & Works as expected. & Pass. \\ \hline
+
+	  	FT-24 Map size in new levels & Works as expected. & Pass \\ \hline
 
 	\end{tabular}
 
