@@ -185,13 +185,32 @@
 	\subsubsection*{Changes to hud}
 		**Made the hud static**
 		After receiving feedback from the customer and through observations during the usability test in sprint 3, it was decided that the hud was going to be static, i.e. it was not going to be necessary to move it up in order to build.The two icons for building power plants and power lines were made slightly smaller to not make the screen look cluttered.
-	\subsubsection*{Scaling GUI elements on Ios}
-		**Make the elements fit on ios**
+
+	\subsubsection*{Scaling GUI elements on iOS}
+		Because of differences in screen resolution and in how different browsers
+		render HTML content, some pieces of text and images were too large on iOS
+		when compared to how they appeared on Android. These issues are not
+		technically challenging, generally speaking, but they are quite
+		unpredictable and solving them requires some experimentation. All of the
+		known layout problems on iOS were solved during this sprint.
+
 	\subsubsection*{Improvements on the appearance of buildings}
 		**Changed map**
 		A grid was added to the map...
-	\subsubsection*{Input handling on Ios}
-		**Fungerer nå på android og Ios**
+
+	\subsubsection*{Input handling on iOS}
+		Because the iOS and Android browsers handle JavaScript TouchEvents
+		differently, we had some problems in making map panning work on both
+		platforms. This was a fairly subtle bug which took a lot of time to
+		understand, but it was solved in the end.
+
+		It turns out that the screen coordinates of a touch event are stored in
+		a list of historical touch events, as suggested by the W3C
+		documentation\cite{touchEventDocumentation}, in the Android browser.
+		On iOS, however, the correct coordinates are only available directly from
+		each individual touch object. In order to make panning work well on both
+		platforms, we've chosen to detect which platform the app is running on
+		and change its behaviour accordingly.
 
 	\subsubsection*{Changed Game logo}
 		We did not know which font was used in the first logo, so we changed it to a new
