@@ -23,7 +23,7 @@
 
 \clearpage
 \subsection{Sprint backlog}
-	\begin{table}
+	\begin{table}[H]
 	\begin{tabular}{| p{1.2cm} | p{8cm} | p{3cm} |}
 		\hline
 		\rowcolor{gray}
@@ -198,9 +198,13 @@
 		\hline
 		\rowcolor{lightgray}
 		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+		
 		FT-02 Appearance of buildings & Buildings do not appear on top of each other anymore. & Pass. \\ \hline
+		
 		FT-05 Build Power Plants & Power Plant are not possible to place on top of other buildings. & Pass. \\ \hline
+		
 		FT-06 Build Power Lines & There is still no constraints on where power lines can be built as long as it is between two buildings. Otherwise they work. & Partially pass. \\ \hline
+		
 		FT-20 Damaged Power Lines & Power lines are now possible to fix. & Pass. \\ \hline
 	\end{tabular}
 
@@ -213,8 +217,6 @@
 	building a power line when asked.
 
 \subsection{Changes to the requirements}
-
-	During testing early in the sprint it was discovered that despite the improvements on the appearance of buildings, i.e.the grid, new buildings could still appear on top of power lines, something which complicates removing and fixing these power lines, as well as making a clutter when building power lines to the buildings. An optimal solution would be to make another constraint on were buildings can appear regarding the power lines. As this was the last sprint and fixing this could be potentially difficult and time consuming, the group decided on another solution to this problem as seen  in requirement FR6.14.
 
 	The fact that buildings should not appear on top of each other has finally been added as a requirement, and an additional sound effect requirement has been added.
 
