@@ -9,7 +9,11 @@
 
 \subsection{Duration and Workload}
 
-{\bf Duration:}  (2 weeks)\\
+	The goal of this sprint was to finish the game. When finishing the game we focused on closing all
+	requirements in the product backlog and do the last part of redesign and bug fixing. The total
+	workload is listed here:
+
+	{\bf Duration:} 28.10 - 10.11 (2 weeks)\\
 	{\bf Workload:} This is the list with hours spent (the whole group) on the project in this sprint.
 	\begin{itemize}
 		\item {\bf Planning:}  12 hours
@@ -19,47 +23,89 @@
 	\end{itemize}
 	{\bf Total workload: }  161 hours \\
 
-	20.1 hours in avrage. 
+	In this sprint we manages a workload of 20.1 hours in avrage pr person each week (161 hours/4 persons/2weeks). We always stibe to reach a workload of 20-24 hours and the group managed this 
+	at sprint 4.  
 
 \clearpage
 \subsection{Sprint backlog}
-	\begin{table}[H]
-	\begin{tabular}{| p{1.2cm} | p{8cm} | p{3cm} |}
+	\begin{table} [H]
+	\begin{tabular}{| p{1cm} | p{7cm} | p{2cm} | p{2cm} |}
 		\hline
 		\rowcolor{gray}
-		ID & Description & Estimate \\ \hline
-		FR1.2 &  The user should be able to exit the game at any time, and the game state should be saved and loaded when the user returns to the game. & \\ \hline
+		ID & Description & Estimate & Actual effort \\ \hline
+		FR1.2 &  The user should be able to exit the game at any time, and the game state should be saved and loaded when the user returns to the game. 
+		& 10 hours & Not implemented. \\ \hline
 
-		FR1.4 & The user should get a high score based on the time spent finishing the level. & \\ \hline
+		FR1.4 & The user should get a high score based on the time spent finishing the level. 
+		& 5 hours & 3 hours \\ \hline
 
-		FR1.5 & The user should be able to improve the high score on any level by beating previous high scores. & \\ \hline
+		FR1.5 & The user should be able to improve the high score on any level by beating previous high scores. 
+		& 2 hours & 2 hours  \\ \hline
 
-		FR1.6 & The user should be able to pause the game at any time. & \\ \hline
+		FR1.6 & The user should be able to pause the game at any time. 
+		& 7 hours & 5 hours \\ \hline
 
-		FR1.7 & The game should play background music. & \\ \hline
+		FR1.7 & The game should play background music. 
+		& 8 hours & 10 hours \\ \hline
 
-		FR1.8 & The user should be able to turn on/off the background music. & \\ \hline
+		FR1.8 & The user should be able to turn on/off the background music. 
+		& 3 hours & 1 hour \\ \hline
 
-		FR1.9 & There should be played a sound effect when the player collects money. & \\ \hline
+		FR1.9 & There should be played a sound effect when the player collects money. 
+		& 3 hours & 1.5 hours \\ \hline
 
-		FR1.10 & There should be played a sound effect when the player upgrades the powerplant. & \\ \hline
+		FR1.10 & There should be played a sound effect when the player upgrades the powerplant. 
+		& 3 hours & 2 hours \\ \hline
 
-		FR1.11 & There should be played a sound effect when the player builds a power cable & \\ \hline
+		FR1.11 & There should be played a sound effect when the player builds a power cable 
+		& 3 hours & 1.5 hours \\ \hline
 
-		FR1.13 & There should be a sound notification for when new obstacles appear. & \\ \hline
+		FR1.13 & There should be a sound notification for when new obstacles appear. 
+		& 3 hours & Not implemented. \\ \hline
 
-		FR1.14 & There should be played a sound effect when the player builds a power plant. & \\ \hline
+		FR1.14 & There should be played a sound effect when the player builds a power plant. 
+		& 3 hours & 1.5 hours \\ \hline
 
-		FR2.7 & The player should only be allowed to build a level-specific number of power plants. & Not implemented. \\ \hline
+		FR2.7 & The player should only be allowed to build a level-specific number of power plants. 
+		& 5 hours & Not implemented.  \\ \hline
 
-		FR2.9 & The houses should not appear on top of each other. & \\ \hline
+		FR2.9 & The houses should not appear on top of each other. 
+		& 7 hours & 5 hours \\ \hline
 		
-		FR6.6 & A power preservation tip should appear when the user reaches a new level. & Not implemented. \\ \hline
+		FR6.6 & A power preservation tip should appear when the user reaches a new level. 
+		& 5 hours & Not implemented. \\ \hline
 
-		FR6.14 & The user should be able to click a button, and go into "powerline view mode", where the buildings aren't rendered and cannot be interacted with. This is to make it easier to see power lines behind buildings etc. & Not implemented. \\ \hline
 	\end{tabular}
 	\caption{Sprint backlog sprint 4}
 	\end{table}
+
+	In this sprint we added all requirements from the product backlog. Since the group have to 
+	finish the implementation in this sprint it ended up with not enough time to implement all
+	requirements in the backlog. 
+
+	The requirement FR1.2 was not implemented becuase it had a high cost in terms of implementation
+	hours. The group decided to not implement this requirement becuase the value for the customer 
+	was to low and the implementation time was to high. The requirement is though partly implemented in 
+	the pause functionality. The game state is saved when the user exit the game, but the state will be lost 
+	when the player turn off the phone. This will be added to further work.
+
+	When the group designed the game, we wanted to add a notification when a new obstable appeard 
+	outside the gamescreen (FR1.13). We wanted to have a pointer on the screen so the player knew 
+	where the new notification appeard. This is only partly implemented in terms of sound. There
+	is a sound effect when a new obstacle appears, but the player will not get the direction.
+
+	The group added a requirement that should limit the number of powerplant could build during
+	a level (FR2.7). The group decided that this was not necessary becuase if the player builds
+	to many powerplants, the player will not get to the next level. Bacuse of this, we did not 
+	implement this requirment.
+
+	In the project description handed out in the start of this project, there was mentioned that
+	it could be added power preservation tips for the user to learn something from the game (FR6.6).
+	In the first customer meeting, the customer told the group that this was not very important
+	and that this requirement was something that NTNU had mentioned, and not something that
+	themselves had required. We will add this to further work and have made some space on the 
+	"victory screen" where this can be added if Helgelandskraft should change their mind. In terms
+	of working hours, this is a fairly easy implementation. 
 
 \subsection{Implementation}
 
@@ -132,6 +178,8 @@
 	}
 	\caption{Gameover and victory screens}
 \end{figure}
+
+
 \subsection{Redesign and bug fixing}
 	
 	\subsubsection*{Changes to hud}
