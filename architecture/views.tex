@@ -6,8 +6,11 @@ with the architecture of the game we are developing.
 \subsection*{Process View}
 
 	\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{pictures/activity_diagram}
+		\centering
+		\subfigure{
+			\includegraphics[width=\textwidth]{pictures/activity_diagram}
+		}
+		\caption{Activity Diagram}
 	\end{figure}
 
 	The main menu screen is the entry point for the game. The game is set up in such a way that the 
@@ -39,10 +42,11 @@ with the architecture of the game we are developing.
 	player's health. The Menu object receives input from the HTML and updates the game models.
 
 	\begin{figure}[H]
-	\begin{adjustwidth}{-50em}{-50em}
-	\centering
-	\includegraphics[scale=0.29]{pictures/class_diagram}
-	\end{adjustwidth}
+		\begin{adjustwidth}{-50em}{-50em}
+			\centering
+			\includegraphics[scale=0.28]{pictures/class_diagram}
+		\end{adjustwidth}
+		\caption{Class Diagram}
 	\end{figure}
 
 	\newpage
@@ -55,7 +59,12 @@ with the architecture of the game we are developing.
 	storage, camera or the accelerometer without having to write the code for this functionality nativly
 	for each platform.
 
-	\includegraphics[width=\textwidth]{pictures/deployment_diagram}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{pictures/deployment_diagram}
+		\caption{Deployment Diagram}
+	\end{figure}
+
 
 \subsection*{Development View}
 
@@ -66,7 +75,11 @@ with the architecture of the game we are developing.
 	layer is the HTML code which handles the layout of the user interface and sends user input to the
 	second layer.
 
-	\includegraphics[scale=0.5]{pictures/development_view}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{pictures/development_view}
+		\caption{Package Diagram}
+	\end{figure}
 
 \subsection*{Scenarios}
 	
