@@ -113,7 +113,13 @@
 
 	\subsubsection*{Highscore}
 
+	When the user successfully finishes a level, they get a score depending on
+	how much time they spent on the level. If the player spent less time on that
+	level than they did previously, then the new score is added to the highscore
+	list.
+
 	\subsubsection*{Building placement}
+
 	Originally buildings was placed randomly around the map. They could appear
 	ontop of each other. This created problems for the player when attempting to
 	connect the buildings with power lines or collecting money. To cirumvent
@@ -202,10 +208,6 @@
 		technically challenging, generally speaking, but they are quite
 		unpredictable and solving them requires some experimentation. All of the
 		known layout problems on iOS were solved during this sprint.
-
-	\subsubsection*{Improvements on the appearance of buildings}
-		**Changed map**
-		A grid was added to the map...
 
 	\subsubsection*{Input handling on iOS}
 		Because the iOS and Android browsers handle JavaScript TouchEvents

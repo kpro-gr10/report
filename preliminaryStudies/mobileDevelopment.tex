@@ -1,6 +1,21 @@
 \section{Mobile development}
 
-\subsection{Frameworks}
+This section outlines the tools and methods the group discussed for how to
+develop the game for both Android and iOS.
+
+\subsection{Native}
+
+Developing the application natively for both Android and iOS would allow us more
+direct control over the behavior, appearance and performance of the application.
+However then we would have to develop in both Java and Objective-C in parallel,
+with all the trouble that would cause not even considering other platform
+differences. It is unlikely that we will be able to finish developing if we were
+to develop natively.
+
+\subsection{Cross Platform Frameworks}
+
+Here we outline the cross platform frameworks we considered to let us develop for
+both Android and iOS without having to maintain two code bases.
 
 \paragraph{PhoneGap}
 PhoneGap takes applications written with web technologies and wraps them in
@@ -11,6 +26,23 @@ everywhere''. Additionally, the PhoneGap framework wraps the native APIs of
 different platforms in a single JavaScript API which is made available to
 developers using PhoneGap. This makes PhoneGap apps potentially much more
 powerful than simple web pages. \cite{phonegapAbout}
+
+\paragraph{Corona}
+
+Corona is a software development kit (SDK) which allows developers to build
+applications for iPhone, iPad, Android and other devices. Corona is not open
+source and costs money to use. Corona also enforces a monthly revenue limit for
+developers unless they use the most expensive pricing plans\cite{coronaPrice}.
+Corona lets programmers develop using Lua.\cite{coronaSDK} Advantages to using
+Corona is that it comes with quite a bit of handy tools for developing video
+games, but Corona is also quite costly and not open source.
+
+\subsection{JavaScript Libraries}
+
+Because Phonegap seemed like the stronger candidate for cross platform development, 
+we also had to consider which JavaScript libraries we were going to use, because
+Phonegap doesn't come with any tools for JavaScript development, just the means 
+to do cross platform.
 
 \paragraph{Backbone.js}
 The JavaScript programming language does not strictly enforce any specific
@@ -37,7 +69,7 @@ Jasmine is widely used in industry. It is also included by default when you
 create a new PhoneGap project, so presumably the two fit nicely together.
 \cite{jasmine}
 
-\subsubsection{Conclusions}
+\subsection{Conclusions}
 Prior to this project, none of the team members had much previous experience
 with writing mobile applications, and certainly not cross-platform ones.
 Therefore, we looked for a framework to help us do this in a way that wouldn't
