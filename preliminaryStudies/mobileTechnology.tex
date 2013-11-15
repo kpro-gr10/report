@@ -1,157 +1,52 @@
-%TODO: add intro to the sections
 \section{Mobile Technology}
 
-After the introduction of smartphones, there has been an explosive surge in the
-popularity of using mobile technologies as computers.
+Mobile technology is technology used for cellular communication. \cite{mobileTechnology} After the
+rise of smartphones, it has become more and more common to use mobilephones as computers for
+anything from reading news to playing games. This section will talk about the mobile platforms the
+customer wants us to develop the game for, Android and iOS.
+
 \begin{figure}[!ht]
-\centering
-\subfigure{
-  \includegraphics[scale=0.06]{pictures/android}
-}
-\subfigure{
-  \includegraphics[scale=0.2]{pictures/apple-logo}
-}
-\subfigure{
-  \includegraphics[scale=0.1]{pictures/phonegap}
-}
-\subfigure{
-  \includegraphics[scale=0.13]{pictures/css3}
-}
-\linebreak
-\subfigure{
-  \includegraphics[scale=0.245]{pictures/html5}
-}
-\subfigure{
-  \includegraphics[scale=0.12]{pictures/corona}
-}
-\subfigure{
-  \includegraphics[scale=0.25]{pictures/js}
-}
-\caption{Android, IOS, Phonegap, CSS3, HTML5, Corona and Javasript}
+    \centering
+    \subfigure{
+    \includegraphics[scale=0.06]{pictures/android}
+    }
+    \subfigure{
+    \includegraphics[scale=0.2]{pictures/apple-logo}
+    }
+    \caption{Android and IOS}
 \end{figure}
 
 \subsection{Mobile platforms}
-{\bf Android} is a Linux-based operating system, designed primarily for mobile
-devices with touch screen support. Android is currently being developed by
-Google and is deployed on various mobile devices developed by third parties.
-\cite{android}
-\linebreak
 
-\indent
-  {\bf Pros:}
-  \begin{itemize}
-    \item Developing for Android is free.
-    \item Native support for Java, a well known programming language.
-    \item Android apps can be developed on any of the major desktop operating
-          systems.
-    \item Android can be emulated using an AVD (Android Virtual Device),
-          allowing for easy testing.
-  \end{itemize}
+\subsubsection*{Android}
 
-\indent
-  {\bf Cons:}
-  \begin{itemize}
-    \item There are many different Android devices, making testing more
-          demanding.
-  \end{itemize}
+    Android is a Linux-based operating system, designed for mobile devices with touchscreens.
+    Android is an open source project primarily being developed by Google and is deployed on various
+    mobile devices by third parties.\cite{android} Advantages with developing for Android is that
+    development is free. Native applications for Android are developed using Java, which is a well
+    known programming language that is taught to everyone studying Computer Science at NTNU. Android
+    applications can be developed on both Windows, Mac and Linux so anyone with a computer can
+    develop for Android. The Android emulator AVD (Android Virtual Device) means that you don't need
+    to own an Android device to test your code. The main disadvantage of developing for Android is
+    that there are many devices, running different versions of the operating system, which makes
+    testing more demanding.
 
-\noindent
-{\bf iOS} is an operating system developed by Apple primarily for the iPhone,
-which has been extended to run on other Apple devices such as the iPad. Apple
-does not allow iOS to be deployed on non-Apple hardware. \cite{ios}
+\subsubsection*{iOS}
 
-\indent
-  {\bf Pros:}
-  \begin{itemize}
-    \item There are fewer devices running iOS, and things like screen
-          resolution is typically standardized, making development and testing
-          easier.
-  \end{itemize}
+    iOS is an operating system developed by Apple primarily for the iPhone, which has been extended
+    to run on other Apple devices such as the iPad. Apple does not allow iOS to be deployed on non-
+    Apple hardware.\cite{ios} The advantage with developing for iOS is that the number of different
+    devices running iOS is smaller and things like screen resolution is more standardized, making
+    development and testing easier. The disadvantages are that you have to use Apple hardware and
+    software to develop for iOS, distribution of applications for iOS requires a yearly
+    subscription\cite{iosCost} and Apple's application store enforces strict terms of distribution
+    and requirements that has to be filled in order for your application to get on the application
+    store.
 
-\indent
-  {\bf Cons:}
-  \begin{itemize}
-    \item Apple hardware and software required to develop for iOS.
-    \item Distribution of applications for iOS requires a yearly subscription. \cite{iosCost}
-    \item Apple's App Store enforces strict terms of distribution which may not
-          be compatible with other software licences.
-  \end{itemize}
+\subsection{Conclusion}
 
-
-\subsection{Cross-platform}
-    {\bf PhoneGap} is a free and open source framework that makes it possible
-    to create mobile applications using web technologies like HTML, CSS and
-    JavaScript. PhoneGap allows developers to create an application which is a
-    hybrid between a web app and a native application. PhoneGap packages the
-    program as an application and gives the developer access to native device APIs.
-    \cite{phonegapFAQ}
-
-\indent
-  {\bf Pros:}
-  \begin{itemize}
-    \item Applications can be developed for Android, BlackBerry, iOS,
-          Windows Phone, Windows 8 and Tizen operating systems.
-    \item PhoneGap lets us develop using JavaScript, HTML and CSS.
-    \item Access to native APIs like camera, storage, networking,
-          touch screen etc.
-    \item Existing CSS and JavaScript libraries can be used.
-    \item Looks like a native application.
-    \item Makes it easy to build applications for all supported platforms.
-    \item PhoneGap is open source.
-  \end{itemize}
-
-\indent
-{\bf Cons:}
-  \begin{itemize}
-    \item PhoneGap runs as an offline webpage, and may impact performance.
-  \end{itemize}
-
-\noindent
-{\bf Corona} is a software development kit (SDK) which allows developers to
-build applications for iPhone, iPad and Android devices. Corona is not open
-source, and enforces a revenue limit for developers unless the developers pay a
-monthly fee. Corona lets programmers develop using Lua.
-\cite{coronaSDK}
-
-\indent
-  {\bf Pros:}
-  \begin{itemize}
-    \item Comes with a physics engine and other features useful for game
-          development.
-  \end{itemize}
-
-\indent
-  {\bf Cons:}
-  \begin{itemize}
-    \item Not open source
-    \item Costs money to unlock full feature set.
-  \end{itemize}
-
-\subsection{Native}
-For focus on single platforms, developing native applications would probably be
-the best choice. Native applications for Android are developed using the Java
-programming language whereas iOS apps are developed in Objective-C.
-
-\indent
-  {\bf Pros:}
-  \begin{itemize}
-    \item Easier to ensure that the application will run on all versions of
-          the platforms.
-    \item Best performance.
-  \end{itemize}
-
-\indent
-  {\bf Cons:}
-  \begin{itemize}
-    \item We have to develop for both iOS and Android in different languages.
-    \item We will have to learn Objective-C.
-    \item Can only build applications for iOS on Mac.
-  \end{itemize}
-
-\noindent
-\subsection{Conclusions}
-    After having discussed it in the group and with the customer, we have agreed
-    on using Phonegap to develop the game. The customer wanted the game to
-    be developed with known technology that they can easily find people with
-    experience with and HTML, CSS and JavaScript is a very popular development
-    platform.
+    The customer wanted us to develop for both Android and iOS, so that is what we are going to do.
+    Ultimately it would have made development easier for us if we could select one platform and
+    stuck to it, probably Android because of all the advantages it has and because other group
+    members have previous experience with developing for Android. However the customer wanted both
+    platforms and I see no reason for not trying.
