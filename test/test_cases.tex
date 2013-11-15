@@ -10,7 +10,7 @@
 		{\bf Item} & {\bf Description} \\ \hline
 		Name & Map and Navigation \\ 
 		Test Id & FT-01 \\ 
-		Feature to be tested & That user should be able to see a small part of the game map and be able to navigate around it.\\ 
+		Feature to be tested & That the user should be able to see a small part of the game map and be able to navigate around it.\\ 
 		Requirement & FR6.1 and FR6.2 \\ 
 		Pre-conditions & None \\ 
 		Steps of Execution & 1. Drag a finger over the screen. \\
@@ -106,11 +106,11 @@
 		& 5. Tap 'OK'. \\
 		& 6. Repeat, but tap 'Cancel'. \\
 		Expected result & 2.1 If player has enough money the game is set to building mode. \\
-		& 2.2 If player does not have enough money, information is displayed. \\
-		& 3. An error message is displayed. \\ 
+		& 2.2 If player does not have enough money, a pop-up is displayed. \\
+		& 3. An error message is displayed. \\
 		& 4. The player is asked to either buy or cancel. \\
-		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. Building modes is ended. \\
-		& 6. Leave building mode. \\
+		& 5. The power plant is placed on the indicated spot and the players amount of money is reduced. Building mode is ended. \\
+		& 6. Building mode is left, nothig has been built. \\
 		\hline
 	\end{tabular}
 	\caption{Functional test 5: Build Power Plants}
@@ -137,7 +137,7 @@
 		& 8. Connect a building and a power plant, and try to let the power line cross another power line. \\
 		& 9. Try to connect two already connected buildings again. \\
 		Expected result & 2.1 If the player has enough money the game is set to building mode. \\
-		& 2.2 If the player does not have enough money, information is displayed. \\
+		& 2.2 If the player does not have enough money, a pop-up message appears. \\
 		& 3. Nothing happens. \\
 		& 4. The two are connected by a line. The player's money are reduces with an amount proportional to the length of the power line. Building mode is ended. \\
 		& 5. Same as step 4 (However, the new power line has no effect on the power plants or buildings) \\
@@ -166,9 +166,9 @@
 		& 3. Repeat step 1 and tap 'Cancel'. \\
 		& 4. Upgrade until the number of upgrades equals the number of allowed upgrades displayed on the power plant. And try to tap the power plant again. \\
 		& 5. Try to upgrade a power plant with not enough money. \\
-		Expected result & 1. An information box about the cost of upgrading and the effects of upgrading is displayed, and asks to upgrade or cancel. \\
+		Expected result & 1. A pop-up box about the cost of upgrading and the effects of upgrading is displayed, and asks to upgrade or cancel. \\
 		& 2. The system reduces the players amount of money by the cost of the upgrade, and upgrades the power plant. This is displayed by increasing the number on the power plant by 1. The power plant's power bar also increases. \\
-		& 3. The information box disappears, nothing happens with the power plant. \\
+		& 3. The pop-up disappears, nothing happens with the power plant. \\
 		& 4. Nothing happens. \\
 		& 5. The system gives accordant feedback. \\
 		\hline
@@ -329,7 +329,8 @@
 		Steps of Execution & 1. Connect buildings to power plants and collect money. \\ 
 		& 2. Repeat step 1 until the player's amount of money reaches the specified goal. \\
 		Expected result & 1. The player's amount of money will increase when money is collected. \\ 
-		& 2. When the goal is reached a 'Victory!' pop-up screen will appear with a 'Next Level' button. \\
+		& 2. When the goal is reached the player is taken to a new page that says 'Victory!' and that contains 
+		a 'Next Level' button. \\
 		\hline
 	\end{tabular}
 	\caption{Functional test 14: Complete Level}
@@ -346,11 +347,11 @@
 		Feature to be tested & That the amount of power available to a power plant is limited, and the effects of upgrading them. \\ 
 		Requirement & FR2.5 FR6.13 \\ 
 		Pre-conditions & FT-07 \\ 
-		Steps of Execution & 1. Connect building to a specific power plant with power lines. \\
+		Steps of Execution & 1. Connect a building to a specific power plant with power lines. \\
 		& 2. Repeat step 1 until the power bar reaches zero. \\
 		& 3. Upgrade the power plant. \\
 		Expected result & 1. The power bar belonging to the power plant will decrease. \\
-		& 2. The power plant is not able to serve more buildings and one or more buildings will not get power, depending on the breadth first search. The power bar will be a little above zero when some buildings do not get powre anymore. \\ 
+		& 2. The power plant is not able to serve more buildings and one or more buildings will not get power, depending on the breadth first search. The power bar will be a little above zero when some buildings do not get power anymore. \\ 
 		& 3. The power bar will gain more content and the power plant is now able to serve more buildings. \\
 		\hline
 	\end{tabular}
@@ -372,9 +373,9 @@
 		& 2. Press 'OK'. \\
 		& 3. Press a power line. \\
 		& 4. Press 'Cancel'. \\
-		Expected result & 1. A splash screen appears asking if the player wants to remove the power line. \\ 
+		Expected result & 1. A pop-up appears asking if the player wants to remove the power line. \\ 
 		& 2. The power line disappears. The house is no longer served and the buildings bar starts decreasing. \\
-		& 3. A splash screen appears asking if the player wants to remove the power line. \\
+		& 3. A pop-up appears asking if the player wants to remove the power line. \\
 		& 4. Nothing happens. \\
 		\hline
 	\end{tabular}
@@ -419,10 +420,10 @@
 		& 3. Tap 'Cancel'. \\
 		& 4. Repeat step 2. \\
 		& 5. Tap 'OK'. \\
-		Expected result & 1. Some of the power line will after some time get a red streak, indicating that it is damaged, and the bar belonging to the building whose power line is red, will decrease, indicating that the building is nor receiving any power. \\
-		& 2. A splash screen asking if you want to repair it and the cost of repair appears. \\
-		& 3. The spash screen disappears. Nothing happens to the power line. \\
-		& 5. The power line now turns yellow, and the building's bar disappears. \\
+		Expected result & 1. Some of the power line will after some time become red, indicating that it is damaged, and the bar belonging to the building whose power line is red, will decrease, indicating that the building is not receiving any power. \\
+		& 2. A pop-up asking if you want to repair it and the cost of repair appears. \\
+		& 3. The pop-up disappears. Nothing happens to the power line. \\
+		& 5. The power line now turns yellow, and the building's bar increases to the top, then it disappears. \\
 		\hline
 	\end{tabular}
 	\caption{Functional test 18: Damaged Power Lines}
@@ -439,9 +440,9 @@
 		Feature to be tested & That when one completes a level one is able to continue to the next level. \\ 
 		Requirement & FR4.1 \\ 
 		Pre-conditions & FT-14.\\ 
-		Steps of Execution & 1. A level has completed as done in FT-14.\\
+		Steps of Execution & 1. A level has been completed as done in FT-14.\\
 		& 2. Press "Next Level". \\
-		Expected result & 1. A "You have won!" splash screen appears with a "Next level" button. \\
+		Expected result & 1. The page says 'Victory!' and contains a 'Next Level' button. \\
 		& 2. A new level is started. \\
 		\hline
 	\end{tabular}
@@ -578,7 +579,7 @@
 		& 5. Go to high score page. \\
 		& 6. Complete level 1 with a worse time. \\
 		& 7. Go to high score page. \\
-		Expected result & 3. The highscore page is updated with the time used on level 1 and level 2. \\
+		Expected result & 3. The high score page is updated with the time used on level 1 and level 2. \\
 		& 5. Level 1 is updated with the new time. The old score of level 2 is still there. \\
 		& 7. The old high scores are still there. \\
 		\hline
@@ -598,8 +599,8 @@
 		Requirement & FR1.6 \\ 
 		Pre-conditions & FT-01 \\ 
 		Steps of Execution & 1. Start a game and press the 'Pause' button. \\
-		& 2. Press the 'Resume' button of the alert message. \\
-		Expected result & 1. An alert message appears telling the player that the game has been paused. \\
+		& 2. Press the 'Resume' button of the pop-up. \\
+		Expected result & 1. A pop-up telling the player that the game has been paused appears. \\
 		& 2. The game is started again. Nothing has changed since the game was paused. The timer starts from the point when the game was paused. \\
 		\hline
 	\end{tabular}
