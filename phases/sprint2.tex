@@ -73,7 +73,7 @@
 		FR2.2 & The user should be able to buy and place several power stations on the game map.
 		& 4 hours & 5 hours \\ \hline
 
-		FR2.3 & The user should be able to buy and place power cables on the map. 
+		FR2.3 & The user should be able to buy and place power lines on the map. 
 		& 10 hours & 11 hours \\ \hline
 
 		FR2.4 & The user should be able to upgrade the power plant. 
@@ -93,8 +93,8 @@
 		FR5.1 & The user should be able to collect money from the buildings connected to the power plant
 		& 5 hours & 4 hours \\ \hline
 
-		FR5.2 & When connecting buildings through power cables, there should be a cost which is 
-		proportional to the length of the cable. 
+		FR5.2 & When connecting buildings through power lines, there should be a cost which is 
+		proportional to the length of the lines. 
 		& 5 hours & 6 hours \\ \hline
 
 		FR5.3 & It should cost money to upgrade the power plant. 
@@ -107,7 +107,7 @@
 		FR6.7 & The user should be able to see the main menu when he or she starts the game. 
 		& 4 hours & 8 hours \\ \hline
 
-		FR6.8 & When the player wants to place a power plant or a power cable in building mode, 
+		FR6.8 & When the player wants to place a power plant or a power line in building mode, 
 		the player should be prompted if they want to go through with it, or cancel. 
 		& 4 hours & 3 hours \\ \hline
 
@@ -130,7 +130,7 @@
 	
 	\begin{itemize}
 		\item {\bf Building mode:} When the player open the hud (menu in the bottom of the screen) and presses
-		on the build powerplant/powercable image, the player enters the building state 
+		on the build powerplant/powerline image, the player enters the building state 
 		"build powerplant/build powerlines". The game state is set back to normal after the player 
 		is finished with the building. The game has a state variable that contains which mode the 
 		game is in (Normal, build power plant or build power lines). When the player is in the building
@@ -345,12 +345,18 @@
 	
 	After the sprint 1 delivery, the group had hoped that the customer would make 
 	changes to the requirement specification by either adding or removing requirements, 
-	but this did not not happened. During the implementation in this sprint, the 
-	team came up with several changes to the requirements. Some requirements have been moved, 
-	changed, split or removed. At the end of sprint 2 we had reached version 3 of the requirement 
-	specification. The changes are listed in the tabled below.
+	but this did not not happen. During the implementation in this sprint, the 
+	team came up with several changes to the requirements.
 
-	\begin{table}
+	The requirements that have been removed, was removed due to being covered in other 
+	existing requirements. The new requirements have been added because we felt they were 
+	missing from the specification. Some requirements were moved to other categories because 
+	they would fit better there. The priority of requirement 3.6 should have had critical priority 
+	from the start because it is a key aspect of the game and it is important to give feedback to the player.
+
+	At the end of sprint 2 we had reached version 3 of the requirement specification. The changes are listed in the tables below.
+
+	\begin{table}[H]
 	\begin{tabular}{| p{1.5cm} | p{12cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -359,9 +365,9 @@
 		with different power requirements  \\ \hline
 		FR3.4 & {\bf \color{green} [NEW]} Different types of building should reward different amounts of 
 		money \\ \hline
-		FR3.6 & {\bf \color{orange} [CHANGED]}changed priority from high to critical \\ \hline
+		FR3.6 & {\bf \color{orange} [CHANGED PRIORITY FROM MEDIUM TO CRITICAL]}The user should be able to see that a building has gone without power for some time, and is affecting the player's health score. \\ \hline
 		FR4.4 & {\bf \color{red} [REMOVED]} As the user reaches higher levels there should be an 
-		increase in faulty power cables \\ \hline
+		increase in faulty power lines \\ \hline
 		FR5.2 & {\bf \color{red} [REMOVED]} There should be buildings on the map for the user to 
 		supply with power; new buildings should appear over time. \\ \hline
 		FR5.4 & {\bf \color{red} [REMOVED]} The player should be able to suspend specific buildings' 
@@ -372,7 +378,7 @@
 	\caption{Changes to version 1 of the requirement specification}
 	\end{table}
 
-	\begin{table}
+	\begin{table}[H]
 	\begin{tabular}{| p{1.5cm} | p{12cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -382,12 +388,12 @@
 		FR1.10 & {\bf \color{green} [NEW]} There should be played a sound effect when 
 		the player upgrades the power plant \\ \hline
 		FR1.11 & {\bf \color{green} [NEW]} There should be played a sound effect when 
-		the player builds a power cable \\ \hline
+		the player builds a power line\\ \hline
 		FR1.12 & {\bf \color{green} [NEW]} The user should not get the opportunity to 
 		tilt the screen by tilting the phone. \\ \hline
 		FR2.4 & {\bf \color{orange} [MOVED TO INCOMING/OUTGOING MONEY]} The user should 
-		be able to connect the buildings to the power plants by building a power cable. 
-		Building cables costs money. \\ \hline
+		be able to connect the buildings to the power plants by building a power line. 
+		Building power lines costs money. \\ \hline
 		FR3.6 & {\bf \color{green} [NEW]} When an existing building is not supplied 
 		with power within a certain amount of time, the house should disappear and the player's 
 		health score should decrease \\ \hline
@@ -403,7 +409,7 @@
 		FR6.7 & {\bf \color{green} [NEW]} The user should be able to see the main 
 		menu when he or she starts the game. \\ \hline
 		FR6.8 & {\bf \color{green} [NEW]} When the player wants to place a power plant 
-		or a power cable in building mode, the player should be prompted if they want to 
+		or a power line in building mode, the player should be prompted if they want to 
 		go through with it, or cancel. \\ \hline
 		FR6.9 & {\bf \color{green} [NEW]} The user should be able to see that he or she 
 		is in building mode when selecting a building to build in the hub menu. \\ \hline
