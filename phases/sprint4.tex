@@ -110,22 +110,36 @@
 
 \subsection{Implementation}
 
-	\subsubsection*{Pause game}
+	\subsubsection*{jQuery}
 
 	
 
-	\subsubsection*{Highscore}
+	\subsubsection*{Pause game}
+
+	The game is properly paused when the player presses the "home" button, or a
+	similar button which puts the game in the background. There is also a
+	dedicated button to pausing the game that the player can press while
+	playing, allowing the player to leave the game at any time without
+	consequences.
+
+	\subsubsection*{Audio}
+
+	Sound effects are played when the player build power plants, upgrade
+	power plants, build power lines or collect money.When collecting money a
+	random sound from a list of sounds is played.
+
+	\subsubsection*{High score}
 
 	When the user successfully finishes a level, they get a score depending on
 	how much time they spent on the level. If the player spent less time on that
-	level than they did previously, then the new score is added to the highscore
+	level than they did previously, then the new score is added to the high score
 	list.
 
 	\subsubsection*{Building placement}
 
 	Originally buildings was placed randomly around the map. They could appear
-	ontop of each other. This created problems for the player when attempting to
-	connect the buildings with power lines or collecting money. To cirumvent
+	on top of each other. This created problems for the player when attempting
+	to connect the buildings with power lines or collecting money. To avoid
 	this, we created a list of possible building locations and shuffled it. Then
 	when the game places new buildings it takes them from this list. The player
 	is also incapable of building power plants on top of already existing
