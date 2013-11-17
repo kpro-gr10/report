@@ -252,7 +252,7 @@
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Evaluation} \\ \hline
 
 		FT-25 High score & Works as expected. & Pass. \\ \hline
 
@@ -262,15 +262,15 @@
 		the main menu, but in the case of our game this works better by just leaving the game. Otherwise the 
 		pause function works. & Partially pass. \\ \hline
 
-		FT-27 Sound Effects & Sound does not work on some devices. & Partially pass. \\ \hline
+		FT-27 Sound Effects & It is not possible to mute the music and sounds just for the game. This has to 
+		be done by turning off the sound on the phone. Also when exiting the game the background music should 
+		stop and then start again when entering the game again. This works for the first time, but not the 
+		second time and therefore the background music has been removed. The sounds for damaged power lines and appearing of buildings have not been implemented. The other sounds have been implemented and works as expected. & Partially pass. \\ \hline
 
 		FT-28 Exit Game & If the game is left when a level is completed, but before the next level has been 
 		entered, the game returns to main menu and the player needs to start at level 1 again. When exiting 
 		the game while in playing mode, it works. & Partially pass. \\ \hline
 
-
-
-		%FT-32 Power Preservation Tip &  & \\ \hline 
 	\end{tabular}
 
 	The following test cases did not pass previous tests and were retested this sprint:
@@ -278,7 +278,7 @@
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
-		{\bf Test Case} & {\bf Result} & {\bf Pass/Fail} \\ \hline
+		{\bf Test Case} & {\bf Result} & {\bf Evaluation} \\ \hline
 		
 		FT-02 Appearance of buildings & Buildings do not appear on top of each other anymore. & Pass. \\ \hline
 		
@@ -289,13 +289,12 @@
 		FT-20 Damaged Power Lines & Power lines are now possible to fix. & Pass. \\ \hline
 	\end{tabular}
 
-	The test cases that are marked with 'partially pass', works mostly as expected, but has some bugs 
-	that we will not be able to fix before delivery.
+	The test cases that are marked with 'partially pass', works mostly as expected, but has some bugs, errors or missing features that we will not be able to fix before delivery.
 
-	Other bugs that was were discovered during testing was that if a building or a power plant is placed 
+	Other bugs that were discovered during testing was that if a building or a power plant is placed 
 	too far on the right side on the game map, their bar is not visible to the player. Also after having 
 	changed the styling of the dialog box for building power lines, it was no longer possible to decline 
-	building a power line when asked.
+	building a power line when asked, this will be fixed before delivery.
 
 \subsection{Changes to the requirements}
 
