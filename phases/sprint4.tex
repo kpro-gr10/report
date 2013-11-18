@@ -29,6 +29,8 @@
 \clearpage
 \subsection{Sprint backlog}
 
+	Table \ref{table:backlog4} shows the backlog for sprint 4.
+
 	\begin{table} [H]
 	\begin{tabular}{| p{1cm} | p{7cm} | p{2cm} | p{2cm} |}
 		\hline
@@ -78,6 +80,7 @@
 
 	\end{tabular}
 	\caption{Sprint backlog sprint 4}
+	\label{table:backlog4}
 	\end{table}
 
 	In this sprint we added all requirements from the product backlog. Because of time constraints,
@@ -257,10 +260,11 @@
 
 \subsection{Testing}
 
-	The following test cases were executed at the end of this sprint:
+	The test cases listed in Table \ref{table:testssprint4} were executed at the end of this sprint.
 
 	\definecolor{lightgray}{gray}{0.9}
 
+	\begin{table}[H]
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -284,9 +288,13 @@
 		the game while in playing mode, it works. & Partially pass. \\ \hline
 
 	\end{tabular}
+	\caption{Functional tests from sprint 4}
+	\label{table:testssprint4}
+	\end{table}
 
-	The following test cases did not pass previous tests and were retested this sprint:
+	The test cases in Table \ref{table:retestssprint4} did not pass previous tests and were retested this sprint.
 
+	\begin{table}[H]
 	\begin{tabular}{| p{3cm} | p{7cm} | p{2cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -299,7 +307,10 @@
 		FT-06 Build Power Lines & There is still no constraints on where power lines can be built as long as it is between two buildings. Otherwise they work. & Partially pass. \\ \hline
 		
 		FT-20 Damaged Power Lines & Power lines are now possible to fix. & Pass. \\ \hline
-	\end{tabular}
+	\end{tabular}	
+	\caption{Redone tests in sprint 4}
+	\label{table:retestssprint4}
+	\end{table}
 
 	The test cases that are marked with 'partially pass', works mostly as expected, but has some bugs, errors or missing features that we will not be able to fix before delivery.
 
@@ -310,11 +321,13 @@
 
 \subsection{Changes to the requirements}
 
+	Table \ref{table:reqspec4} shows the changes to version 4 of the requirement specification.
+
 	The fact that buildings should not appear on top of each other has finally been added as a requirement, and an additional sound effect requirement has been added.
 
 	Requirement FR1.3 has been removed. The initial plan was that the player could play any level as long as he or she had completed the previous one, and chose which level to play from a menu of all levels. This would be demanding to implement and in addition the levels do not change character to a great extent, only the parameters are changed, from level to level. Therefore it was decided that we will operate with 'tetris-levels', i.e. the player always starts at level 1 and can enter higher levels by winning all previous levels without loosing. 
 
-	{\bf Changes to version 4 of the requirement specification:} \\
+	\begin{table}[H]
 	\begin{tabular}{| p{1.5cm} | p{12cm} |}
 		\hline
 		\rowcolor{lightgray}
@@ -324,5 +337,8 @@
 		FR2.9 & {\bf \color{green}[NEW]} The houses should not appear on top of each other. \\ \hline
 		FR6.14 & {\bf \color{green}[NEW]} The user should be able to click a button, and go into "powerline view mode", where the buildings are not rendered and cannot be interacted with. This is to make it easier to see power lines behind buildings etc. \\ \hline
 	\end{tabular}
+	\caption{Changes to version 4 of the requirement specification}
+	\label{table:reqspec4}
+	\end{table}
 
 \subsection{Customer feedback}
