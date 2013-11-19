@@ -204,15 +204,27 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{HeaderTimer}
 
-	init
-
-	render
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & \\ \hline
+	render & \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{HeaderLevel}
 
-	init
-
-	render
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & \\ \hline
+	render & \\ \hline
+	\end{tabular}
+	\end{table}
 
 \clearpage
 
@@ -223,18 +235,25 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	model: Entity
 
 \subsection*{HigscoreList}
+
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	initialize & \\ \hline
+	loadData & \\ \hline
+	saveData & \\ \hline
+	addScore & \\ \hline
+	writeToConsole & \\ \hline
+
+	\end{tabular}
+	\end{table}
+
 	
 	model: Highscore
 
-	initialize
-
-	loadData
-
-	saveData
-
-	addScore
-
-	writeToConsole
+	
 
 \subsection*{PowerLineList}
 
@@ -248,48 +267,82 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{App}
 
-	gameLevel: null,
-  	highscoreList: null,
-  	gameScreen: null
-  	timer: null,
-  	level: null,
-  	hudBtns: null,
-  	hudMny: null,
-  	hpBar: null,
-  	mainMenu: null,
-  	highscoreView: null,
-  	gameRunning: false,
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	gameLevel & null \\ \hline
+  	highscoreList & null \\ \hline
+  	gameScreen & null \\ \hline
+  	timer & null \\ \hline
+  	level & null \\ \hline
+  	hudBtns & null \\ \hline
+  	hudMny & null \\ \hline
+  	hpBar & null \\ \hline
+  	mainMenu & null \\ \hline
+  	highscoreView & null \\ \hline
+  	gameRunning & false \\ \hline
+	
+	\end{tabular}
+	\end{table}
 
-  	initialize
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	initialize & \\ \hline
+  	initGame & \\ \hline
+  	startGame & \\ \hline
+  	stopGame & \\ \hline
+  	onDeviceReady & \\ \hline
 
-  	initGame
+	\end{tabular}
+	\end{table}
 
-  	startGame
+	
 
-  	stopGame
 
-  	onDeviceReady
 
 \subsection*{AudioPlayer}
 
-	mediaSuccess
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	mediaSuccess & \\ \hline
+	mediaError & \\ \hline
+	getMediaStatusString & \\ \hline
+	mediaStatus & \\ \hline
+	getMediaPath & \\ \hline
+	audioPlayer & (init, loadSfx, loadBGM, playBGM, stopBGM, playRandMoney, stopAll) \\ \hline
+	\end{tabular}
+	\end{table}
 
-	mediaError
 
-	getMediaStatusString
-
-	mediaStatus
-
-	getMediaPath
-
-	audioPlayer (init, loadSfx, loadBGM, playBGM, stopBGM, playRandMoney, stopAll)
 
 \subsection*{ImageLibrary}
 	
-	var imagesLoaded=0;
-	var imagesToLoad=1;
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	imagesLoaded & \\ \hline
+	imagesToLoad & \\ \hline
+	\end{tabular}
+	\end{table}
 
-	imgLib (isAllImagesLoaded, loadImage)	
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	imgLib & (isAllImagesLoaded, loadImage) \\ \hline	
+	\end{tabular}
+	\end{table}
 
 \clearpage
 
@@ -297,63 +350,54 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{Utilities}
 
-	requestAnimFrame
+	\begin{table}[H]
+	\begin{tabular}{p{6cm} | p{6cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	requestAnimFrame & \\ \hline
+	getPhoneGapPath & \\ \hline
+	timeToString & \\ \hline
+	onBackButton & \\ \hline
+	scrollToTop & \\ \hline
+	calcGoal & \\ \hline
+	calcLevelSize & \\ \hline
+	generateBuildingSpawnTime & \\ \hline
+	sqr & \\ \hline
+	dist2 & \\ \hline
+	distToSegmentSquared & \\ \hline
+	distToSegment & \\ \hline
 
-	getPhoneGapPath
+	\end{tabular}
+	\end{table}
 
-	timeToString
-
-	onBackButton
-
-	scrollToTop
-
-	calcGoal
-
-	calcLevelSize
-
-	generateBuildingSpawnTime
-
-	sqr
-
-	dist2
-
-	distToSegmentSquared(p, v, w)
-
-	distToSegment
-
+\clearpage
 
 \subsection*{Constants}
-	
-	GAME\_FPS
 
-	DEBUG
+	\begin{table}[H]
+	\begin{tabular}{p{6cm} | p{6cm} }
 
-	HUD\_HEIGHT
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	GAME\_FPS & \\ \hline
+	DEBUG & \\ \hline
+	HUD\_HEIGHT & \\ \hline
+	BuildingTemplates & \\ \hline
+	BUILDING\_WIDTH & \\ \hline
+	BUILDING\_REVENUE\_FREQ & \\ \hline
+	BUILDING\_DURABILITY & \\ \hline
+	POWERPLANT\_COST & \\ \hline
+	POWERPLANT\_MAX\_LEVEL & \\ \hline
+	POWERPLANT\_POWER & \\ \hline
+	UPGRADE\_COST & \\ \hline
+	POWERLINE\_COST & \\ \hline
+	POWERLINE\_WIDTH & \\ \hline
+	GameState & \\ \hline
+	PowerLineState & \\ \hline
+	PLAYER\_MAX\_HP & \\ \hline
+	PLAYER\_START\_MONEY & \\ \hline
 
-	BuildingTemplates
-
-	BUILDING\_WIDTH
-
-	BUILDING\_REVENUE\_FREQ
-
-	BUILDING\_DURABILITY
-
-	POWERPLANT\_COST
-
-	POWERPLANT\_MAX\_LEVEL
-
-	POWERPLANT\_POWER
-
-	UPGRADE\_COST
-
-	POWERLINE\_COST
-
-	POWERLINE\_WIDTH
-
-	GameState
-
-	PowerLineState
-
-	PLAYER\_MAX\_HP
-
-	PLAYER\_START\_MONEY
+	\end{tabular}
+	\end{table}
