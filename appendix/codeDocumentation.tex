@@ -1,131 +1,131 @@
 \chapter{Code Documentation}
+
+The code documentation lists the JavaScript objects in bold, followed by a list of their methods.
+
 \clearpage 
 
 \section{Models - Backbone Models}
 
 \subsection*{Building}
-	defaults
+	defaults - Default values for this object
 
-	timeSinceRevenue
+	timeSinceRevenue - Duration since last time the building generated revenue.
 
-	shouldBeRemoved
+	shouldBeRemoved - Returns true if the durability of this building is <= 0.
 
-	updateRevenue
+	updateRevenue - Makes this building generate revenue.
 
-	lowerDurability
+	lowerDurability - Lower the durability of this building.
 
-	render
+	render - Draw this object to a canvas context.
 
-	update
+	update - Update the state of this building.
 
 \subsection*{Entity}
 
-	initialize
+	initialize - Initialize a PowerLineList for this entity.
 
-	update
+	update - Update the state of this entity. Should be overwritten by subclasses.
 
-	getCenterPos
+	getCenterPos - returns the center position of this entity.
 
-	shouldBeRemoved
+	shouldBeRemoved - Returns if this entity should be removed from the map or not. Should be overwritten by subclasses.
 
-	connectTo
+	connectTo - Connect this entity to a PowerLine.
 
-	disconnect
+	disconnect - Disconnect this entity from a PowerLine.
 
-	contains
+	contains - Check if a point is inside of this entity.
 
 \subsection*{Highscore}
 
-	updateTime
+	updateTime - Updates this high score object if the new score is smaller than the old score.
 
-	saveData
+	saveData - Write data to local storage.
 
-	toString
+	toString - Returns a string representation of this object.
 
 \subsection*{Level}
 	
-	defaults
+	defaults - Default values for this object.
 
-	initialize
+	initialize - Initialize and shuffle the list of possible building positions for this level.
 
-	update
+	update - Update the state of the level.
 
-	createBuilding
+	createBuilding - Create a new building and place it on the map.
 
-	tapMap
+	tapMap - Process user input.
 
-	buildPowerPlantAt
+	buildPowerPlantAt - Build a new Powerplant on the map.
 
-	costOfPowerLine
+	costOfPowerLine - Calculate the cost of a Powerline.
 
-	costOfFixingPowerLine
+	costOfFixingPowerLine - Calculate the cost of repairing a Powerline.
 
-	connectWithPowerLine
+	connectWithPowerLine - Connect two buildings with a Powerline.
 
-	fixPowerLine
+	fixPowerLine - Repair a Powerline.
 
 \subsection*{Map}
 
-	defaults
+	defaults - Default values for map.
 
-	update
+	update - Update the state of the game map.
 
-	translateView
+	translateView - Move the view of the map.
 
-	getBuildingAt
+	getBuildingAt - Returns the building located here on the map. Input coordinates in screen space.
 
-	getBuildingAtMap
+	getBuildingAtMap - Returns the building located here on the map. Input coordinates in world space.
 
-	screenToMapCoordinates
+	screenToMapCoordinates - Translate coordinates from screen space to map space.
 
-	getPowerLineAt
+	getPowerLineAt - Return the powerline located here on the map. Input coordinates in screen space.
 
 \subsection*{Player}
 
-	defaults
+	defaults - Player default values.
 
-	damage
+	damage - Inflict damage to the players health.
 
 \subsection*{Powerline}
 
-	defaults
+	defaults - Powerline default values.
 
-	isHealthy
+	isHealthy - Returns if this Powerline is healthy or not.
 
-	getPointA
+	getPointA - Returns the center position of the first building this Powerline is connected to.
 
-	getPointB
+	getPointB - Returns the center position of the second building this Powerline is connected to.
 
-	removeFrom
+	removeFrom - Remove this Powerline from the map and disconnect everything connected to it.
 
-	break
+	break - Set the state of this Powerline to broken.
 
-	fix
+	fix - Set the state of this Powerline to healthy.
 
-	render
+	render - Draw this Powerline to the canvas context.
 
 \subsection*{Powerplant}
 
-	defaults
+	defaults - Default values for this Powerplant.
 
-	canBeUpgraded
+	canBeUpgraded - Returns true if this Powerplant can be upgraded.
 
-	getMaxPower
+	getMaxPower - Returns how much power this powerplant can output.
 
-	upgrade
+	upgrade - Upgrade this Powerplant.
 
-	distributePower
+	distributePower - Distribute power from this Powerplant to as many connected buildings as allowed by getMaxPower using Breadth First Search.
 
-	render
-
+	render - Draw this Powerplant to the canvas context.
 
 \clearpage
 
 \section{Presenters - Backbone Views}
 	
 	\subsection*{HighscoreView}
-
-	
 
 	\subsection*{HpBar}
 
