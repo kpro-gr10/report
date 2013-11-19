@@ -32,6 +32,7 @@ What can change (the artifact)?
 When is the change made and who makes it (the environment)? 
 Once a change has been specified, the new implementation must be designed, 
 implemented, tested, and deployed. All of these actions take time and money, both of which can be measured.
+
 Helgelandskraft (the customer) wanted the possibility for further development on the game. The developers
 have to keep in mind that the game is developed in a such way that the customer can continue
 the development after the delivery. If the game is made in a way that changes are hard to implement, 
@@ -81,7 +82,10 @@ parameters in the models. The difficulty of the game is based on these parameter
 \end{table}
 
 \subsection{Performance}
-\cite{attributes}
+
+Performance\cite{attributes} is about timing. Different events occur and the system must respond to them. Performance is concerned about how long it takes to respond to events. Performance becomes complicated because of the number of event sources and arrival pattern.
+
+Performance is very important for games. If the game takes too long responding to user input, the game feels slugish and the player is likely to quit playing. The game also has it's own logic running in parallel to the user interacting with the game which affects the users perception of the game. If the game runs at a slow pace the user experience suffers as a result.
 
 \subsection*{P1: Rendering (Repaint)}
 When changes occure to the game models, the screen should identify if the change 
@@ -100,7 +104,7 @@ that part of the display at the beginning of the next game update.
 	Response Measure & Less than 16 ms\\ \hline
 \end{tabular}
 
-\subsection{Other Quality attributes}
+\subsection{Other Quality Attributes}
 \subsection*{Usability: } The group do not have the main focus on this quality attribute, but because this is a game that is supposed to be played by a variety of people, it has to be considered to make the game easy to use. Instructions in the main menu has been added to help the user get started.\cite{attributes}
 
 \subsection*{Testability: } Since the game is made as a prototype, the focus has been on having
