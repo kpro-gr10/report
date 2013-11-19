@@ -1,125 +1,132 @@
 \chapter{User Guide}
 
-In this section it will be a briefly description of how to play the game.
-The description will be described with text and some illustrations from the
-game. 
+This section will, with the help of text and illustrations give a description of how to play the game. 
 
 \clearpage
 
 \section*{Game Elements}
-	In this section, it will be a short description of the elements in the game.
+	Here is a short description of the elements in the game. The numbers are referencing the elements in
+	Figure \ref{ref:gameelements}.
 
-	{\bf \#1: Power plant:} this building is the one that can serve the houses
-	with power. A powerplant has a limited amount of power and can be upgarded
-	in order to serve more buildings with power. Building a powerplant cost money.
-	To serve buildings with power, the player is able to connect a power plant to
-	buildings with power lines. \\
-	{\bf \#2: Power lines: } this icon is the option when to choose when the player
-	wants to build a powe line. \\
-	{\bf \#3-\#7: Buildings: } this is the buildings that will appear randomly at the
-	map at random intervals when the game starts. Each building require a different 
-	amount of power and will also give the user a different amount of moeny. 
-	The first building (\#1) will require least amount of power and the last building
-	(\#7) will require the most amount power. \\
-	{\bf \#8: Power line status:} in the game, a powerline can have three different kind
-	of status. If a powerline is connected between two building without any connection
-	to a powerplant, the line will be black and signalize that there is no power served
-	to the buildings. If the buildings is not connected to a power plant, the buildings
-	will dissapper and the health bar vil decrease. The Yellow line signalize that the
-	houses is served with power and the user will be able to collect money. If the 
-	power line is red, it signalize that the power line is damagesd/unstable. This is
-	something that happends in the real world and the player needs to fix it so the
-	houses can get power from the power plant. If it is not fixed, the houses will 
-	dissappear and the healthbar will decrease. \\ 
-	{\bf \#9: Coin: } this coin will appear next to a building when it is connected to
-	a powerplant that can serve the building with power. This coin signalize that
-	the building is buying power form the power plant. When this appear, the player
-	is able to click on the building and collect the money in order to try to 
-	reach the goal to get to the next level. 
+	{\bf \#1: Power plant:} The power plant is able to serve buildings with power.
+	A power plant has a limited amount of power and can be upgraded
+	in order to serve more buildings with power. Building a power plant cost money.
+	To serve buildings with power, the player must connect a power plant to
+	buildings using power lines. \\
+	
+	{\bf \#2: Power lines: } In order to serve buildings with power, the building needs 
+	to be connected to a power plant using power lines, either directly or indirectly 
+	through other buildings.
+
+	
+	{\bf \#3-\#7: Buildings: } Buildings that need to be served with power will appear 
+	around the map at random intervals. There are different kinds of buildings, and each 
+	kind requires a different amount of power. The first building (\#1) requires the least 
+	amount of power, while the last building (\#7) will require the most amount power. \\
+	
+	{\bf \#8: Power line status:} The power lines can have 3 different kinds of statuses.
+	If a power line is connected between two building without any connection
+	to a power plant, the line will be black and signalize that no power is served
+	to the buildings. The same applies for power lines connecting a building to a power 
+	plant that is not able to serve that building, because the other buildings connected 
+	demands all its available power. The yellow line signalize that the buildings are served 
+	with power. If the power line is red, it signalize that the power 
+	line is damaged or unstable, and needs to be fixed. \\ 
+	
+	{\bf \#9: Coin:} A coin will, at regular intervals, appear next to buildings connected to
+	a power plant that can serve the building with power. The coin signalize that the building 
+	is receiving power form the power plant, and the owners are ready to pay for the power. The player
+	can tap the coin and collect the money in order to try to reach the level specific goal of earning 
+	enough money to reach the next level.
+
+	{\bf Health bar:} If a building is not connected to a power plant, or the power line connecting 
+	it to a power plant is either black or red, the building is not receiving any power and the owners 
+	will leave, making the player's health bar decrease. If the health bar reaches the bottom the game is over.
 
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{pictures/GameElements.png}
 		\caption{Game elements}
+		\label{ref:gameelements}
 	\end{figure}
 
 \subsection*{Map Menu}
-	When the game starts, there will be a menu in the buttom of the map. There 
-	are a few elements in the menu the player needs to know:
+	When a new game is started, there is a menu at the bottom of the map. The numbers are referencing 
+	the elements in Figure \label{fig:mapmenuelements}. The elements in the menu are as follows:
 
-	{\bf \#1 Money: } this is the amount of money the player have\\
-	{\bf \#2 Goal: } is the amount of money the player needs to collect in 
+	{\bf \#1 Money:} this is the amount of money the player has. \\
+	{\bf \#2 Goal: } this is the amount of money the player needs to collect in 
 	order to reach the next level.\\
-	{\bf \#3 Healthbar: } is the health the player have. If it reached zero, it is game over. \\
+	{\bf \#3 Health bar: } is the health the player has. If it reaches zero, the game is over. \\
 	{\bf \#4 Build power plant: } is the element to choose if the player wants to build a power plant. \\
-	{\bf \#5 Build power line: } is the element to choose if the player wants to build a powerline. \\
-	{\bf \#6 Pause game: } the player can press this button to pause the game. \\
+	{\bf \#5 Build power line: } is the element to choose if the player wants to build a power line. \\
+	{\bf \#6 Pause game: } the player can tap this button to pause the game. \\
 
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{pictures/mapmenu.png}
 		\caption{The map menu}
+		\label{fig:mapmenuelements}
 	\end{figure}
 
 \subsection*{Start Game}
-	The player is able to start the game by clicking on the "Power Supply" icon
-	for the app at the phone. When the game starts, a flashscreen appears and the
-	menu will show after 5 seconds. From the main menu, the player is able to 
-	start a new game, see all highscores and read the instructions. 
 
-	When the player starts a new game, a empty map will appear. When the game starts, 
-	houses will start appearing a random positions at the map.
+	The game always start at level 1, and the player can only reach higher levels by completing 
+	all previous levels. From the main menu, the player can start a new game, see all highscores 
+	or read the game instructions. 
 
-	The player need to build power plants, power lines and collect money in order
+	When the player starts a new game, an empty map will appear. The player will then be 
+	presented with the goal of the level, and subsequently buildings will start appearing 
+	at random positions on the map.
+
+	The player needs to build power plants, power lines and collect money in order
 	to reach the next level.
 
 \subsection*{Build Power Plant}
 
-	When the game is started, a menu is showing in the bottom of the screen.
-	From the main menu the player is able to choose to build a power plant.
-	After selection "build power plant" the game is entering building mode and
-	the player is able to choose the location to build the power plant. 
+	To build power plants the player taps the power plant icon at the bottom of the screen. 
+	This will make the player enter building mode, and the player can tap the location on the 
+	map he wants to place the power plant. 
 
-	In order to build a power plant, the player needs enough moeny and the
-	location that is chosen have to be empty.
+	In order to build a power plant, the player must have enough money and the
+	location that is chosen has to be empty.
 
 \subsection*{Build Power Line}
 
-	When buildings appear at the map, the player is able to connect buildings and
-	power plant with power lines. The player choose the "build power line" in the 
-	menu and press on the buildings that the player want to connect. The first building
-	will get a white circle around the building and after selecting the second one, there
-	will appear a question if the player want to connect them or not.
+	To build power lines the player taps the power line icon at the bottom of the screen. 
+	This will make the player enter building mode and, and the player can tap the two 
+	building he wants to connect with a power line. The player need to be able to afford 
+	the power line to build it and the cost of the power line is proportional to the length 
+	between the two buildings.
 
 \subsection*{Repair or remove damaged Power Line}
 
-	If a powerline gets damaged, it will turn red. The player needs to press on the
-	damaged powerline in order to fix it or remove it. 
+	If a power line is damaged, it will turn red. The player needs to press on the
+	damaged power line in order to fix it or remove it. 
 
 \subsection*{Upgrade Power Plant}
 
 	A power plant can only serve a fixed amount of power. If the player wants a power
-	plant to serve more power, the player can a amount of money and upgrade the power plant. 
-	When the player upgrades a power plant, it will be able to serve more houses with power.
-	A power plant can only be upgraded up to level 5. A power plant can be upgraded by pressing
-	on a power plant. 
+	plant to serve more power, the player can for a certain amount of money upgrade the power 
+	plant, by tapping it, and pressing upgrade. A power plant can only be upgraded up to level 5.
 
 \subsection*{Navigate around the map}
 	
 	The map in the game is quite big and the player needs to navigate around
-	the map in order to get a overview of all the elements on the map. 
+	the map in order to get an overview of all the elements on the map. 
 	In order to navigate, the player swipe the finger over the screen and the 
 	map position will change. In order to get a full overview of the map, the player
-	only needs to do a double-tap on the map. The map will then zoom out and the player
-	can do a double-tap agian to go back to normal map view. 
+	only needs to double-tap the map. The map will then zoom out and the player
+	can double-tap again to go back to normal map view. The player can not build in 
+	the zoomed out view.
 
 \subsection*{Pause the game}
 
-	If the player wants to pause the game, it is only to press the pause button in 
+	If the player wants to pause the game, he can press the pause button in 
 	the menu or just exit the game. 
 
 \subsection*{Collect money}
 	
 	When buildings are connected to a power plant, the player will be able to collect
-	money from the buildings. The player are able to collect the money by pressing on the
+	money from the buildings. The player is able to collect the money by pressing on the
 	building with a attached coin and the players amount of money will increase. If
 	the amount of money is equal or greater than the goal, the player reaches the next level.
 
@@ -127,4 +134,14 @@ game.
 
 	When a building appears on the map, a countdown starts. The player needs to connect
 	the building to a power plant before the countdown is zero. If the countdown is zero, 
-	the building will disappear and the health bar will decrease.  
+	the building will disappear and the health bar will decrease.
+
+\subsection*{Next level}
+
+	The higher the level is the more difficult it will be. The rate at which buildings appear 
+	will increase, the rate at which power lines are damaged will increase, and the map size increases.
+
+\subsection*{Highscore}
+
+	At the start of a new level, a timer will start. The player should try to complete the level as 
+	fast as possible. The highscore shows the best time the player has gained at each level he has completed.
