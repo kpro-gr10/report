@@ -128,7 +128,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 \subsection*{HighscoreView}
 	initialize - Render the highscore list and begin listening to changes to the list.
 	
-	render - Update the HTML Object with the state of the highscore list.
+	render - Update the HTML with the state of the highscore list.
 
 \subsection*{HpBar}
 	init - Render the player's health and begin listening to changes to player health.
@@ -138,11 +138,11 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 \subsection*{HudMoney}
 	init - Render the player's money and begin listening to changes to the player's money.
 
-	render - Update the HTML Object with the state of the player's health.
+	render - Update the HTML with the state of the player's health.
 
 \subsection*{HudButtons}
 
-	events - Which events this Presenter should receive from the HTML Object.
+	events - Which events this Presenter should receive from the HTML.
 
 	buildPowerPlant - Change the game state to BuildPP.
 
@@ -152,7 +152,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{Menu}
 
-	events - Which events this Presenter should receive from the HTML Object.
+	events - Which events this Presenter should receive from the HTML.
 
 	startGame - Start the game.
 
@@ -182,25 +182,25 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 	renderPowerLines - Draw the powerlines to the HTML canvas.
 
-	buildingTemp: null,
+	buildingTemp - Holds the building that you are currently building a powerline from.
 
-  	screenMove: false,
+  	screenMove - Set to true if the current series of touch events has a touch move event.
 
-  	prevTouchStart: null,
+  	prevTouchStart - Previous touch start event.
 
- 	prevTouchEnd: null,
+ 	prevTouchEnd - Previous touch end event.
 
-  	prevTouchEndTime: -Infinity,
+  	prevTouchEndTime - Time of previous touch end event.
 
-  	touchStart
+  	touchStart - Called when a touch start event is registered.
 
-  	touchEnd
+  	touchEnd - Called when a touch end event is registered.
 
-  	touchMove
+  	touchMove - Called when a touch move event is registered.
 
-  	doubleTap
+  	doubleTap - Called when the player double taps the screen.
 
-  	handleEvent
+  	handleEvent - Called when this screen receives an input event.
 
 \subsection*{HeaderTimer}
 
@@ -209,8 +209,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	init & \\ \hline
-	render & \\ \hline
+	init & Render the current playtime and begin listening to the level's playtime variable. \\ \hline
+	render & Update the HTML with the state of the level's playtime variable. \\ \hline
 	\end{tabular}
 	\end{table}
 
@@ -221,8 +221,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	init & \\ \hline
-	render & \\ \hline
+	init & Render the current level and begin listening to changes to the level. \\ \hline
+	render & Update the HTML with the level.  \\ \hline
 	\end{tabular}
 	\end{table}
 
@@ -241,11 +241,11 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	initialize & \\ \hline
-	loadData & \\ \hline
-	saveData & \\ \hline
-	addScore & \\ \hline
-	writeToConsole & \\ \hline
+	initialize & Load highscore data. \\ \hline
+	loadData & Read highscore data from local storage. \\ \hline
+	saveData & Save highscore data to local storage. \\ \hline
+	addScore & If the new score is better than the old, update the level's highscore. \\ \hline
+	writeToConsole & Write the highscore list to console for debug purposes. \\ \hline
 
 	\end{tabular}
 	\end{table}
@@ -272,17 +272,17 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Variables & Description \\ \hline
-	gameLevel & null \\ \hline
-  	highscoreList & null \\ \hline
-  	gameScreen & null \\ \hline
-  	timer & null \\ \hline
-  	level & null \\ \hline
-  	hudBtns & null \\ \hline
-  	hudMny & null \\ \hline
-  	hpBar & null \\ \hline
-  	mainMenu & null \\ \hline
-  	highscoreView & null \\ \hline
-  	gameRunning & false \\ \hline
+	gameLevel & Current level model. \\ \hline
+  	highscoreList & List of highscores. \\ \hline
+  	gameScreen & Screen presenter. \\ \hline
+  	timer & Timer presenter. \\ \hline
+  	level & Level presenter. \\ \hline
+  	hudBtns & Hud Buttons presenter. \\ \hline
+  	hudMny & Hud Player Money presenter. \\ \hline
+  	hpBar & Player Health presenter. \\ \hline
+  	mainMenu & Main menu presenter. \\ \hline
+  	highscoreView & Highscore presenter. \\ \hline
+  	gameRunning & True if the game loop is running. \\ \hline
 	
 	\end{tabular}
 	\end{table}
@@ -292,11 +292,11 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	initialize & \\ \hline
-  	initGame & \\ \hline
-  	startGame & \\ \hline
-  	stopGame & \\ \hline
-  	onDeviceReady & \\ \hline
+	initialize & Initialize this object's data. \\ \hline
+  	initGame & Init a new game. \\ \hline
+  	startGame & Start the game. \\ \hline
+  	stopGame & Stop the game. \\ \hline
+  	onDeviceReady & The device is ready and we can start the game. \\ \hline
 
 	\end{tabular}
 	\end{table}
@@ -312,12 +312,14 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	mediaSuccess & \\ \hline
-	mediaError & \\ \hline
-	getMediaStatusString & \\ \hline
-	mediaStatus & \\ \hline
-	getMediaPath & \\ \hline
-	audioPlayer & (init, loadSfx, loadBGM, playBGM, stopBGM, playRandMoney, stopAll) \\ \hline
+	mediaSuccess & Function for printing audio debug information. \\ \hline
+	mediaError & Function for printing audio debug information. \\ \hline
+	getMediaStatusString & Function for printing audio debug information. \\ \hline
+	mediaStatus & Function for printing audio debug information. \\ \hline
+	getMediaPath & Get the path to the sound file.  \\ \hline
+	audioPlayer.init & Initialize the audio player's sound files. \\ \hline
+	audioPlayer.loadSfx & Load a audio file. \\ \hline
+	audioPlayer.playRandMoney & Play a random money sound effect. \\ \hline
 	\end{tabular}
 	\end{table}
 
@@ -330,8 +332,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Variables & Description \\ \hline
-	imagesLoaded & \\ \hline
-	imagesToLoad & \\ \hline
+	imagesLoaded & Number of images loaded. \\ \hline
+	imagesToLoad & Number of images that has to be loaded. \\ \hline
 	\end{tabular}
 	\end{table}
 
@@ -340,7 +342,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	imgLib & (isAllImagesLoaded, loadImage) \\ \hline	
+	imgLib.isAllImagesLoaded & Returns true if all images attempted to be loaded with the loadImage function is done loading. \\ \hline	
+	imgLib.loadImage & Load and return an image object. \\ \hline	
 	\end{tabular}
 	\end{table}
 
@@ -355,18 +358,18 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	requestAnimFrame & \\ \hline
-	getPhoneGapPath & \\ \hline
-	timeToString & \\ \hline
-	onBackButton & \\ \hline
-	scrollToTop & \\ \hline
-	calcGoal & \\ \hline
-	calcLevelSize & \\ \hline
-	generateBuildingSpawnTime & \\ \hline
-	sqr & \\ \hline
-	dist2 & \\ \hline
-	distToSegmentSquared & \\ \hline
-	distToSegment & \\ \hline
+	requestAnimFrame & \url{www.paulirish.com/2011/requestanimationframe-for-smart-animating/} \\ \hline
+	getPhoneGapPath & Returns the path to phonegap, device independently. \\ \hline
+	timeToString & Translate a time in seconds to a string. \\ \hline
+	onBackButton & Called when the backbutton on the device is pressed. \\ \hline
+	scrollToTop & Scroll to the top of the html page. \\ \hline
+	calcGoal & Calculate a goal for the level. \\ \hline
+	calcLevelSize & Calculat ethe size of the map. \\ \hline
+	generateBuildingSpawnTime & Calculate time to the next building spawn. \\ \hline
+	sqr & Returns the square of the input number. \\ \hline
+	dist2 & Returns the square of the distance between two points. \\ \hline
+	distToSegmentSquared & Returns the square of the distance from a point to a line segment. \\ \hline
+	distToSegment &  Returns the distance to from a point to a line segment. \\ \hline
 
 	\end{tabular}
 	\end{table}
@@ -381,13 +384,13 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Variables & Description \\ \hline
-	GAME\_FPS & \\ \hline
-	DEBUG & \\ \hline
-	HUD\_HEIGHT & \\ \hline
-	BuildingTemplates & \\ \hline
-	BUILDING\_WIDTH & \\ \hline
-	BUILDING\_REVENUE\_FREQ & \\ \hline
-	BUILDING\_DURABILITY & \\ \hline
+	GAME\_FPS & Game frame rate. \\ \hline
+	DEBUG & Print debug to console. \\ \hline
+	HUD\_HEIGHT & Height of the UI hud. \\ \hline
+	BuildingTemplates & Buildings to place on the map. \\ \hline
+	BUILDING\_WIDTH & Buidling dimensions. \\ \hline
+	BUILDING\_REVENUE\_FREQ & How often buildings generate money \\ \hline
+	BUILDING\_DURABILITY &  \\ \hline
 	POWERPLANT\_COST & \\ \hline
 	POWERPLANT\_MAX\_LEVEL & \\ \hline
 	POWERPLANT\_POWER & \\ \hline
