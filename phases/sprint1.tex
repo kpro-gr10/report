@@ -79,13 +79,12 @@ and smooth.
 	to the visual HTML code. They listen to changes to the Backbone Models and changes 
 	the HTML objects accordingly. The Presenters also handles input events from the HTML objects.
 	
-	We have implemented the four main states of the game. Each state has its own purpose.
+	We implemented these presenters in this sprint:
 	\begin{itemize}
-		\item {\bf Main menu} The main menu where you navigate to the other screens.
-		\item {\bf Ingame} THis is where you play the game, the game loop runs 
-		and the game state is rendered to the screen.
-		\item {\bf Instructions} In the Instruction screen you can read about how to play the game.
-		\item {\bf Highscore} This lets you see how well you did while playing the game.
+		\item{\bf Screen}
+		Displays the state of the game map, meaning the buildings placed on the maps and their locations. This presenter also accepts touchscreen inputs.
+		\item{\bf Menu}
+		This presenter receives main menu user input from html buttons.
 	\end{itemize}
 	
 	\begin{figure}[H]
