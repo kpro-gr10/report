@@ -124,40 +124,174 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 \clearpage
 
 \section{Presenters - Backbone Views}
+
+\subsection*{HighscoreView}
+	initialize
 	
-	\subsection*{HighscoreView}
+	render
 
-	\subsection*{HpBar}
+\subsection*{HpBar}
+	init
 
-	\subsection*{Hud}
+	render
 
-	\subsection*{Menu}
+\subsection*{HudMoney}
+	init
 
-	\subsection*{Screen}
+	render
 
-	\subsection*{ScreenHeader}
+\subsection*{HudButtons}
 
-	\clearpage
+	events
+
+	buildPowerPlant
+
+	buildPowerLine
+
+	togglePause
+
+\subsection*{Menu}
+
+	events
+
+	startGame
+
+	instructions
+
+	highscore
+
+\subsection*{Screen}
+
+	init
+
+	iOS
+
+	needsRepaint
+
+	prevZoomed
+
+	resetZoom
+
+	render
+
+	renderBuildings
+
+	renderBuildingTemp
+
+	renderBuildMode
+
+	renderPowerLines
+
+	buildingTemp: null,
+
+  	screenMove: false,
+
+  	prevTouchStart: null,
+
+ 	prevTouchEnd: null,
+
+  	prevTouchEndTime: -Infinity,
+
+  	touchStart
+
+  	touchEnd
+
+  	touchMove
+
+  	doubleTap
+
+  	handleEvent
+
+\subsection*{HeaderTimer}
+
+	init
+
+	render
+
+\subsection*{HeaderLevel}
+
+	init
+
+	render
+
+\clearpage
 
 \section{Collections - Backbone Collections}
 	
-	\subsection*{BuildingList}
+\subsection*{BuildingList}
 
-	\subsection*{HigscoreList}
+	model: Entity
 
-	\subsection*{PowerLineList}
+\subsection*{HigscoreList}
+	
+	model: Highscore
 
-	\clearpage
+	initialize
+
+	loadData
+
+	saveData
+
+	addScore
+
+	writeToConsole
+
+\subsection*{PowerLineList}
+
+	model: PowerLine
+
+	sample
+
+\clearpage
 
 \section{Singletons}
 
-	\subsection*{App}
+\subsection*{App}
 
-	\subsection*{AudioPlayer}
+	gameLevel: null,
+  	highscoreList: null,
+  	gameScreen: null
+  	timer: null,
+  	level: null,
+  	hudBtns: null,
+  	hudMny: null,
+  	hpBar: null,
+  	mainMenu: null,
+  	highscoreView: null,
+  	gameRunning: false,
 
-	\subsection*{ImageLibrary}
+  	initialize
 
-	\clearpage
+  	initGame
+
+  	startGame
+
+  	stopGame
+
+  	onDeviceReady
+
+\subsection*{AudioPlayer}
+
+	mediaSuccess
+
+	mediaError
+
+	getMediaStatusString
+
+	mediaStatus
+
+	getMediaPath
+
+	audioPlayer (init, loadSfx, loadBGM, playBGM, stopBGM, playRandMoney, stopAll)
+
+\subsection*{ImageLibrary}
+	
+	var imagesLoaded=0;
+	var imagesToLoad=1;
+
+	imgLib (isAllImagesLoaded, loadImage)	
+
+\clearpage
 
 \section{Other}
 
