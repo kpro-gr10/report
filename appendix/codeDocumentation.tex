@@ -3,23 +3,123 @@
 
 \section{Models - Backbone Models}
 
-	\subsection*{Building}
+\subsection*{Building}
+	defaults
 
-	\subsection*{Entity}
+	timeSinceRevenue
 
-	\subsection*{Highscore}
+	shouldBeRemoved
 
-	\subsection*{Level}
+	updateRevenue
 
-	\subsection*{Map}
+	lowerDurability
 
-	\subsection*{Player}
+	render
 
-	\subsection*{Powerline}
+	update
 
-	\subsection*{Powerplant}
+\subsection*{Entity}
 
-	\clearpage
+	initialize
+
+	update
+
+	getCenterPos
+
+	shouldBeRemoved
+
+	connectTo
+
+	disconnect
+
+	contains
+
+\subsection*{Highscore}
+
+	updateTime
+
+	saveData
+
+	toString
+
+\subsection*{Level}
+	
+	defaults
+
+	initialize
+
+	update
+
+	createBuilding
+
+	tapMap
+
+	buildPowerPlantAt
+
+	costOfPowerLine
+
+	costOfFixingPowerLine
+
+	connectWithPowerLine
+
+	fixPowerLine
+
+\subsection*{Map}
+
+	defaults
+
+	update
+
+	translateView
+
+	getBuildingAt
+
+	getBuildingAtMap
+
+	screenToMapCoordinates
+
+	getPowerLineAt
+
+\subsection*{Player}
+
+	defaults
+
+	damage
+
+\subsection*{Powerline}
+
+	defaults
+
+	isHealthy
+
+	getPointA
+
+	getPointB
+
+	removeFrom
+
+	break
+
+	fix
+
+	render
+
+\subsection*{Powerplant}
+
+	defaults
+
+	canBeUpgraded
+
+	getMaxPower
+
+	upgrade
+
+	distributePower
+
+	render
+
+
+\clearpage
 
 \section{Presenters - Backbone Views}
 	
@@ -89,7 +189,7 @@
 \subsection*{Constants}
 	
 	GAME_FPS
-	DEBUG=true;
+	DEBUG
 	HUD_HEIGHT
 	BuildingTemplates
 	BUILDING_WIDTH
