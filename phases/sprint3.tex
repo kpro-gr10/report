@@ -104,45 +104,40 @@ Table \ref{table:backlogsprint3} shows the backlog from sprint 3.
 	
 	\subsubsection{Power Lines}
 		\begin{itemize}
-			\item {\bf Build Power Lines: } The user is now able to build powerlines
+			\item {\bf Build Power Lines: } It is now possible to build power lines
 			between buildings. There is no restrictions of what buildings you can connect, 
-			but there need to be a powerplant in the connected buildings in order to serve the houses 
-			with power.
-			\item {\bf Remove Power Lines: } It is possible to click on power 
-			lines to remove them. The algorithm used called point to line segment 
-			distance and is described under "algorithms" in this section. 
+			but there need to be a power plant in the connected buildings in order to serve the 
+			building with power.
+			\item {\bf Remove Power Lines: } It is possible to tap power 
+			lines to remove them. The algorithm used is called "point to line segment 
+			distance" and is described under "algorithms" in this section. 
 			\item {\bf Damaged Power Lines: } It was implemented functionality to set a 
-			powerline to be in "damaged" mode. 
+			power line to be in "damaged" mode. 
 			\item {\bf More damaged power lines in new levels: } When the user reaches a higher level
-			there is now appearing more damaged power lines that needs to be fixed. 
-			\item {\bf Color of power line: } A powerline is black if there is no power served between
-			the buildings. The reason for a line to be black is either is there is no poweplant
-			connected og if the powerplant cannot serve the houses. If the line is yellow, it 
-			signalize that there is sent power to the house. 
-			\item {\bf Selected houses when building powerlines: } When building a powerline, 
-			the user tap on the building he or she wants to connect the line between. When tapping on the
-			first house, it is outlined with a white circle behind the house, so that the player knows
+			more damaged power lines are now appearing. 
+			\item {\bf Color of power line: } A power line is black if there is no power served between
+			the buildings. This is either when there is no power plant connected or if the connected power 
+			plant cannot serve the buildings. If the line is yellow, it 
+			signalize that power is being sent to the building. 
+			\item {\bf Selected buildings when building power lines:} When buildings a power line, 
+			the user tap on the building he or she wants to connect the line between. When tapping the
+			first building, it is outlined with a white circle behind the house, so that the player knows
 			that it has been successfully selected. The played can then select a second house to connect
-			to the powerline.
+			to the power line to.
 		\end{itemize}
 
 	\subsubsection{Other Implementations}
 		\begin{itemize}
-			\item {\bf Collect Money: } When a building is connected to a powerplant, it starts
+			\item {\bf Collect Money: } When a building is connected to a power plant, it starts
 			"producing" money. The money icon is added to the building and the user is now
 			able to click on the building in order to collect the money. The players money
-			should increase and be more close to the goal. 
-			\item {\bf Enter next level: } A user should be able to complete a level by getting
-			as much money as the goal for the specific level. For example if the goal is 1500, the
-			player reach the next level by getting his/her sum of money equal or greater than 1500.
-			\item {\bf Powerplant with Limited Power: } A powerplant do not have infinite amount of
-			power. The powerplant can be upgraded to serve more power. 
-			\item {\bf Number of Power Plants: } This is not implemented yet, but it should be added
-			to the next sprint. 
-			\item {\bf Different Buildings: } When the time loop have started, there is appearing
-			different type of buildings. Each house require a different amount of money and is
-			also "producing" a different amount of money when the building is served with power
-			form a powerplant. 
+			increases. 
+			\item {\bf Enter next level: } It is now possible to reach the next level by earning the level specific amount of money and completing the level.
+			\item {\bf Power plant with Limited Power: } A power plant does not have an infinite amount of
+			power. The power plant can be upgraded to serve more power.
+			\item {\bf Different Buildings: } When the time loop has started, there is appearing
+			different types of buildings. Each building requires a different amount of power and is
+			also paying a different amount of money when the building is served with power. 
 			\item {\bf Appearance of buildings in new levels: } Buildings appear more rapidly 
 			when the level increase. 
 		\end{itemize}

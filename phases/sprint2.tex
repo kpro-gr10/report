@@ -139,84 +139,70 @@
 	from the sprint backlog.
 	
 	\begin{itemize}
-		\item {\bf Building mode:} When the player open the hud (menu in the bottom of the screen) and presses
-		on the build powerplant/powerline image, the player enters the building state 
-		"build powerplant/build powerlines". The game state is set back to normal after the player 
-		is finished with the building. The game has a state variable that contains which mode the 
-		game is in (Normal, build power plant or build power lines). When the player is in the building
-		state, two lines will appear (on top and bottom) on the screen that looks like constructions mode
+		\item {\bf Building mode:} When the player opens the hud (menu at the bottom of the screen) and taps
+		the build power plant or power line image, the player enters building mode. The game state is set back to normal when the player has placed the power plant or power line. The game has a state variable that contains which mode the game is in: Normal, build power plant or build power line. When the player is in the building
+		mode, two lines will appear, on the top and bottom of the screen, that looks like constructions band
 		(yellow and black stripes). The look and feel is important for the user to understand that
 		the game-state is changes to building mode. 
 
-		\item {\bf Upgrade power plants:} When the player taps on the power plant, a pop-up will appear.
-		In the pop-up it will show the level the power plant is in and how much it will cost the 
+		\item {\bf Upgrade power plants:} When the player taps the power plant, a pop-up will appear.
+		The pop-up will show the level the power plant is in and how much it will cost the 
 		player to upgrade the power plant. If the player choose to upgrade the power plant the level will
-		increase by 1. If the player do not want to upgrade, he or she press "cancel" and the player will be sent
-		back to the game. The part that is not implemented here is that when a power plant is upgraded, 
+		increase by 1. If the player do not want to upgrade, he or she presses "cancel" and the player will be sent
+		back to the game. The part that is not implemented is that when a power plant is upgraded, 
 		it will be able to serve more buildings with power and this should also be added to the building 
 		information in the pop-up. If the player does not have enough money, the player gets a message 
 		that he or she cannot upgrade.
 
-		\item {\bf Building and buy power plants:} When the player open the menu in the bottom and 
-		choose the "build powerplant" icon, the player enters the building mode and is able to 
+		\item {\bf Building and buy power plants:} When the player opens the menu at the bottom and 
+		choose the "build power plant" icon, the player enters the building mode and is able to 
 		tap on the screen where he or she wants to place the power plant. When the player taps on the
-		location to place the building, it will a appear a pop-up with the question if the player 
-		want to buy and build the power plant. If the player want to build the power plant, a certain
-		amount of money will be payed from the players money or if the player press "cancel", the 
+		location to place the building, a pop-up will appear, asking if the player 
+		wants to buy and build the power plant. If the player want to build the power plant, a certain
+		amount of money will be payed from the player's money or if the player press "cancel", the 
 		game goes out of the building state and back to normal. If the player choose to buy the 
 		power plant, but do not have enough money, the player get a message that he or she do not have
 		enough money and the game state will be set back to normal. 
 
 		\item {\bf Connect buildings to power plants:} When the player open the menu in the bottom and 
 		choose the "build powerline" icon, the player enters the building mode and the player is able
-		to build power lines. The power lines is build by tapping on the desired en-points (house-house 
+		to build power lines. The power lines is built by tapping on the desired end-points (house-house 
 		or house-power plant).
 
 		The part that is not implemented is the logic for handling the "connection state" of a building, 
-		as well as the amount of power a power plant can serve. It is not implemented that if the building
-		is connected, the countdown will stop and make money that the player can collect. The money should
-		only be "produced" if the building is connected to a power plant. The amount of money that is 
-		produced should be building specific because different buildings use different amount of power, and
-		therefore need to pay a different amount of money. 
+		as well as the amount of power a power plant can serve. That a buildings countdown should stop when 
+		connected, and the possibility of collecting money from the building is not implemented yet.
 
 		\item {\bf Collect money:} When a building is connected to another building, it starts 
-		"producing" money. The building will show a icon of a coin when the player is able to 
-		collect the money. The money is collected when the user taps on the building with a coin. 
+		"producing" money. The building will show an icon of a coin when the player is able to 
+		collect the money. The money is collected by tapping the building with a coin. 
 
-		The parts that is missing is that it needs to check whether the connected building is a power plant 
-		or just another building. It should only produce money if it is connected to a power plant. 
-		If the building have produced money, a coin will appear on the building. When the player tap
-		on a building with a coin icon, it will collect the money and the players amount of money 
-		will increase. 
+		The parts that are missing is to check whether the building is directly or indirectly connected 
+		to a power plant, only then will it pay for electricity.
 
 		\item {\bf Game over:} When the health bar is zero, the game is over and the game over screen 
-		is showing. When the player press "ok", the player is sent to the main menu and is able to 
+		is showing. When the player presses "Ok", the player is sent to the main menu and is able to 
 		start a new game. This part may need some changes to the look and feel, but it is working.
 
 		\item {\bf Main menu:} When the game is starting, the app is showing the main menu. 
-		From this menu, the player is able to choose between "Start game", "Instructions" and high score.
+		From this menu, the player is able to choose between "Start Game", "Instructions" and "High Score".
 
 		\item {\bf Money and goal:} When the player has started the game, the score and goal for
 		the level is showing in the hud. To get to the next level, the player need to get the same
 		amount of money as the goal in order to go to the next level. The logic for the level
 		is not finished yet.
 
-		\item {\bf Information about power plant:} If the user taps on a power plant it will pop up
-		information about the power plant like level and upgrade information. It is not implemented yet,
-		but it will be implemented more information like how much power it can serve and how mange
-		buildings that are connected. 
+		\item {\bf Information about power plant:} If the user taps a power plant it will pop up
+		information about the power plant such as level and upgrade information.
 
-		\item {\bf Health bar:} In the bottom of the game it is showing a health bar. If the 
-		health bar is below zero, it is game over, so the player need to keep track of the health.
-		A user loses health if a new buildings countdown is over and the building disappears.
-		The health bar will send a signal with a color. If the player has full health bar the bar is
-		green, then it gets orange and in the end it is red. 
+		\item {\bf Health bar:} At the bottom of the game screen is the health bar. If the 
+		health bar is below zero, the game is over. The health bar decreases when a building has not been 
+		served electricity for a certain amount of time. When the health bar is full it is green, as it 
+		decreases it goes orange, then red. 
 
-		\item {\bf Countdown on building:} when a building appear, a countdown starts. If the player
-		do not connect the building to a power plant, the countdown wont stop. If the countdown is
-		finished, the house will disappear and the health bar will decrease. This is a signal to
-		the player so he or she is able to connect the building to a power plant in order to not loose
-		health. 
+		\item {\bf Countdown on building:} When a building appear, a countdown starts. The countdown stops 
+		if the player connects the building to a power plant. When the countdown reaches zero, the house 
+		disappears and the health bar decreases.
 
 	\end{itemize}
 
