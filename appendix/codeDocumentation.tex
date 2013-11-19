@@ -7,200 +7,318 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 \section{Models - Backbone Models}
 
 \subsection*{Building}
-	defaults - Default values for this object
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	shouldBeRemoved & Returns true if the durability of this building is less than or equal to 0. \\ \hline
+	updateRevenue & Makes this building generate revenue. \\ \hline
+	lowerDurability & Lower the durability of this building. \\ \hline
+	render & Draw this object to a canvas context. \\ \hline
+	update & Update the state of this building. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	timeSinceRevenue - Duration since last time the building generated revenue.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	defaults & Default values for this object \\ \hline
+	timeSinceRevenue & Duration since last time the building generated revenue. \\ \hline
 
-	shouldBeRemoved - Returns true if the durability of this building is <= 0.
-
-	updateRevenue - Makes this building generate revenue.
-
-	lowerDurability - Lower the durability of this building.
-
-	render - Draw this object to a canvas context.
-
-	update - Update the state of this building.
+	\end{tabular}
+	\end{table}
 
 \subsection*{Entity}
-
-	initialize - Initialize a PowerLineList for this entity.
-
-	update - Update the state of this entity. Should be overwritten by subclasses.
-
-	getCenterPos - returns the center position of this entity.
-
-	shouldBeRemoved - Returns if this entity should be removed from the map or not. Should be overwritten by subclasses.
-
-	connectTo - Connect this entity to a PowerLine.
-
-	disconnect - Disconnect this entity from a PowerLine.
-
-	contains - Check if a point is inside of this entity.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	initialize & Initialize a PowerLineList for this entity. \\ \hline
+	update & Update the state of this entity. Should be overwritten by subclasses. \\ \hline
+	getCenterPos & Returns the center position of this entity. \\ \hline
+	shouldBeRemoved & Returns if this entity should be removed from the map or not. Should be overwritten by subclasses. \\ \hline
+	connectTo & Connect this entity to a PowerLine. \\ \hline
+	disconnect & Disconnect this entity from a PowerLine. \\ \hline
+	contains & Check if a point is inside of this entity. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{Highscore}
-
-	updateTime - Updates this high score object if the new score is smaller than the old score.
-
-	saveData - Write data to local storage.
-
-	toString - Returns a string representation of this object.
-
-\subsection*{Level}
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	updateTime & Updates this high score object if the new score is smaller than the old score. \\ \hline
+	saveData & Write data to local storage. \\ \hline
+	toString & Returns a string representation of this object. \\ \hline
+	\end{tabular}
+	\end{table}
 	
-	defaults - Default values for this object.
+\subsection*{Level}
 
-	initialize - Initialize and shuffle the list of possible building positions for this level.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	initialize & Initialize and shuffle the list of possible building positions for this level. \\ \hline
+	update & Update the state of the level. \\ \hline
+	createBuilding & Create a new building and place it on the map. \\ \hline
+	tapMap & Process user input. \\ \hline
+	buildPowerPlantAt & Build a new Powerplant on the map. \\ \hline
+	costOfPowerLine & Calculate the cost of a Powerline. \\ \hline
+	costOfFixingPowerLine & Calculate the cost of repairing a Powerline. \\ \hline
+	connectWithPowerLine & Connect two buildings with a Powerline. \\ \hline
+	fixPowerLine & Repair a Powerline. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	update - Update the state of the level.
-
-	createBuilding - Create a new building and place it on the map.
-
-	tapMap - Process user input.
-
-	buildPowerPlantAt - Build a new Powerplant on the map.
-
-	costOfPowerLine - Calculate the cost of a Powerline.
-
-	costOfFixingPowerLine - Calculate the cost of repairing a Powerline.
-
-	connectWithPowerLine - Connect two buildings with a Powerline.
-
-	fixPowerLine - Repair a Powerline.
-
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Varables & Description \\ \hline
+	defaults & Default values for this object. \\ \hline
+	\end{tabular}
+	\end{table}
+	
 \subsection*{Map}
 
-	defaults - Default values for map.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Varables & Description \\ \hline
+	defaults & Default values for map. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	update - Update the state of the game map.
-
-	translateView - Move the view of the map.
-
-	getBuildingAt - Returns the building located here on the map. Input coordinates in screen space.
-
-	getBuildingAtMap - Returns the building located here on the map. Input coordinates in world space.
-
-	screenToMapCoordinates - Translate coordinates from screen space to map space.
-
-	getPowerLineAt - Return the powerline located here on the map. Input coordinates in screen space.
+	
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	update & Update the state of the game map. \\ \hline
+	translateView & Move the view of the map. \\ \hline
+	getBuildingAt & Returns the building located here on the map. Input coordinates in screen space. \\ \hline
+	getBuildingAtMap & Returns the building located here on the map. Input coordinates in world space. \\ \hline
+	screenToMapCoordinates & Translate coordinates from screen space to map space. \\ \hline
+	getPowerLineAt & Return the powerline located here on the map. Input coordinates in screen space. \\ \hline
+	\end{tabular}
+	\end{table}
+	
 
 \subsection*{Player}
 
-	defaults - Player default values.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Varables & Description \\ \hline
+	defaults & Player default values. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	damage - Inflict damage to the players health.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	damage & Inflict damage to the players health. \\ \hline
+	\end{tabular}
+	\end{table}
+	
 
 \subsection*{Powerline}
 
-	defaults - Powerline default values.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	isHealthy & Returns if this Powerline is healthy or not. \\ \hline
+	getPointA & Returns the center position of the first building this Powerline is connected to. \\ \hline
+	getPointB & Returns the center position of the second building this Powerline is connected to. \\ \hline
+	removeFrom & Remove this Powerline from the map and disconnect everything connected to it. \\ \hline
+	break & Set the state of this Powerline to broken. \\ \hline
+	fix & Set the state of this Powerline to healthy. \\ \hline
+	render & Draw this Powerline to the canvas context. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	isHealthy - Returns if this Powerline is healthy or not.
-
-	getPointA - Returns the center position of the first building this Powerline is connected to.
-
-	getPointB - Returns the center position of the second building this Powerline is connected to.
-
-	removeFrom - Remove this Powerline from the map and disconnect everything connected to it.
-
-	break - Set the state of this Powerline to broken.
-
-	fix - Set the state of this Powerline to healthy.
-
-	render - Draw this Powerline to the canvas context.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	defaults & Powerline default values. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{Powerplant}
 
-	defaults - Default values for this Powerplant.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
+	defaults & Default values for this Powerplant. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	canBeUpgraded - Returns true if this Powerplant can be upgraded.
-
-	getMaxPower - Returns how much power this powerplant can output.
-
-	upgrade - Upgrade this Powerplant.
-
-	distributePower - Distribute power from this Powerplant to as many connected buildings as allowed by getMaxPower using Breadth First Search.
-
-	render - Draw this Powerplant to the canvas context.
-
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	canBeUpgraded & Returns true if this Powerplant can be upgraded. \\ \hline
+	getMaxPower & Returns how much power this powerplant can output. \\ \hline
+	upgrade & Upgrade this Powerplant. \\ \hline
+	distributePower & Distribute power from this Powerplant to as many connected buildings as allowed by getMaxPower using Breadth First Search. \\ \hline
+	render & Draw this Powerplant to the canvas context. \\ \hline
+	\end{tabular}
+	\end{table}
+	
 \clearpage
 
 \section{Presenters - Backbone Views}
 
 \subsection*{HighscoreView}
-	initialize - Render the highscore list and begin listening to changes to the list.
+
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	initialize & Render the highscore list and begin listening to changes to the list. \\ \hline
+	render & Update the HTML Object with the state of the highscore list. \\ \hline
+	\end{tabular}
+	\end{table}
 	
-	render - Update the HTML with the state of the highscore list.
-
 \subsection*{HpBar}
-	init - Render the player's health and begin listening to changes to player health.
-
-	render - Draw the player's health to the HP bar canvas.
-
+	
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & Render the player's health and begin listening to changes to player health. \\ \hline
+	render & Draw the player's health to the HP bar canvas. \\ \hline
+	\end{tabular}
+	\end{table}
+	
 \subsection*{HudMoney}
-	init - Render the player's money and begin listening to changes to the player's money.
-
-	render - Update the HTML with the state of the player's health.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & Render the player's money and begin listening to changes to the player's money. \\ \hline
+	render & Update the HTML Object with the state of the player's health. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{HudButtons}
 
 	events - Which events this Presenter should receive from the HTML.
 
-	buildPowerPlant - Change the game state to BuildPP.
-
-	buildPowerLine - Change the game state to BuildPL.
-
-	togglePause - Change the game's pause state.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	buildPowerPlant & Change the game state to BuildPP. \\ \hline
+	buildPowerLine & Change the game state to BuildPL. \\ \hline
+	togglePause & Change the game's pause state. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{Menu}
 
 	events - Which events this Presenter should receive from the HTML.
 
-	startGame - Start the game.
-
-	instructions - Go to the instruction screen.
-
-	highscore - Go to the highscore screen.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	startGame & Start the game. \\ \hline
+	instructions & Go to the instruction screen. \\ \hline
+	highscore & Go to the highscore screen. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{Screen}
 
-	init - Begin listening to changes to the state of the game map.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & Begin listening to changes to the state of the game map. \\ \hline
+	resetZoom & Resets the scaling of the HTML canvas. \\ \hline
+	render & Draw the map state onto the HTML canvas. \\ \hline
+	renderBuildings & Draw buildings to the HTML canvas. \\ \hline
+	renderBuildingTemp & Draw a circle below the building selected to build a powerline from. \\ \hline
+	renderBuildMode & Draw indicators that the game is in build mode. \\ \hline
+	renderPowerLines & Draw the powerlines to the HTML canvas. \\ \hline
+  	touchStart & \\ \hline
 
-	iOS - Detect if the application is running on iOS.
+  	touchEnd & \\ \hline
 
-	needsRepaint - Set to true if the map has to be redrawn.
+  	touchMove & \\ \hline
 
-	prevZoomed - Set to true if the map was "zoomed in" during last render.
+  	doubleTap & \\ \hline
 
-	resetZoom - Resets the scaling of the HTML canvas.
+  	handleEvent
+	\end{tabular}
+	\end{table}
 
-	render - Draw the map state onto the HTML canvas.
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Variables & Description \\ \hline
 
-	renderBuildings - Draw buildings to the HTML canvas.
 
-	renderBuildingTemp - Draw a circle below the building selected to build a powerline from.
 
-	renderBuildMode - Draw indicators that the game is in build mode.
+	iOS & Detect if the application is running on iOS. \\ \hline
 
-	renderPowerLines - Draw the powerlines to the HTML canvas.
+	needsRepaint & Set to true if the map has to be redrawn. \\ \hline
 
-	buildingTemp - Holds the building that you are currently building a powerline from.
+	buildingTemp & Holds the building that you are currently building a powerline from. \\ \hline
 
-  	screenMove - Set to true if the current series of touch events has a touch move event.
+	prevZoomed & Set to true if the map was "zoomed in" during last render. \\ \hline
 
-  	prevTouchStart - Previous touch start event.
+  	screenMove & Set to true if the current series of touch events has a touch move event. \\ \hline
 
- 	prevTouchEnd - Previous touch end event.
+  	prevTouchStart & Previous touch start event. \\ \hline
 
-  	prevTouchEndTime - Time of previous touch end event.
+ 	prevTouchEnd & Previous touch end event. \\ \hline
 
-  	touchStart - Called when a touch start event is registered.
+  	prevTouchEndTime & Time of previous touch end event. \\ \hline
 
-  	touchEnd - Called when a touch end event is registered.
+  	touchStart & Called when a touch start event is registered. \\ \hline
 
-  	touchMove - Called when a touch move event is registered.
+  	touchEnd & Called when a touch end event is registered. \\ \hline
 
-  	doubleTap - Called when the player double taps the screen.
+  	touchMove & Called when a touch move event is registered. \\ \hline
 
-  	handleEvent - Called when this screen receives an input event.
+  	doubleTap & Called when the player double taps the screen. \\ \hline
+
+  	handleEvent & Called when this screen receives an input event. \\ \hline
+
+
+
+
+	\end{tabular}
+	\end{table}
 
 \subsection*{HeaderTimer}
 
