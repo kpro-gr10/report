@@ -126,61 +126,61 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 \section{Presenters - Backbone Views}
 
 \subsection*{HighscoreView}
-	initialize
+	initialize - Render the highscore list and begin listening to changes to the list.
 	
-	render
+	render - Update the HTML Object with the state of the highscore list.
 
 \subsection*{HpBar}
-	init
+	init - Render the player's health and begin listening to changes to player health.
 
-	render
+	render - Draw the player's health to the HP bar canvas.
 
 \subsection*{HudMoney}
-	init
+	init - Render the player's money and begin listening to changes to the player's money.
 
-	render
+	render - Update the HTML Object with the state of the player's health.
 
 \subsection*{HudButtons}
 
-	events
+	events - Which events this Presenter should receive from the HTML Object.
 
-	buildPowerPlant
+	buildPowerPlant - Change the game state to BuildPP.
 
-	buildPowerLine
+	buildPowerLine - Change the game state to BuildPL.
 
-	togglePause
+	togglePause - Change the game's pause state.
 
 \subsection*{Menu}
 
-	events
+	events - Which events this Presenter should receive from the HTML Object.
 
-	startGame
+	startGame - Start the game.
 
-	instructions
+	instructions - Go to the instruction screen.
 
-	highscore
+	highscore - Go to the highscore screen.
 
 \subsection*{Screen}
 
-	init
+	init - Begin listening to changes to the state of the game map.
 
-	iOS
+	iOS - Detect if the application is running on iOS.
 
-	needsRepaint
+	needsRepaint - Set to true if the map has to be redrawn.
 
-	prevZoomed
+	prevZoomed - Set to true if the map was "zoomed in" during last render.
 
-	resetZoom
+	resetZoom - Resets the scaling of the HTML canvas.
 
-	render
+	render - Draw the map state onto the HTML canvas.
 
-	renderBuildings
+	renderBuildings - Draw buildings to the HTML canvas.
 
-	renderBuildingTemp
+	renderBuildingTemp - Draw a circle below the building selected to build a powerline from.
 
-	renderBuildMode
+	renderBuildMode - Draw indicators that the game is in build mode.
 
-	renderPowerLines
+	renderPowerLines - Draw the powerlines to the HTML canvas.
 
 	buildingTemp: null,
 
