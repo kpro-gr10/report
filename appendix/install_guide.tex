@@ -36,3 +36,31 @@ the application on the Android market place, as of 19.11.2013 this can be found
 on the following webpage: \href{http://developer.android.com/distribute/index.html}{developer.android.com/distribute/index.html}
 
 \section{iOS}
+
+The iOS operating system does not allow ordinary users to install apps from
+sources other than Apple's App Store. Nor does it give you direct access to the
+filesystem. Therefore, you need to be a registered iOS developer to install
+your own apps during development; information about how to enroll in the iOS
+Developer Program can be found on Apple's website\cite{iOSDevProgram}.
+
+Once enrolled, you'll need to sign in to your user account in the Xcode IDE;
+this is currently done from the ``Accounts'' tab in Xcode's preferences.
+The Xcode project is available as \mbox{\texttt{platforms/ios/Power 
+Supply.xcodeproj}} under the root directory of the project; once the project
+is opened, you may install and run the app on an iPhone by performing the
+following steps:
+
+\begin{enumerate}
+  \item Connect your iPhone to your Mac through a cable.
+  \item Select your iPhone as the target device from the drop-down menu near
+        the top-left of the project window.
+  \item Click the ``Play'' icon or select Product $\rightarrow$ Run from the
+        menu bar.
+\end{enumerate}
+
+These details may change in the future. For the full and current details,
+please see the Apple Developer Support Center\cite{appleSupport}.
+
+As a practical side note, Espen Skarsbø Olsen of Helgelandskraft set up a
+company account for Helgelandskraft with the iOS Developer Program in October
+of 2013.
