@@ -79,11 +79,13 @@ and smooth.
 	to the visual HTML code. They listen to changes to the Backbone Models and changes 
 	the HTML objects accordingly. The Presenters also handles input events from the HTML objects.
 	
+	We have implemented the four main states of the game. Each state has its own purpose.
 	\begin{itemize}
-		\item {\bf Menu Screen}
-		\item {\bf Game Screen}
-		\item {\bf Instruction screen}
-		\item {\bf Highscore screen}
+		\item {\bf Main menu} The main menu where you navigate to the other screens.
+		\item {\bf Ingame} THis is where you play the game, the game loop runs 
+		and the game state is rendered to the screen.
+		\item {\bf Instructions} In the Instruction screen you can read about how to play the game.
+		\item {\bf Highscore} This lets you see how well you did while playing the game.
 	\end{itemize}
 	
 	\begin{figure}[H]
@@ -99,9 +101,9 @@ and smooth.
 
 	\subsubsection*{Other Implementations}
 		\begin{itemize}
-			\item {\bf Place buildings on map}
-			\item {\bf Rendering}
-			\item {\bf Game Loop}
+			\item {\bf Place buildings on map} The game will place buildings at random positions on the map.
+			\item {\bf Rendering} The state of the map will be rendered to the screen.
+			\item {\bf Game Loop} The game loop updates the state of the game continuously.
 		\end{itemize}
 
 \subsection{Testing}
