@@ -112,7 +112,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	getPowerLineAt & Return the powerline located here on the map. Input coordinates in screen space. \\ \hline
 	\end{tabular}
 	\end{table}
-	
+
+\clearpage
 
 \subsection*{Player}
 
@@ -239,6 +240,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\end{tabular}
 	\end{table}
 
+\clearpage
 \subsection*{Menu}
 
 	events - Which events this Presenter should receive from the HTML.
@@ -269,14 +271,10 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	renderBuildMode & Draw indicators that the game is in build mode. \\ \hline
 	renderPowerLines & Draw the powerlines to the HTML canvas. \\ \hline
   	touchStart & \\ \hline
-
   	touchEnd & \\ \hline
-
   	touchMove & \\ \hline
-
   	doubleTap & \\ \hline
-
-  	handleEvent
+  	handleEvent & \\ \hline
 	\end{tabular}
 	\end{table}
 
@@ -285,38 +283,19 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Variables & Description \\ \hline
-
-
-
 	iOS & Detect if the application is running on iOS. \\ \hline
-
 	needsRepaint & Set to true if the map has to be redrawn. \\ \hline
-
 	buildingTemp & Holds the building that you are currently building a powerline from. \\ \hline
-
 	prevZoomed & Set to true if the map was "zoomed in" during last render. \\ \hline
-
   	screenMove & Set to true if the current series of touch events has a touch move event. \\ \hline
-
   	prevTouchStart & Previous touch start event. \\ \hline
-
  	prevTouchEnd & Previous touch end event. \\ \hline
-
   	prevTouchEndTime & Time of previous touch end event. \\ \hline
-
   	touchStart & Called when a touch start event is registered. \\ \hline
-
   	touchEnd & Called when a touch end event is registered. \\ \hline
-
   	touchMove & Called when a touch move event is registered. \\ \hline
-
   	doubleTap & Called when the player double taps the screen. \\ \hline
-
   	handleEvent & Called when this screen receives an input event. \\ \hline
-
-
-
-
 	\end{tabular}
 	\end{table}
 
@@ -354,6 +333,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{HigscoreList}
 
+	model: Highscore
+
 	\begin{table}[H]
 	\begin{tabular}{p{4cm} | p{8cm} }
 	\hline
@@ -366,12 +347,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	writeToConsole & Write the highscore list to console for debug purposes. \\ \hline
 
 	\end{tabular}
-	\end{table}
-
-	
-	model: Highscore
-
-	
+	\end{table}	
 
 \subsection*{PowerLineList}
 
