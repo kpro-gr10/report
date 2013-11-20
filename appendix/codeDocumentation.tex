@@ -1,6 +1,6 @@
 \chapter{Code Documentation}
 
-The code documentation lists the JavaScript objects in bold, followed by a list of their methods.
+The code documentation lists the JavaScript objects in bold, followed by a list of their variables and functions.
 
 \clearpage 
 
@@ -375,9 +375,16 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 \subsection*{PowerLineList}
 
-	model: PowerLine
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	sample & Return a random object from this list. \\ \hline
+	\end{tabular}
+	\end{table}
 
-	sample
+	model: PowerLine
 
 \clearpage
 
@@ -429,19 +436,25 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\begin{tabular}{p{4cm} | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	Functions & Description \\ \hline
+	Global Functions & Description \\ \hline
 	mediaSuccess & Function for printing audio debug information. \\ \hline
 	mediaError & Function for printing audio debug information. \\ \hline
 	getMediaStatusString & Function for printing audio debug information. \\ \hline
 	mediaStatus & Function for printing audio debug information. \\ \hline
 	getMediaPath & Get the path to the sound file.  \\ \hline
-	audioPlayer.init & Initialize the audio player's sound files. \\ \hline
-	audioPlayer.loadSfx & Load a audio file. \\ \hline
-	audioPlayer.playRandMoney & Play a random money sound effect. \\ \hline
 	\end{tabular}
 	\end{table}
 
-
+	\begin{table}[H]
+	\begin{tabular}{p{4cm} | p{8cm} }
+	\hline
+	\rowcolor{gray}
+	Functions & Description \\ \hline
+	init & Initialize the audio player's sound files. \\ \hline
+	loadSfx & Load a audio file. \\ \hline
+	playRandMoney & Play a random money sound effect. \\ \hline
+	\end{tabular}
+	\end{table}
 
 \subsection*{ImageLibrary}
 	
@@ -449,7 +462,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\begin{tabular}{p{4cm} | p{8cm} }
 	\hline
 	\rowcolor{gray}
-	Variables & Description \\ \hline
+	Global Variables & Description \\ \hline
 	imagesLoaded & Number of images loaded. \\ \hline
 	imagesToLoad & Number of images that has to be loaded. \\ \hline
 	\end{tabular}
@@ -460,8 +473,8 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\hline
 	\rowcolor{gray}
 	Functions & Description \\ \hline
-	imgLib.isAllImagesLoaded & Returns true if all images attempted to be loaded with the loadImage function is done loading. \\ \hline	
-	imgLib.loadImage & Load and return an image object. \\ \hline	
+	isAllImagesLoaded & Returns true if all images attempted to be loaded with the loadImage function is done loading. \\ \hline	
+	loadImage & Load and return an image object. \\ \hline	
 	\end{tabular}
 	\end{table}
 
@@ -475,7 +488,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 	\begin{tabular}{p{6cm} | p{6cm} }
 	\hline
 	\rowcolor{gray}
-	Functions & Description \\ \hline
+	Global Functions & Description \\ \hline
 	requestAnimFrame & \url{www.paulirish.com/2011/requestanimationframe-for-smart-animating/} \\ \hline
 	getPhoneGapPath & Returns the path to phonegap, device independently. \\ \hline
 	timeToString & Translate a time in seconds to a string. \\ \hline
@@ -501,7 +514,7 @@ The code documentation lists the JavaScript objects in bold, followed by a list 
 
 	\hline
 	\rowcolor{gray}
-	Variables & Description \\ \hline
+	Global Variables & Description \\ \hline
 	GAME\_FPS & Game frame rate. \\ \hline
 	DEBUG & Print debug to console. \\ \hline
 	HUD\_HEIGHT & Height of the UI hud. \\ \hline
