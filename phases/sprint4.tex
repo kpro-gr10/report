@@ -1,6 +1,8 @@
 \section{Sprint 4}
 
-This is the last sprint. We have all the main features of the game implemented, this phase will focus on the feedback from the customer and the usability test and to implement a few features that adds flavor to the game, like sound and high score.
+	This is the last sprint. We have all the main features of the game implemented, 
+	this phase will focus on the feedback from the customer and the usability test 
+	and to implement a few features that adds flavor to the game, like sound and high score.
 
 \subsection{Sprint Planning}
 
@@ -25,8 +27,8 @@ This is the last sprint. We have all the main features of the game implemented, 
 	\end{itemize}
 	{\bf Total workload: }  161 hours \\
 
-	In this sprint we managed a workload of 20.1 hours in average per person each week (161 hours/4 persons/2 weeks). We always strive to reach a workload of 20-24 hours and the group managed this 
-	at sprint 4.  
+	In this sprint we managed a workload of 20.1 hours in average per person each week (161 hours/4 persons/2 weeks). 
+	We always strive to reach a workload of 20-25 hours and the group managed this at sprint 4.  
 
 \clearpage
 \subsection{Sprint Backlog}
@@ -86,10 +88,10 @@ This is the last sprint. We have all the main features of the game implemented, 
 	\end{table}
 
 	In this sprint we added all requirements from the product backlog. Because of time constraints,
-	and because this is the final sprint of the project, not all of the of these requirements were
+	and because this is the final sprint of the project, not all of the requirements were
 	implemented.
 
-	The requirement FR1.2 was not implemented because it had a high cost in terms of implementation
+	Requirement FR1.2 was not implemented because it had a high cost in terms of implementation
 	time, and the group decided the value for the customer was too low to justify the time it would
 	take to implement. However, the requirement is partly implemented in the pause functionality.
 	The game state is saved when the user exits the game, but the state will be lost when the player
@@ -97,13 +99,13 @@ This is the last sprint. We have all the main features of the game implemented, 
 
 	When the group designed the game, we wanted to add a notification when a new obstacle appeared
 	outside the gamescreen (FR1.13). We wanted to have a pointer on the screen so the player knew
-	where the new notification appeared. This is only partly implemented in terms of sound. There
-	is a sound effect when a new obstacle appears, but the player will not get the direction.
+	where the new obstacle had appeared. We plan to implement this in terms of sounds for the obstacle 
+	instead. This was however not implemented because of time constraints. This will be added to ``further work''. 
 
-	The group added a requirement that should limit the number of power plants it's possible to
+	The group added a requirement that should limit the number of power plants that is possible to
 	build during a level (FR2.7). The group decided that this was not necessary because if the
-	player builds too many power plants, the player will not get to the next level. Because of this,
-	we did not implement this requirement.
+	player builds too many power plants, the player will not get to the next level, because of all 
+	the money spent. Because of this, we did not implement this requirement.
 
 	The project description which was handed out at the start of this project stated that power
 	preservation tips should be included in the game (FR6.6). During the first customer meeting,
@@ -142,7 +144,7 @@ This is the last sprint. We have all the main features of the game implemented, 
 
 	\subsubsection*{Building placement}
 
-	Originally buildings was placed randomly around the map. They could appear
+	Originally buildings were placed randomly around the map. They could appear
 	on top of each other. This created problems for the player when attempting
 	to connect the buildings with power lines or collecting money. To avoid
 	this, we created a list of possible building locations and shuffled it. Then
@@ -243,7 +245,7 @@ This is the last sprint. We have all the main features of the game implemented, 
 		On iOS, however, the correct coordinates are only available directly from
 		each individual touch object. In order to make panning work well on both
 		platforms, we've chosen to detect which platform the app is running on
-		and change its behaviour accordingly.
+		and change its behavior accordingly.
 
 	\subsubsection*{Changed Game logo}
 		We did not know which font was used in the first logo, so we changed it to a new
